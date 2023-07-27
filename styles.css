@@ -11,7 +11,6 @@ html {
 
 body {
   max-width: 1920px;
-  margin: 0 auto;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -65,7 +64,6 @@ body {
 
 .menuHamburguesa img {
   height: 500px;
-
 }
 
 .menuHamburguesa a img {
@@ -82,7 +80,6 @@ body {
 
 #menuImg {
   height: 25px;
-
 }
 
 
@@ -199,6 +196,18 @@ body {
 .coverTexto h1 {
   color: rgb(60, 60, 60);
   font-size: 50px;
+}
+
+.coverIzq {
+  text-align: start;
+  display: block;
+  justify-content: left;
+}
+
+.coverDer {
+  text-align: end;
+  display: block;
+  justify-content: right;
 }
 
 .coverBoton {
@@ -523,7 +532,6 @@ footer a:link {
 
 .flechitaFondo {
   background-color: #e7acaa;
-  text-align: center;
 }
 
 /* Redes sociales footer ---------------------------------------------------------------------------------------*/
@@ -845,7 +853,14 @@ form div textarea {
 }
 
 @media only screen and (max-width: 480px) {
-
+  .coverIzq {
+    text-align: center;
+    justify-content: center;
+  }
+  .coverDer {
+    text-align: center;
+    justify-content: center;
+  }
   .separador p {
     font-size: 18px;
   }
