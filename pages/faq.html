@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preguntas frecuentes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="shortcut icon" href="assets/img/favicon.png">
+</head>
+
+<body>
+
+  <div id="home"></div>
+
+  <!-- Menu hamburguesa y logo, solo para moviles (resoluciones pequenias) -------------------------------------------------->
+  <!-- Si pongo este nav dentro del header o de un <section>, no funciona el position: sticky. No me gustó el de bootstrap -->
+  <nav class="menuHamburguesa">
+      <a href="#menuDesplegable">
+        <img src="../assets/img/menu.png" alt="Menu hamburguesa" id="menuImg">
+      </a>
+      <a href="../index.html">
+        <img src="../assets/img/logo.png" alt="Logo">
+      </a>
+
+      <div class="menuEnlaces" id="menuDesplegable">
+        <a href="../index.html" class="menuEnlace"><p>Inicio</p></a>
+        <a href="producto.html" class="menuEnlace"><p>Productos</p></a>
+        <a href="aboutus.html" class="menuEnlace"><p>Sobre nosotros</p></a>
+        <a href="faq.html" class="menuEnlace"><p>Preguntas frecuentes</p></a>
+        <a href="contacto.html" class="menuEnlace"><p>Contacto</p></a>
+      </div>
+  </nav>
+
+  <!-- HEADER ----------------------------------------------------------------------------------------------------------->
+  <header>
+    <section class="headerPages">
+
+      <nav class="coverLinks" id="navTop">
+        <ul class="linkUnderlined">
+          <li><a href="producto.html">Productos</li></a>
+          <li><a href="aboutus.html">Sobre nosotros</li></a>
+          <li class="linkInicio"><a href="../index.html">Inicio</li></a>
+          <li><a href="faq.html">Preguntas frecuentes</li></a>
+          <li><a href="contacto.html">Contacto</li></a>
+        </ul>
+      </nav>
+
+      <div class="headerLogo justify-content-center d-flex flex-column align-items-center">
+        <a href="../index.html"><img src="../assets/img/Logo.png" alt="Logo" class="m-4"></a>
+        <div class="coverTexto text-center">
+          <h1>Preguntas frecuentes</h1>
+        </div>
+      </div>
+
+    </section>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+
+    <section class="faq m-5 mx-auto p-5 rounded shadow">
+
+        <details class="rounded shadow bg-light p-2 pe-auto">
+          <summary class="h4 m-2">¿Qué es la cosmética natural?</summary>
+          <p class="lead m-5">La cosmética natural se basa en el uso de ingredientes provenientes de fuentes
+            naturales, como
+            plantas, aceites esenciales, extractos de hierbas y minerales. Estos ingredientes se eligen cuidadosamente
+            para
+            ofrecer productos libres de químicos agresivos y sintéticos. En Legioma natural, nos comprometemos
+            a
+            utilizar ingredientes naturales de alta calidad para brindarte productos que nutran y cuiden tu piel de
+            manera
+            suave y efectiva.</p>
+        </details>
+
+      <div class="faqItem">
+        <details class="rounded shadow bg-light p-2 pe-auto mt-5">
+          <summary class="h4 m-2">¿Son seguros los productos de cosmética natural?</summary>
+          <p class="lead m-5">Sí, nuestros productos de cosmética natural son seguros para su uso. Nos esforzamos
+            por
+            mantener
+            nuestras fórmulas libres de ingredientes sintéticos y tóxicos, lo que reduce el riesgo de irritaciones y
+            reacciones adversas en la piel. Sin embargo, siempre recomendamos realizar una prueba de sensibilidad en
+            una
+            pequeña área de piel antes de usar cualquier producto nuevo, especialmente si tienes alergias conocidas o
+            piel
+            sensible.</p>
+        </details>
+      </div>
+
+      <div class="faqItem">
+        <details class="rounded shadow bg-light p-2 pe-auto mt-5">
+          <summary class="h4 m-2">¿Los productos de cosmética natural son adecuados para todo tipo de piel?</summary>
+          <p class="lead m-5">Sí, nuestros productos de cosmética natural están diseñados para ser adecuados para
+            la
+            mayoría
+            de los tipos de piel, incluyendo piel seca, mixta, grasa y sensible. Sin embargo, cada persona es única y
+            puede
+            tener diferentes necesidades y reacciones individuales. Te recomendamos revisar la descripción de cada
+            producto
+            y utilizar nuestras guías de selección para encontrar los productos que mejor se adapten a tus necesidades
+            específicas.</p>
+        </details>
+      </div>
+
+      <div class="faqItem">
+        <details class="rounded shadow bg-light p-2 pe-auto mt-5">
+          <summary class="h4 m-2">¿Hacen pruebas en animales?</summary>
+          <p class="lead m-5">En absoluto. En Legioma natural, nos oponemos firmemente a las pruebas en
+            animales y
+            nos
+            comprometemos a producir productos que sean libres de crueldad animal. No realizamos pruebas en animales
+            en
+            ninguna etapa del desarrollo de nuestros productos, y trabajamos con proveedores que comparten nuestros
+            valores
+            éticos.</p>
+        </details>
+      </div>
+
+      <div class="faqItem">
+        <details class="rounded shadow bg-light p-2 pe-auto mt-5">
+          <summary class="h4 m-2">¿Son sus envases respetuosos con el medio ambiente?</summary>
+          <p class="lead m-5">Sí, nos preocupamos por el medio ambiente y nos esforzamos por minimizar nuestro
+            impacto
+            en
+            él.
+            Utilizamos envases y embalajes eco-amigables siempre que sea posible, como botellas y frascos reciclables
+            o
+            biodegradables. Además, nos esforzamos por utilizar materiales de embalaje sostenibles y reciclados en
+            nuestros
+            envíos.</p>
+        </details>
+      </div>
+
+      <div class="faqItem">
+        <details class="rounded shadow bg-light p-2 pe-auto mt-5">
+          <summary class="h4">¿Cómo puedo realizar un pedido?</summary>
+          <p class="lead m-5">Realizar un pedido en nuestro sitio web es rápido y sencillo. Navega por nuestra
+            tienda
+            en
+            línea, selecciona los productos que deseas y añádelos a tu carrito de compras. Luego, sigue las
+            instrucciones
+            de
+            pago y envío para completar tu pedido. Si tienes alguna pregunta o necesitas ayuda durante el proceso,
+            nuestro
+            equipo de atención al cliente estará encantado de asistirte.</p>
+        </details>
+      </div>
+
+      </div>
+
+      <div class="faqAclaracion">
+        <p class="m-5 text-center">Si tienes alguna otra pregunta que no se haya respondido aquí, no dudes en ponerte en contacto con nosotros.
+          Estamos aquí para ayudarte y proporcionarte la información que necesites.</p>
+          <div class="botonMarron">
+            <a href="contacto.html"><button type="button" class="btn btn-light btn-lg">Contactarse</button></a>
+          </div>
+
+    </section>
+
+  </main>
+
+   <!-- FOOTER -->
+   <footer>
+
+    <!-- Flechita para subir -------------------------------------------------------------------------------------------------->
+    <section class="flechita">
+      <a href="#home">
+        <div class="flechitaFondo">
+          <h2>▲</h2>
+        </div>
+      </a>
+    </section>
+
+    <!-- Redes sociales ------------------------------------------------------------------------------------------------------>
+    <section class="redesFooter">
+      <a href="https://www.instagram.com"><img src="../assets/img/iconInstagram.png" alt="Icono Instagram"></a>
+      <a href="https://www.facebook.com"><img src="../assets/img/iconFacebook.png" alt="Icono Facebook"></a>
+      <a href="https://www.whatsapp.com"><img src="../assets/img/iconWhatsapp.png" alt="Icono WhatsApp"></a>
+    </section>
+
+    <!-- Footer original -->
+    <section class="footerMenu">
+      <div class="footerLogo">
+        <a href="../index.html"><img src="../assets/img/logo.png" alt="Logo de Legioma"></a>
+      </div>
+      <div class="footerLinks">
+        <ul>
+          <li><a href="producto.html">Productos</a></li>
+          <li><a href="aboutus.html">Sobre nosotros</a></li>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="faq.html">Preguntas frecuentes</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footerBottom">
+        <p>Todos los derechos reservados &copy; 2023 | Legioma</p>
+      </div>
+    </section>
+
+  </footer>
+
+  <!-- Script cambia color del fondo del menu top -->
+  <script type="text/javascript">
+    window.onscroll = () => {
+      const nav = document.querySelector('#navTop');
+      if (this.scrollY <= 10) nav.className = 'coverLinks'; else nav.className = 'scroll';
+    };
+  </script>
+
+  <!-- SCRIPT BS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  </script>
+</body>
+
+</html>
