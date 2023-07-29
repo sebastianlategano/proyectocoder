@@ -1,0 +1,105 @@
+/* MEDIA QUERIES (RESPONSIVE) */
+/* ------------------------------------------------------------------------------- */
+
+@media only screen and (min-width: 1280px) {
+    .menuHamburguesa {
+        display: none;
+        visibility: hidden;
+    }
+
+    .categoriasMobile {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@media only screen and (max-width: 1279px) {
+    .categorias {
+        display: none;
+        visibility: hidden;
+    }
+
+    .coverLinks {
+        display: none;
+        visibility: hidden;
+    }
+
+    .scroll {
+        display: none;
+        visibility: hidden;
+    }
+
+    .footerLinks {
+        display: none;
+        visibility: hidden;
+    }
+
+    .contacto {
+        flex-direction: column;
+    }
+
+    .contactoFormulario {
+        width: 100%;
+    }
+
+    .contactoInfo {
+        max-width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    /* #left {
+      margin: 0;
+    }
+  
+    #right {
+      margin: 0;
+    } */
+
+    .tarjetaTexto {
+        font-size: 30px;
+    }
+
+    .whatsappIcon {
+        bottom: 6%;
+        right: 10%;
+    }
+
+    .aboutUs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .video h1 {
+        font-weight: 500;
+        font-size: 25px;
+    }
+
+    .coverLogo img {
+        height: 100px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .coverIzq {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .coverDer {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .separador p {
+        font-size: 18px;
+    }
+
+    .informativo {
+        padding: 0;
+    }
+
+}

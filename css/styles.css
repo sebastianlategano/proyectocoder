@@ -1,0 +1,824 @@
+@charset "UTF-8";
+/* MEDIA QUERIES (RESPONSIVE) */
+/* ------------------------------------------------------------------------------- */
+@media only screen and (min-width: 1280px) {
+  .menuHamburguesa {
+    display: none;
+    visibility: hidden;
+  }
+  .categoriasMobile {
+    display: none;
+    visibility: hidden;
+  }
+}
+@media only screen and (max-width: 1279px) {
+  .categorias {
+    display: none;
+    visibility: hidden;
+  }
+  .coverLinks {
+    display: none;
+    visibility: hidden;
+  }
+  .scroll {
+    display: none;
+    visibility: hidden;
+  }
+  .footerLinks {
+    display: none;
+    visibility: hidden;
+  }
+  .contacto {
+    flex-direction: column;
+  }
+  .contactoFormulario {
+    width: 100%;
+  }
+  .contactoInfo {
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* #left {
+    margin: 0;
+  }
+
+  #right {
+    margin: 0;
+  } */
+  .tarjetaTexto {
+    font-size: 30px;
+  }
+  .whatsappIcon {
+    bottom: 6%;
+    right: 10%;
+  }
+  .aboutUs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .video h1 {
+    font-weight: 500;
+    font-size: 25px;
+  }
+  .coverLogo img {
+    height: 100px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .coverIzq {
+    text-align: center;
+    justify-content: center;
+  }
+  .coverDer {
+    text-align: center;
+    justify-content: center;
+  }
+  .separador p {
+    font-size: 18px;
+  }
+  .informativo {
+    padding: 0;
+  }
+}
+.botonMarron, .botonVerde, .botonRosa {
+  display: flex;
+  justify-content: center;
+}
+
+.botonMarron button, .botonVerde button, .botonRosa button {
+  color: white;
+  padding-left: 100px;
+  padding-right: 100px;
+  border: none;
+}
+
+.botonMarron button {
+  background-color: #e2b995;
+  margin: 50px;
+}
+
+.botonVerde button {
+  background-color: #9cb8a0;
+  margin: 50px;
+}
+
+.botonRosa button {
+  background-color: #e7acaa;
+}
+
+.botonMarron button:hover, .botonVerde button:hover, .botonRosa button:hover {
+  color: white;
+  border: none;
+}
+
+.botonMarron button:hover {
+  background-color: #f5c8a1;
+}
+
+.botonVerde button:hover {
+  background-color: #b5d7ba;
+}
+
+.botonRosa button:hover {
+  background-color: #fcbcba;
+}
+
+/* Menu hamburguesa, solo resoluciones bajas ---------------------------------------------------------*/
+.menuHamburguesa {
+  padding: 0 31px;
+  height: 81px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: -1px;
+  z-index: 3;
+}
+.menuHamburguesa .menuEnlaces {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  background-color: #ffffff;
+  display: grid;
+  place-items: center;
+  clip-path: circle(0% at top left);
+  transition: clip-path 0.4s;
+  z-index: 1;
+}
+.menuHamburguesa .menuEnlaces .menuCerrar {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 6.5%;
+  top: 3.5%;
+}
+.menuHamburguesa .menuEnlaces .menuEnlace {
+  text-decoration: none;
+  z-index: 1;
+}
+.menuHamburguesa .menuEnlaces .menuEnlaces:target {
+  clip-path: circle(150% at top left);
+}
+.menuHamburguesa .menuEnlaces p {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  border-radius: 3px;
+  padding: 10px;
+  width: 250px;
+  text-align: center;
+  background-color: #e2b995;
+}
+.menuHamburguesa .menuEnlaces:target {
+  clip-path: circle(150% at top left);
+}
+
+.menuHamburguesa img {
+  height: 50px;
+}
+
+#menuImg {
+  height: 25px;
+}
+
+/*Common para los 2 tipos de header ---------------------------------------------------------------------------*/
+.coverLinks, .scroll, .headerPages {
+  /* Efecto transición colores en links */
+  /* Diferente para Inicio */
+}
+.coverLinks .linkUnderlined a,
+.coverLinks .linkInicio a, .scroll .linkUnderlined a,
+.scroll .linkInicio a, .headerPages .linkUnderlined a,
+.headerPages .linkInicio a {
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+  font-weight: 700;
+}
+.coverLinks .linkUnderlined a, .scroll .linkUnderlined a, .headerPages .linkUnderlined a {
+  background-image: linear-gradient(to right, #9cb8a0, #9cb8a0 50%, rgb(49, 49, 49) 50%);
+}
+.coverLinks .linkUnderlined a:before, .scroll .linkUnderlined a:before, .headerPages .linkUnderlined a:before {
+  content: "";
+  background: #9cb8a0;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+.coverLinks .linkUnderlined a:hover, .scroll .linkUnderlined a:hover, .headerPages .linkUnderlined a:hover {
+  background-position: 0;
+}
+.coverLinks .linkUnderlined a:hover::before, .scroll .linkUnderlined a:hover::before, .headerPages .linkUnderlined a:hover::before {
+  width: 100%;
+}
+.coverLinks .linkInicio a, .scroll .linkInicio a, .headerPages .linkInicio a {
+  background-image: linear-gradient(to right, #000000, #000000 50%, #9cb8a0 50%);
+}
+
+.coverLinks, .scroll {
+  text-align: center;
+}
+
+.coverLinks ul li, .scroll ul li {
+  display: inline-block;
+  margin: 5px 10px;
+}
+
+/* Cambiar el color del bg del menu top al hacer scroll */
+#navTop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 18px;
+  transition: background-color 0.4s ease-out;
+  z-index: 3;
+}
+
+.scroll {
+  background-color: #ffffff;
+}
+
+/* Exclusivo header/cover del index --------------------------------------------------------------------------------- */
+.cover {
+  min-height: 100vh;
+}
+.cover .coverFondo {
+  /* Centrar caption del carousel */
+}
+.cover .coverFondo .coverZoom {
+  animation: zoom-in-zoom-out 40s ease infinite;
+}
+.cover .coverFondo .coverLogo {
+  margin: 30px;
+}
+.cover .coverFondo .coverLogo img {
+  height: 177px;
+}
+.cover .coverFondo .coverTexto p, .cover .coverFondo .coverTexto h1 {
+  font-weight: 700;
+}
+.cover .coverFondo .coverTexto p {
+  color: #9cb8a0;
+  font-size: 30px;
+}
+.cover .coverFondo .coverTexto h1 {
+  color: rgb(60, 60, 60);
+  font-size: 50px;
+}
+.cover .coverFondo .coverIzq {
+  text-align: start;
+  display: block;
+  justify-content: left;
+}
+.cover .coverFondo .coverDer {
+  text-align: end;
+  display: block;
+  justify-content: right;
+}
+.cover .coverFondo .coverBoton {
+  display: flex;
+  z-index: 1;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.cover .coverFondo .carousel-caption {
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: initial;
+}
+.cover .coverFondo img {
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* Header diferente para las otras páginas -------------------------------------------------------------------------- */
+.headerPages {
+  min-height: 50vh;
+  background-color: #f1f1f1;
+  background-image: url(../assets/img/coverpages.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.headerLogo {
+  height: 50vh;
+}
+
+/* FOOTER (Common para todas las pages) -------------------------------------------------------------------------*/
+footer a {
+  transition: all 0.5s ease-out;
+}
+
+footer a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+footer a:hover {
+  text-decoration: none;
+  color: rgb(143, 143, 143);
+}
+
+footer a:link {
+  text-decoration: none;
+  color: white;
+}
+
+/* Flechita up ------------------------------------------------------------------------------------------------*/
+.flechita a {
+  transition: all 0.5s ease-out;
+}
+.flechita a .flechitaFondo {
+  background-color: #e7acaa;
+}
+
+.flechita a:hover {
+  text-decoration: none;
+  color: rgb(143, 143, 143);
+}
+
+/* Redes sociales footer ---------------------------------------------------------------------------------------*/
+.redesFooter {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px;
+}
+
+.redesFooter a img {
+  width: 50px;
+}
+
+/* Menu de links en footer -------------------------------------------------------------------------------------*/
+.footerMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e7acaa;
+}
+.footerMenu .footerLogo {
+  text-align: center;
+  margin: 20px;
+}
+.footerMenu .footerLogo a img {
+  width: 50%;
+}
+.footerMenu .footerLinks ul li {
+  display: inline-block;
+  margin-right: 10px;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+.footerMenu .footerBottom {
+  text-align: center;
+  opacity: 0.5;
+}
+
+/* PÁGINA "PRODUCTOS" */
+/* ------------------------------------------------------------------------------- */
+#facial, #corporal, #capilar, #banio, #accesorios {
+  scroll-margin-top: 80px;
+}
+
+/* PÁGINA "SOBRE DE NOSOTROS" */
+/* ------------------------------------------------------------------------------- */
+.video {
+  max-height: 450px;
+}
+.video .video h1 {
+  font-weight: 700;
+  font-size: 60px;
+}
+
+.aboutUs {
+  max-width: 1200px;
+  display: grid;
+  grid-row-gap: 100px;
+  grid-template-areas: "txt0 txt0" "txt1 img1" "img2 txt2" "txt3 img3" "img4 txt4" "txt5 img5" "prof prof";
+}
+.aboutUs .faq0texto {
+  grid-area: txt0;
+  font-style: italic;
+}
+.aboutUs .faq1texto {
+  grid-area: txt1;
+  box-shadow: #e7acaa 10px 11px 0px, rgba(0, 0, 0, 0.25) 4px 4px 0px;
+}
+.aboutUs .faq2texto {
+  grid-area: txt2;
+  box-shadow: #e2b995 10px 11px 0px, rgba(0, 0, 0, 0.25) 4px 4px 0px;
+}
+.aboutUs .faq3texto {
+  grid-area: txt3;
+  box-shadow: #eae9e4 10px 11px 0px, rgba(0, 0, 0, 0.25) 4px 4px 0px;
+}
+.aboutUs .faq4texto {
+  grid-area: txt4;
+  box-shadow: #d3e0ce 10px 11px 0px, rgba(0, 0, 0, 0.25) 4px 4px 0px;
+}
+.aboutUs .faq5texto {
+  grid-area: txt5;
+  box-shadow: #9cb8a0 10px 11px 0px, rgba(0, 0, 0, 0.25) 4px 4px 0px;
+}
+.aboutUs .faq1img, .aboutUs .faq2img, .aboutUs .faq3img, .aboutUs .faq4img, .aboutUs .faq5img {
+  width: 300px;
+  border-radius: 25px;
+}
+.aboutUs .faq6img {
+  width: 150px;
+  border: 3px solid #e7acaa;
+  border-style: dashed;
+}
+.aboutUs .faq1img {
+  grid-area: img1;
+}
+.aboutUs .faq2img {
+  grid-area: img2;
+}
+.aboutUs .faq3img {
+  grid-area: img3;
+}
+.aboutUs .faq4img {
+  grid-area: img4;
+}
+.aboutUs .faq5img {
+  grid-area: img5;
+}
+.aboutUs .faq6img {
+  grid-area: img6;
+}
+.aboutUs .faqProfile {
+  grid-area: prof;
+  border-radius: 25px;
+}
+
+/* PÁGINA "PREGUNTAS FRECUENTES" */
+/* ------------------------------------------------------------------------------- */
+.faq {
+  max-width: 1200px;
+  background-color: #eae9e4;
+}
+.faq .faqAclaracion {
+  font-style: italic;
+}
+
+/* PÁGINA "CONTACTO" */
+/* ------------------------------------------------------------------------------- */
+.contacto {
+  max-width: 1200px;
+}
+
+.contactoFormulario {
+  background-color: #eae9e4;
+  width: 65%;
+}
+
+.contactoFormulario h2 {
+  font-family: "Pacifico", cursive;
+}
+
+form div textarea {
+  height: 100px;
+}
+
+#genero, #suscribirse, ::placeholder {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #757575;
+}
+
+.contactoInfo {
+  max-width: 35%;
+  background-color: #e7acaa;
+  color: white;
+}
+
+.contactoInfo ul li {
+  width: 100%;
+  list-style-type: none;
+}
+
+.contactoInfo img {
+  max-width: 20px;
+  max-height: 20px;
+  margin: 5px;
+}
+
+.mapa {
+  max-width: 1200px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 1920px;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Separador ------------------------------------------------------------------------------------------------*/
+.separador {
+  background-color: #e2b995;
+}
+
+/* Productos destacados ----------------------------------------------------------------------------------------*/
+.catalogo .dontOverflow {
+  overflow: hidden;
+  max-width: 300px;
+  max-height: 300px;
+  margin: 0 auto;
+}
+.catalogo .dontOverflow .catalogoImagen {
+  transition: 1s;
+}
+.catalogo .dontOverflow .catalogoImagen:hover {
+  transform: scale(1.1);
+}
+.catalogo .carrito {
+  height: 30px;
+  width: 30px;
+  transition: 0.5s ease;
+}
+.catalogo .carrito:hover {
+  filter: brightness(0.75);
+}
+
+/* Categorías selector ------------------------------------------------------------------------------------- */
+.categorias {
+  display: flex;
+  width: 100%;
+  height: 430px;
+}
+
+.categorias img {
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: 0.5s ease;
+}
+
+.categorias img:hover {
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+.categorias a {
+  display: contents;
+}
+
+/* Categorías mobile -----------------------------------------------------------------------------------------*/
+.categoriasMobile {
+  width: 100%;
+  max-height: 450px;
+  position: relative;
+  display: flex;
+  overflow: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.categoriasMobile img {
+  width: 100%;
+  left: 0;
+  object-fit: cover;
+  border-radius: 5px;
+  scroll-snap-align: center;
+}
+
+.categoriasMobile a {
+  display: contents;
+}
+
+/* Sección informativa ----------------------------------------------------------------------------------------------- */
+.informativo {
+  background-color: #f5f5f5;
+  padding: 30px;
+}
+.informativo .informativoCaja {
+  letter-spacing: 0.5px;
+}
+.informativo .informativoCaja .informativoIcono img {
+  width: 50px;
+  margin: 50px;
+}
+.informativo .informativoCaja .informativoTexto h3 {
+  font-size: 18px;
+}
+.informativo .informativoCaja .informativoTexto p {
+  margin-bottom: 0px;
+  opacity: 0.75;
+}
+
+/* Tarjetas promoción y acerca de nosotros --------------------------------------------------------------------------*/
+.tarjetas {
+  padding-top: 50px;
+}
+.tarjetas .tarjetasCaja {
+  margin: 0 auto;
+}
+.tarjetas .tarjetasCaja .tarjetaImagen {
+  display: flex;
+  align-items: center;
+}
+.tarjetas .tarjetasCaja .tarjetaImagen img {
+  margin: 50px;
+}
+.tarjetas .tarjetasCaja .tarjetaTexto {
+  letter-spacing: -0.05rem;
+  font-size: 40px;
+  text-align: center;
+  margin: 50px;
+  font-weight: 700;
+}
+.tarjetas .tarjetasCaja .tarjetaTexto .tarjetaSpan1 {
+  color: #e2b995;
+}
+.tarjetas .tarjetasCaja .tarjetaTexto .tarjetaSpan2 {
+  color: #9cb8a0;
+}
+.tarjetas .tarjetasCaja .tarjetaTexto p {
+  text-align: center;
+}
+.tarjetas .tarjetasCaja .tarjetaDescripcion {
+  margin: 30px;
+}
+
+/* Sección testimonios ----------------------------------------------------------------------------------------- */
+.testimonios .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.testimonios .col-lg-4 p {
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+}
+
+.testimonios .testimoniosImg {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+}
+.testimonios .estrellas {
+  width: 99px;
+  height: 30px;
+  margin: 10px;
+}
+
+/* Instagram -------------------------------------------------------------------------------------------------*/
+.insta {
+  display: block;
+  background-image: url(../assets/img/instaBack.png);
+  background-size: cover;
+  background-position: center;
+}
+.insta .instaCaja {
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  max-width: 325px;
+  margin: 0 auto;
+  background-color: #e7acaa;
+  margin-bottom: 30px;
+  border-radius: 3px;
+}
+.insta .instaCaja h2 {
+  padding: 20px;
+  color: white;
+  font-weight: 700;
+}
+
+/* Icono Whats App ---------------------------------------------------------------------------------------------*/
+.whatsappIcon {
+  position: fixed;
+  bottom: 3%;
+  right: 3%;
+}
+
+.whatsappIcon img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Esto es para el efecto zoom del cover del index */
+/* ------------------------------------------------------------------------------- */
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+/* MEDIA QUERIES (RESPONSIVE) */
+/* ------------------------------------------------------------------------------- */
+@media only screen and (min-width: 1280px) {
+  .menuHamburguesa {
+    display: none;
+    visibility: hidden;
+  }
+  .categoriasMobile {
+    display: none;
+    visibility: hidden;
+  }
+}
+@media only screen and (max-width: 1279px) {
+  .categorias {
+    display: none;
+    visibility: hidden;
+  }
+  .coverLinks {
+    display: none;
+    visibility: hidden;
+  }
+  .scroll {
+    display: none;
+    visibility: hidden;
+  }
+  .footerLinks {
+    display: none;
+    visibility: hidden;
+  }
+  .contacto {
+    flex-direction: column;
+  }
+  .contactoFormulario {
+    width: 100%;
+  }
+  .contactoInfo {
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* #left {
+    margin: 0;
+  }
+
+  #right {
+    margin: 0;
+  } */
+  .tarjetaTexto {
+    font-size: 30px;
+  }
+  .whatsappIcon {
+    bottom: 6%;
+    right: 10%;
+  }
+  .aboutUs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .video h1 {
+    font-weight: 500;
+    font-size: 25px;
+  }
+  .coverLogo img {
+    height: 100px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .coverIzq {
+    text-align: center;
+    justify-content: center;
+  }
+  .coverDer {
+    text-align: center;
+    justify-content: center;
+  }
+  .separador p {
+    font-size: 18px;
+  }
+  .informativo {
+    padding: 0;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

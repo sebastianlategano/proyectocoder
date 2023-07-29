@@ -1,0 +1,224 @@
+/* Menu hamburguesa, solo resoluciones bajas ---------------------------------------------------------*/
+.menuHamburguesa {
+    padding: 0 31px;
+    height: 81px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: -1px;
+    z-index: 3;
+
+    .menuEnlaces {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        right: 0;
+        background-color: #ffffff;
+        display: grid;
+        place-items: center;
+        clip-path: circle(0% at top left);
+        transition: clip-path .4s;
+        z-index: 1;
+
+        .menuCerrar {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 6.5%;
+            top: 3.5%;
+        }
+
+        .menuEnlace {
+            text-decoration: none;
+            z-index: 1;
+        }
+
+        .menuEnlaces:target {
+            clip-path: circle(150% at top left);
+        }
+    }
+
+    .menuEnlaces p {
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+        border-radius: 3px;
+        padding: 10px;
+        width: 250px;
+        text-align: center;
+        background-color: #e2b995;
+    }
+
+    .menuEnlaces:target {
+        clip-path: circle(150% at top left);
+    }
+}
+
+.menuHamburguesa img {
+    height: 50px;
+}
+
+#menuImg {
+    height: 25px;
+}
+
+/*Common para los 2 tipos de header ---------------------------------------------------------------------------*/
+
+.coverLinks, .scroll, .headerPages {
+    /* Efecto transición colores en links */
+    .linkUnderlined a,
+    .linkInicio a {
+        background-size: 200% 100%;
+        background-position: -100%;
+        display: inline-block;
+        padding: 5px 0;
+        position: relative;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 0.3s ease-in-out;
+        font-weight: 700;
+    }
+
+    .linkUnderlined a {
+        background-image: linear-gradient(to right,
+                #9cb8a0,
+                #9cb8a0 50%,
+                rgb(49, 49, 49) 50%);
+    }
+
+    .linkUnderlined a:before {
+        content: '';
+        background: #9cb8a0;
+        display: block;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 3px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .linkUnderlined a:hover {
+        background-position: 0;
+    }
+
+    .linkUnderlined a:hover::before {
+        width: 100%;
+    }
+
+    /* Diferente para Inicio */
+    .linkInicio a {
+        background-image: linear-gradient(to right,
+                #000000,
+                #000000 50%,
+                #9cb8a0 50%);
+    }
+}
+
+.coverLinks, .scroll {
+    text-align: center;
+}
+
+.coverLinks ul li, .scroll ul li {
+    display: inline-block;
+    margin: 5px 10px;
+}
+
+/* Cambiar el color del bg del menu top al hacer scroll */
+#navTop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 18px;
+    transition: background-color 0.4s ease-out;
+    z-index: 3;
+}
+
+.scroll {
+    background-color: #ffffff;
+}
+
+/* Exclusivo header/cover del index --------------------------------------------------------------------------------- */
+.cover {
+    min-height: 100vh;
+
+    .coverFondo {
+
+        .coverZoom {
+            animation: zoom-in-zoom-out 40s ease infinite;
+        }
+
+        .coverLogo {
+            margin: 30px;
+        }
+
+        .coverLogo img {
+            height: 177px;
+        }
+
+        .coverTexto p, .coverTexto h1 {
+            font-weight: 700;
+        }
+
+        .coverTexto p {
+            color: #9cb8a0;
+            font-size: 30px;
+        }
+
+        .coverTexto h1 {
+            color: rgb(60, 60, 60);
+            font-size: 50px;
+        }
+
+        .coverIzq {
+            text-align: start;
+            display: block;
+            justify-content: left;
+        }
+
+        .coverDer {
+            text-align: end;
+            display: block;
+            justify-content: right;
+        }
+
+        .coverBoton {
+            display: flex;
+            z-index: 1;
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+
+        /* Centrar caption del carousel */
+        .carousel-caption {
+            top: 50%;
+            transform: translateY(-50%);
+            bottom: initial;
+        }
+    }
+
+    .coverFondo img {
+        height: 100vh;
+        object-fit: cover;
+    }
+
+}
+
+/* Header diferente para las otras páginas -------------------------------------------------------------------------- */
+.headerPages {
+    min-height: 50vh;
+    background-color: #f1f1f1;
+    background-image: url(../assets/img/coverpages.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.headerLogo {
+    height: 50vh;
+}

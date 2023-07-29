@@ -1,0 +1,76 @@
+/* FOOTER (Common para todas las pages) -------------------------------------------------------------------------*/
+footer a {
+    transition: all 0.5s ease-out;
+}
+  
+footer a:visited {
+    text-decoration: none;
+    color: white;
+}
+  
+footer a:hover {
+    text-decoration: none;
+    color: rgb(143, 143, 143);
+}
+  
+footer a:link {
+    text-decoration: none;
+    color: white;
+}
+  
+/* Flechita up ------------------------------------------------------------------------------------------------*/
+.flechita a {
+    transition: all 0.5s ease-out;
+
+    .flechitaFondo {
+        background-color: #e7acaa;
+    }
+}
+  
+.flechita a:hover {
+    text-decoration: none;
+    color: rgb(143, 143, 143);
+}
+
+/* Redes sociales footer ---------------------------------------------------------------------------------------*/
+
+.redesFooter {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px;
+}
+  
+.redesFooter a img {
+    width: 50px;
+}
+  
+/* Menu de links en footer -------------------------------------------------------------------------------------*/
+.footerMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e7acaa;
+
+    .footerLogo {
+        text-align: center;
+        margin: 20px;
+    }
+      
+    .footerLogo a img {
+        width: 50%;
+    }
+
+    .footerLinks ul li {
+        display: inline-block;
+        margin-right: 10px;
+        color: white;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+
+    .footerBottom {
+        text-align: center;
+        opacity: 0.5;
+    }
+}

@@ -1,0 +1,42 @@
+.botonMarron , .botonVerde , .botonRosa {
+    display: flex;
+    justify-content: center;
+}
+  
+.botonMarron button , .botonVerde button , .botonRosa button {
+    color: white;
+    padding-left: 100px;
+    padding-right: 100px;
+    border: none;
+}
+  
+.botonMarron button{
+    background-color: #e2b995;
+    margin: 50px;
+}
+  
+.botonVerde button {
+    background-color: #9cb8a0;
+    margin: 50px;
+}
+  
+.botonRosa button {
+    background-color: #e7acaa;
+}
+  
+.botonMarron button:hover , .botonVerde button:hover , .botonRosa button:hover {
+    color: white;
+    border: none;
+}
+  
+.botonMarron button:hover {
+    background-color: #f5c8a1;
+}
+  
+.botonVerde button:hover {
+    background-color: #b5d7ba;
+}
+  
+.botonRosa button:hover {
+    background-color: #fcbcba;
+}
