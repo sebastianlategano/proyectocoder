@@ -71,7 +71,12 @@
       <div class="contactoFormulario p-5">
         <h2 class="mb-4">Contáctanos</h2>
         
-        <form name="contactoLegioma" method="POST" netlify>
+        <form name="contactoLegioma" method="POST" netlify netlify-honeypot="bot-field">
+          <p class="hidden">
+            <label>
+              Don’t fill this out if you’re human: <input name="bot-field" />
+            </label>
+          </p>
           <div>
             <input class="text-center w-75 rounded m-3 p-2 border-0 shadow" type="text" id="nombre" name="nombre" required placeholder="Nombre">
           </div>
