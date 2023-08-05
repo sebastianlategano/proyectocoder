@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sobre nosotros</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="shortcut icon" href="assets/img/favicon.png">
@@ -14,48 +15,49 @@
 
   <div id="home"></div>
 
-  <!-- Menu hamburguesa y logo, solo para moviles (resoluciones pequenias) -------------------------------------------------->
-  <!-- Si pongo este nav dentro del header o de un <section>, no funciona el position: sticky. No me gustó el de bootstrap -->
-  <nav class="menuHamburguesa">
-      <a href="#menuDesplegable">
-        <img src="../assets/img/menu.png" alt="Menu hamburguesa" id="menuImg">
-      </a>
-      <a href="../index.html">
-        <img src="../assets/img/logo.png" alt="Logo">
-      </a>
-
-      <div class="menuEnlaces" id="menuDesplegable">
-        <a href="../index.html" class="menuEnlace"><p>Inicio</p></a>
-        <a href="producto.html" class="menuEnlace"><p>Productos</p></a>
-        <a href="aboutus.html" class="menuEnlace"><p>Sobre nosotros</p></a>
-        <a href="faq.html" class="menuEnlace"><p>Preguntas frecuentes</p></a>
-        <a href="contacto.html" class="menuEnlace"><p>Contacto</p></a>
-      </div>
-  </nav>
-
-  <!-- HEADER ----------------------------------------------------------------------------------------------------------->
+  <!-- Nav mobile ----------------------------------------------------------------------------------------------------------->
   <header>
-    <section class="headerPages">
+    <nav class="menuHamburguesa" id="hambTop">
+      <a href="#menuDesplegable"><img src="../assets/img/menu.png" alt="Menu hamburguesa" id="menuImg"></a>
+      <div class="menuEnlaces" id="menuDesplegable">
+        <div class="menuCerrar">
+          <a href="#a"><img src="../assets/img/menu.png" alt="Menu hamburguesa" id="menuImg"></a>
+        </div>
+        <div class="miniLogo">
+          <img src="../assets/img/logo.png" alt="">
+        </div>
+        
+        <a href="../index.html" class="menuEnlace"><p class="linkComun"><span class="nose"><img src="../assets/img/hambHome5.png" alt=""></span>Inicio</p></a>
+        <a href="producto.html" class="menuEnlace"><p class="linkComun"><span class="nose"><img src="../assets/img/hambProductos.png" alt=""></span>Productos</p></a>
+        <a href="aboutus.html" class="menuEnlace"><p class="linkResaltado"><span class="nose"><img src="../assets/img/hambAboutUs.png" alt=""></span>Sobre nosotros</p></a>
+        <a href="faq.html" class="menuEnlace"><p class="linkComun"><span class="nose"><img src="../assets/img/hambFaq.png" alt=""></span>Preguntas frecuentes</p></a>
+        <a href="contacto.html" class="menuEnlace"><p class="linkComun"><span class="nose"><img src="../assets/img/hambContacto.png" alt=""></span>Contacto</p></a>
+      </div>
+    </nav>
+  </header>
 
+  <!-- NAV Desktop ----------------------------------------------------------------------------------------------------------->
+
+  <section class="headerPages">
+    <header>
       <nav class="coverLinks" id="navTop">
         <ul class="linkUnderlined">
           <li><a href="producto.html">Productos</li></a>
-          <li><a href="aboutus.html">Sobre nosotros</li></a>
-          <li class="linkInicio"><a href="../index.html">Inicio</li></a>
+          <li class="linkInicio"><a href="aboutus.html">Sobre nosotros</li></a>
+          <li><a href="../index.html">Inicio</li></a>
           <li><a href="faq.html">Preguntas frecuentes</li></a>
           <li><a href="contacto.html">Contacto</li></a>
         </ul>
       </nav>
-
-      <div class="headerLogo justify-content-center d-flex flex-column align-items-center">
-        <a href="../index.html"><img src="../assets/img/logo.png" alt="Logo" class="m-4"></a>
-        <div class="coverTexto text-center">
-          <h1>Sobre nosotros</h1>
-        </div>
+    </header>
+    <div class="headerLogo justify-content-center d-flex flex-column align-items-center">
+      <a href="../index.html"><img src="../assets/img/logo.png" alt="Logo" class="m-4"></a>
+      <div class="coverTexto text-center animate__animated animate__fadeInUp animate__delay-1s">
+        <h1>Sobre nosotros</h1>
       </div>
+    </div>
+  </section>
 
-    </section>
-  </header>
 
   <!-- MAIN -->
   <main>
@@ -71,7 +73,7 @@
     </section>
 
     <!-- Texto Acerca de nosotros ---------------------------------------------------------------------------------------->
-    <section class="aboutUs text-center mx-auto align-items-center">
+    <section class="aboutUs mx-auto align-items-center">
       <p class="faq0texto">
         Bienvenidos a Legioma natural, tu destino para la belleza natural y saludable. <br>
         Nos enorgullece ofrecerte una amplia gama de productos cosméticos naturales, creados con pasión y dedicación <br>para cuidar tu piel de la manera más suave y efectiva posible.
@@ -79,7 +81,7 @@
       <img class="faq1img mx-auto" src="../assets/img/aboutus1.jpg" alt="">
       <div class="faq1texto rounded">
         <h3>Ingredientes de calidad</h3>
-      <p class="m-5">
+      <p class="m-2 m-sm-3 m-md-5">
         En Legioma natural, creemos en la belleza que proviene de la naturaleza. Nuestro compromiso es
         proporcionar productos que te hagan sentir bien tanto por dentro como por fuera, utilizando ingredientes
         naturales de alta calidad cuidadosamente seleccionados.
@@ -87,7 +89,7 @@
       <img class="faq2img mx-auto" src="../assets/img/aboutus2.jpg" alt="">
       <div class="faq2texto rounded">
         <h3>Sin químicos</h3>
-      <p class="m-5">
+      <p class="m-2 m-sm-3 m-md-5">
         Nos esforzamos por mantener nuestros productos libres de
         químicos agresivos, toxinas y ingredientes sintéticos dañinos, para que puedas disfrutar de una experiencia de
         cuidado personal segura y confiable.
@@ -95,14 +97,14 @@
       <img class="faq3img mx-auto" src="../assets/img/aboutus3.jpg" alt="">
       <div class="faq3texto rounded">
       <h3>Envases sustentables</h3>
-      <p class="m-5">
+      <p class="m-2 m-sm-3 m-md-5">
         Nos comprometemos a utilizar envases y embalajes
         eco-amigables, minimizando así nuestro impacto en el medio ambiente.
       </p></div>
       <img class="faq4img mx-auto" src="../assets/img/aboutus4.jpg" alt="">
       <div class="faq4texto rounded">
         <h3>Nuestro compromiso</h3>
-      <p class="m-5">
+      <p class="m-2 m-sm-3 m-md-5">
         En Legioma natural, creemos en el empoderamiento a través del cuidado personal. Queremos que te sientas
         maravillosamente bien al usar nuestros productos y que disfrutes de una experiencia que va más allá de los
         resultados visibles en tu piel. Nuestro objetivo es que cada momento que dediques a ti mismo(a) sea una
@@ -111,13 +113,13 @@
       <img class="faq5img mx-auto" src="../assets/img/crueltyfree.png" alt="Cruelty free logo">
       <div class="faq5texto rounded">
         <h3>Apto Vegan</h3>
-      <p class="m-5">
+      <p class="m-2 m-sm-3 m-md-5">
         Creemos que la belleza puede ser alcanzada sin causar sufrimiento, y nos esforzamos por marcar la diferencia en la industria al proporcionar productos que son amigables tanto para ti como para los animales. 
       </p></div>
       
       <div class="shadow w-100 d-flex flex-column mx-auto justify-content-center faqProfile mb-5">
-        <img class="faq6img mx-auto rounded-circle mt-5" src="../assets/img/profile.jpg" alt="Foto de perfil">
-        <p class="faq6texto text-center m-5 lead">
+        <img class="faq6img rounded-circle mt-2 mt-sm-3 mt-md-5 mx-auto" src="../assets/img/profile.jpg" alt="Foto de perfil">
+        <p class="faq6texto text-center m-2 m-sm-3 m-md-5 lead">
           Gracias por visitar Legioma natural. Esperamos que disfrutes explorando nuestra gama de productos
           naturales y que encuentres aquellos que se adapten perfectamente a tus necesidades. Si tienes alguna pregunta o
           necesitas asesoramiento, no dudes en contactarnos. Únete a nosotros en
@@ -169,11 +171,19 @@
   </footer>
 
 
-  <!-- Script cambia color del fondo del menu top -->
+  <!-- Script cambia color del fondo del menu top, tanto en version mobile como en version desktop-->
   <script type="text/javascript">
     window.onscroll = () => {
-      const nav = document.querySelector('#navTop');
-      if (this.scrollY <= 10) nav.className = 'coverLinks'; else nav.className = 'scroll';
+      const navTop = document.querySelector('#navTop');
+      const hambTop = document.querySelector('#hambTop');
+  
+      if (this.scrollY <= 10) {
+        navTop.className = 'coverLinks';
+        hambTop.className = 'menuHamburguesa';
+      } else {
+        navTop.className = 'scroll';
+        hambTop.className = 'hambScroll';
+      }
     };
   </script>
 

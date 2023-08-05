@@ -71,10 +71,17 @@
         display: none;
         visibility: hidden;
     }
+    #nombre , #email , #genero, #mensaje {
+        width: 75%;
+    }
 
 }
 
 @media only screen and (max-width: 768px) {
+
+    #nombre , #email , #genero , #mensaje {
+        width: 100%;
+    }
     /* #left {
       margin: 0;
     }
@@ -143,6 +150,10 @@
     .tarjetaTexto {
         margin-top: 50px;
     }
+    .faq details p {
+        font-size: 18px;
+    }
+
 }
 
 @media only screen and (max-width: 480px) {
@@ -171,7 +182,6 @@
         padding-left: 50px;
         padding-right: 50px;
         margin: 0px;
-        margin-bottom: 30px;
     }
     .tarjetaTexto {
         font-size: 30px;
@@ -193,6 +203,11 @@
         width: 196px;
     }
 
+
+}
+
+@media only screen and (max-width: 480px) {
+
 }
 
 @media only screen and (max-width: 365px) {
@@ -203,5 +218,11 @@
             padding-bottom: 10px;
             font-size: 14px;
         }
-}
+    }
+
+    .faq details summary {
+        font-size: 15px;
+    }
+
+
 }

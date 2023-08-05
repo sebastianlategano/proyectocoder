@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Legioma natural</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
@@ -15,114 +16,118 @@
   
   <div id="home"></div>
 
-  <!-- Menu hamburguesa y logo, solo para moviles (resoluciones pequenias) -------------------------------------------------->
-  <!-- Si pongo este nav dentro del header o de un <section>, no funciona el position: sticky. No me gustó el de bootstrap -->
-  <nav class="menuHamburguesa" id="hambTop">
-      <a href="#menuDesplegable"><img src="assets/img/menu.png" alt="Menu hamburguesa" id="menuImg"></a>
-      <div class="menuEnlaces" id="menuDesplegable">
-        <div class="menuCerrar">
-          <a href="#a"><img src="assets/img/menu.png" alt="Menu hamburguesa" id="menuImg"></a>
-        </div>
-        <div class="miniLogo">
-          <img src="assets/img/logo.png" alt="">
-        </div>
-        
-        <a href="index.html" class="menuEnlace"><p><span class="nose"><img src="assets/img/hambHome5.png" alt=""></span>Inicio</p></a>
-        <a href="pages/producto.html" class="menuEnlace"><p><span class="nose"><img src="assets/img/hambProductos.png" alt=""></span>Productos</p></a>
-        <a href="pages/aboutus.html" class="menuEnlace"><p><span class="nose"><img src="assets/img/hambAboutUs.png" alt=""></span>Sobre nosotros</p></a>
-        <a href="pages/faq.html" class="menuEnlace"><p><span class="nose"><img src="assets/img/hambFaq.png" alt=""></span>Preguntas frecuentes</p></a>
-        <a href="pages/contacto.html" class="menuEnlace"><p><span class="nose"><img src="assets/img/hambContacto.png" alt=""></span>Contacto</p></a>
-      </div>
-  </nav>
-
-  <!-- HEADER // COVER ------------------------------------------------------------------------------------------------------>
+  <!-- Nav mobile --------------------------------------------------------------------------------------------------------->
   <header>
-    <section class="cover">
+    <nav class="menuHamburguesa" id="hambTop">
+        <a href="#menuDesplegable"><img src="assets/img/menu.png" alt="Menu hamburguesa" id="menuImg"></a>
+        <div class="menuEnlaces" id="menuDesplegable">
+          <div class="menuCerrar">
+            <a href="#a"><img src="assets/img/menu.png" alt="Menu hamburguesa" id="menuImg"></a>
+          </div>
+          <div class="miniLogo">
+            <img src="assets/img/logo.png" alt="">
+          </div>
+          <a href="index.html" class="menuEnlace"><p class="linkResaltado"><span class="nose"><img src="assets/img/hambHome5.png" alt=""></span>Inicio</p></a>
+          <a href="pages/producto.html" class="menuEnlace"><p class="linkComun"><span class="nose"><img src="assets/img/hambProductos.png" alt=""></span>Productos</p></a>
+          <a href="pages/aboutus.html" class="menuEnlace"><p class="linkComun"><span class="nose"><img src="assets/img/hambAboutUs.png" alt=""></span>Sobre nosotros</p></a>
+          <a href="pages/faq.html" class="menuEnlace"><p class="linkComun"><span class="nose"><img src="assets/img/hambFaq.png" alt=""></span>Preguntas frecuentes</p></a>
+          <a href="pages/contacto.html" class="menuEnlace"><p class="linkComun"><span class="nose"><img src="assets/img/hambContacto.png" alt=""></span>Contacto</p></a>
+        </div>
+    </nav>
+  </header>
 
+  <!-- COVER Nav Desktop --------------------------------------------------------------------------------------------------->
+
+  <section class="cover">
+    <header>
       <nav class="coverLinks" id="navTop">
         <ul class="linkUnderlined">
           <li><a href="pages/producto.html">Productos</li></a>
           <li><a href="pages/aboutus.html">Sobre nosotros</li></a>
-          <li><a href="#home">Inicio</li></a>
+          <li class="linkInicio"><a href="#home">Inicio</li></a>
           <li><a href="pages/faq.html">Preguntas frecuentes</li></a>
           <li><a href="pages/contacto.html">Contacto</li></a>
         </ul>
       </nav>
+    </header>
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-interval="7000" data-bs-ride="carousel" data-bs-touch="true">
+      
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      
+      <div class="carousel-inner">
 
-      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-interval="7000" data-bs-ride="carousel" data-bs-touch="true">
-        
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        
-        <div class="carousel-inner">
-
-          <div class="carousel-item active coverFondo">
-            <img src="assets/img/cover1.jpg" class="d-block w-100 coverZoom" alt="Envases de cosmética natural">
-            <div class="carousel-caption d-md-block">
-              <div class="coverLogo">
-                <a href="index.html"><img src="assets/img/logo.png" alt="Logo"></a>
-              </div>
-              <div class="coverTexto">
-                <p class="animate__animated animate__fadeInUp animate__delay-2s">natural & vegan</p>
-                <h1 class="animate__animated animate__fadeInUp animate__delay-1s">Cosmética natural</h1>
-              </div>
-              <div class="coverBoton justify-content-center animate__animated animate__fadeInUp">
-                <a href="pages/producto.html"><button type="button" class="btn btn-light btn-lg">Shop</button></a>
-              </div>
+        <div class="carousel-item active coverFondo">
+          <img src="assets/img/cover1.jpg" class="d-block w-100 coverZoom" alt="Envases de cosmética natural">
+          <div class="carousel-caption d-md-block">
+            <div class="coverLogo">
+              <a href="index.html"><img src="assets/img/logo.png" alt="Logo"></a>
+            </div>
+            <div class="coverTexto">
+              <p class="animate__animated animate__fadeInUp animate__delay-3s">natural & vegan</p>
+              <h1 class="animate__animated animate__fadeInUp animate__delay-2s">Cosmética natural</h1>
+            </div>
+            <div class="coverBoton justify-content-center animate__animated animate__fadeInUp animate__delay-1s">
+              <a href="pages/producto.html"><button type="button" class="btn btn-light btn-lg">Shop</button></a>
             </div>
           </div>
-
-          <div class="carousel-item coverFondo">
-            <img src="assets/img/cover2.jpg" class="d-block w-100 coverZoom" alt="Tabla con toallón y jabón">
-            <div class="carousel-caption d-md-block">
-              <div class="coverLogo justify-content-center">
-                <a href="index.html"><img src="assets/img/logo.png" alt="Logo"></a>
-              </div>
-              <div class="coverTexto coverIzq">
-                <p class="animate__animated animate__fadeInUp animate__delay-2s">conoce más sobre</p>
-                <h1 class="animate__animated animate__fadeInUp animate__delay-1s">Legioma</h1>
-              </div>
-              <div class="coverBoton coverIzq animate__animated animate__fadeInUp">
-                <a href="pages/aboutus.html"><button type="button" class="btn btn-light btn-lg">Sobre nosotros</button></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item coverFondo">
-            <img src="assets/img/cover3.jpg" class="d-block w-100 coverZoom" alt="Preparación natural">
-            <div class="carousel-caption d-md-block">
-              <div class="coverLogo">
-                <a href="index.html"><img src="assets/img/logo.png" alt="Logo"></a>
-              </div>
-              <div class="coverTexto coverDer">
-                <p class="animate__animated animate__fadeInUp animate__delay-2s">Haz tu pedido personalizado</p>
-                <h1 class="animate__animated animate__fadeInUp animate__delay-1s">Contáctanos</h1>
-              </div>
-              <div class="coverBoton coverDer animate__animated animate__fadeInUp">
-                <a href="pages/contacto.html"><button type="button" class="btn btn-light btn-lg">Escribir
-                    mensaje</button></a>
-              </div>
-            </div>
-          </div>
-
         </div>
 
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        <div class="carousel-item coverFondo">
+          <img src="assets/img/cover2.jpg" class="d-block w-100 coverZoom" alt="Tabla con toallón y jabón">
+          <div class="carousel-caption w-25 d-md-block">
+            <div class="coverLogo justify-content-center">
+              <a href="index.html"><img src="assets/img/logo.png" alt="Logo"></a>
+            </div>
+            <!-- <div class="coverTexto coverIzq"> -->
+            <div class="coverTexto">
+              <p class="animate__animated animate__fadeInUp animate__delay-3s">conoce más sobre</p>
+              <h1 class="animate__animated animate__fadeInUp animate__delay-2s">Legioma</h1>
+            </div>
+            <!-- <div class="coverBoton coverIzq animate__animated animate__fadeInUp"> -->
+            <div class="coverBoton animate__animated animate__fadeInUp animate__delay-1s d-flex justify-content-center">
+              <a href="pages/aboutus.html"><button type="button" class="btn btn-light btn-lg">Sobre nosotros</button></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item coverFondo">
+          <img src="assets/img/cover3.jpg" class="d-block w-100 coverZoom" alt="Preparación natural">
+          <div class="carousel-caption w150 d-md-block">
+            <div class="coverLogo justify-content-center">
+              <a href="index.html"><img src="assets/img/logo.png" alt="Logo"></a>
+            </div>
+            <!-- <div class="coverTexto coverDer"> -->
+            <div class="coverTexto">
+              <p class="animate__animated animate__fadeInUp animate__delay-3s">Haz tu pedido personalizado</p>
+              <h1 class="animate__animated animate__fadeInUp animate__delay-2s">Contáctanos</h1>
+            </div>
+            <!-- <div class="coverBoton coverDer animate__animated animate__fadeInUp"> -->
+            <div class="coverBoton animate__animated animate__fadeInUp animate__delay-1s d-flex justify-content-center">
+              <a href="pages/contacto.html"><button type="button" class="btn btn-light btn-lg">Escribir
+                  mensaje</button></a>
+            </div>
+          </div>
+        </div>
 
       </div>
 
-    </section>
-  </header>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+    </div>
+
+  </section>
+
 
   <!-- MAIN -->
   <main>
@@ -300,6 +305,7 @@
     <!-- Tarjetas promoción y acerca de nosotros --------------------------------------------------------------------->
     <section class="tarjetas">
       <div class="container-fluid row tarjetasCaja rounded-3 border shadow-lg">
+        
         <div class="col-lg-5 tarjetaImagen text-center">
           <img src="assets/img/accesoriospromo.jpg" alt="Accesorios para cosmética" class="img-fluid mx-auto">
         </div>
@@ -309,7 +315,7 @@
             Descubre la belleza de lo natural con nuestros accesorios para cosmética natural.
             Estamos comprometidos con la sostenibilidad, por lo que nos aseguramos de que cada accesorio que encuentres
             en nuestra tienda esté hecho con materiales amigables con el medio ambiente.</p>
-          <div class="botonMarron">
+          <div class="botonMarron mb-5" id="animacion">
             <a href="pages/producto.html#accesorios"><button type="button" class="btn btn-light btn-lg">Comprar</button></a>
           </div>
         </div>
@@ -318,18 +324,19 @@
 
     <section class="tarjetas">
       <div class="container-fluid row tarjetasCaja rounded-3 border shadow-lg">
-        <div class="col-lg-5 tarjetaImagen text-center">
-          <img src="assets/img/aboutusindex.jpg" alt="Cosméticos hechos con aloe" class="img-fluid mx-auto">
-        </div>
+
         <div class="col-lg-7 justify-content-center d-flex flex-column corrector">
           <h2 class="tarjetaTexto">Somos <span class="tarjetaSpan2">Legioma</span></h2>
           <p class="lead tarjetaDescripcion text-center">
             Conoce más acerca de nuestra pasión por la belleza natural. En nuestra empresa de cosmética, fusionamos la
             pureza de la naturaleza con la ciencia para brindarte productos seguros, efectivos y respetuosos con el
             medio ambiente. Descubre tu mejor versión, de manera natural.</p>
-          <div class="botonVerde">
+          <div class="botonVerde mb-5" data-aos="fade-up">
             <a href="pages/aboutus.html"><button type="button" class="btn btn-light btn-lg">Conocenos</button></a>
           </div>
+        </div>
+        <div class="col-lg-5 tarjetaImagen text-center">
+          <img src="assets/img/aboutusindex.jpg" alt="Cosméticos hechos con aloe" class="img-fluid mx-auto">
         </div>
       </div>
     </section>
@@ -571,7 +578,38 @@
 
   </footer>
 
+<!-- script chat gpt -->
+<script>
+  // Función para verificar si un elemento está en el área visible del viewport
+  function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
 
+  // Función para agregar la clase de animación cuando el div está en el área visible
+  function handleScrollAnimation() {
+    var div = document.getElementById('animacion');
+
+    if (isElementInViewport(div)) {
+      div.classList.add('animate__animated', 'animate__fadeIn'); // Puedes cambiar 'animate__bounce' por cualquier otra clase de animate.css
+      window.removeEventListener('scroll', handleScrollAnimation); // Detenemos la escucha del evento después de aplicar la animación
+    }
+  }
+
+  // Agregamos el evento de scroll para activar la animación
+  window.addEventListener('scroll', handleScrollAnimation);
+</script>
+
+  <!--Scripts para animaciones  -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+      AOS.init();
+  </script>
 
   <!-- Script cambia color del fondo del menu top, tanto en version mobile como en version desktop-->
   <script type="text/javascript">
@@ -587,12 +625,6 @@
         hambTop.className = 'hambScroll';
       }
     };
-  </script>
-  
-  <!-- Script para que el carrousel sea draggable en mobile -->
-  <script type="text/javascript">
-    var myCarousel = document.querySelector('#myCarousel')
-    var carousel = new bootstrap.Carousel(myCarousel)
   </script>
 
   <!-- SCRIPT BS -->

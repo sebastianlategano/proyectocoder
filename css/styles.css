@@ -101,7 +101,6 @@
 .menuHamburguesa .menuEnlaces p, .hambScroll .menuEnlaces p {
   font-size: 15px;
   /*color: white;*/
-  color: #3c3c3c;
   /*border-radius: 3px;*/
   padding: 10px;
   width: 250px;
@@ -111,6 +110,12 @@
   font-weight: 700;
   display: flex;
   align-items: center;
+}
+.menuHamburguesa .linkResaltado, .hambScroll .linkResaltado {
+  color: #e2b995;
+}
+.menuHamburguesa .linkComun, .hambScroll .linkComun {
+  color: #3c3c3c;
 }
 .menuHamburguesa .nose img, .hambScroll .nose img {
   width: 20px;
@@ -192,7 +197,7 @@
 .coverLinks .linkUnderlined a:hover::before, .scroll .linkUnderlined a:hover::before, .headerPages .linkUnderlined a:hover::before {
   width: 100%;
 }
-.coverLinks .linkUnderlined a[href="#home"], .coverLinks .linkUnderlined a[href="../index.html"], .scroll .linkUnderlined a[href="#home"], .scroll .linkUnderlined a[href="../index.html"], .headerPages .linkUnderlined a[href="#home"], .headerPages .linkUnderlined a[href="../index.html"] {
+.coverLinks .linkInicio a, .scroll .linkInicio a, .headerPages .linkInicio a {
   background-image: linear-gradient(to right, #000000, #000000 50%, #9cb8a0 50%);
 }
 
@@ -235,9 +240,6 @@
 .cover .coverFondo .coverLogo {
   margin: 30px;
 }
-.cover .coverFondo .coverTexto p, .cover .coverFondo .coverTexto h1 {
-  font-weight: 700;
-}
 .cover .coverFondo .coverTexto p {
   color: #9cb8a0;
 }
@@ -254,6 +256,10 @@
 }
 .cover .coverFondo img {
   object-fit: cover;
+}
+
+.coverTexto p, .coverTexto h1 {
+  font-weight: 700;
 }
 
 .coverIzq {
@@ -282,6 +288,11 @@
 
 .coverTexto h1 {
   color: #3c3c3c;
+}
+
+/*acomodar*/
+.w150 {
+  width: 120%;
 }
 
 /* FOOTER (Common para todas las pages) -------------------------------------------------------------------------*/
@@ -412,6 +423,9 @@ footer a:link {
   width: 150px;
   border: 3px solid #e7acaa;
   border-style: dashed;
+  vertical-align: center;
+  align-items: center;
+  margin: 0 auto;
 }
 .aboutUs .faq1img {
   grid-area: img1;
@@ -761,8 +775,14 @@ body {
     display: none;
     visibility: hidden;
   }
+  #nombre, #email, #genero, #mensaje {
+    width: 75%;
+  }
 }
 @media only screen and (max-width: 768px) {
+  #nombre, #email, #genero, #mensaje {
+    width: 100%;
+  }
   /* #left {
     margin: 0;
   }
@@ -822,6 +842,9 @@ body {
   .tarjetaTexto {
     margin-top: 50px;
   }
+  .faq details p {
+    font-size: 18px;
+  }
 }
 @media only screen and (max-width: 480px) {
   .coverIzq {
@@ -845,7 +868,6 @@ body {
     padding-left: 50px;
     padding-right: 50px;
     margin: 0px;
-    margin-bottom: 30px;
   }
   .tarjetaTexto {
     font-size: 30px;
@@ -873,6 +895,9 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 14px;
+  }
+  .faq details summary {
+    font-size: 15px;
   }
 }
 .animate__animated.animate__fadeInDown {
