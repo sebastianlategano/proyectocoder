@@ -1,34 +1,42 @@
 /* Menu hamburguesa, solo resoluciones bajas ---------------------------------------------------------*/
-.menuHamburguesa {
+.menuHamburguesa , .hambScroll {
     padding: 0 31px;
-    height: 81px;
-    background-color: white;
+    height: 71px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: sticky;
+    position: fixed;
     top: -1px;
     z-index: 3;
+    width: 100%;
 
     .menuEnlaces {
         position: fixed;
         left: 0;
         bottom: 0;
-        top: 0;
+        top: 70px;
         right: 0;
-        background-color: #ffffff;
+        /*barra lateral izq grande*/
+        background-color: rgba(255, 255, 255, 0.98);
         display: grid;
-        place-items: center;
-        clip-path: circle(0% at top left);
+        place-items: left;
+        /*clip-path: circle(0% at top left);*/
+        clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
         transition: clip-path .4s;
         z-index: 1;
 
         .menuCerrar {
-            position: absolute;
+            padding: 0 31px;
+            height: 71px;
+            /*barra arriba izq*/
+            background-color: rgba(255, 255, 255);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: -1px;
+            z-index: 3;
             width: 100%;
-            height: 100%;
-            left: 6.5%;
-            top: 3.5%;
         }
 
         .menuEnlace {
@@ -36,23 +44,46 @@
             z-index: 1;
         }
 
-        .menuEnlaces:target {
-            clip-path: circle(150% at top left);
-        }
+
+    }
+    .menuEnlaces img {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        height: 80px;
     }
 
+    .miniLogo {
+        width: 50%;
+        margin: 31px 0;
+        display: flex;
+        align-items: center;
+    }
     .menuEnlaces p {
-        font-size: 20px;
-        color: rgb(255, 255, 255);
-        border-radius: 3px;
+        font-size: 15px;
+        /*color: white;*/
+        color: $colorGrisOscuro;
+        /*border-radius: 3px;*/
         padding: 10px;
         width: 250px;
-        text-align: center;
-        background-color: #e2b995;
+        text-align: left;
+        /*background-color: $colorMarron;*/
+        width: 50%;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+    }
+
+    .nose img{
+        width: 20px;
+        height: 20px;
+        margin-left: 31px;
+        margin-right: 10px;
     }
 
     .menuEnlaces:target {
-        clip-path: circle(150% at top left);
+        /*clip-path: circle(150% at top left);*/
+        clip-path: polygon(-100% -100%,50% -100%,50% 100%,0% 100%);
     }
 }
 
@@ -64,12 +95,35 @@
     height: 25px;
 }
 
+/* PRUEBA */
+.menuHamburguesa {
+    background-color: rgba(0, 166, 255, 0);
+}
+
+.hambScroll {
+    /*barra arriba der*/
+    background-color: rgba(255, 255, 255);
+}
+
+.hambScroll img {
+    height: 50px;
+}
+
+#menuImg {
+    height: 25px;
+    /*Fondito de las 3 rayitas*/
+    background-color:  rgba(255, 3, 3, 0);
+}
+
+#hambTop {
+    transition: background-color 0.4s ease-out;
+}
+
 /*Common para los 2 tipos de header ---------------------------------------------------------------------------*/
 
 .coverLinks, .scroll, .headerPages {
     /* Efecto transición colores en links */
-    .linkUnderlined a,
-    .linkInicio a {
+    .linkUnderlined a {
         background-size: 200% 100%;
         background-position: -100%;
         display: inline-block;
@@ -110,11 +164,11 @@
     }
 
     /* Diferente para Inicio */
-    .linkInicio a {
+    .linkUnderlined a[href="#home"] , .linkUnderlined a[href="../index.html"]{
         background-image: linear-gradient(to right,
                 #000000,
                 #000000 50%,
-                #9cb8a0 50%);
+                $colorVerdeOscuro 50%);
     }
 }
 
@@ -141,7 +195,7 @@
 }
 
 .scroll {
-    background-color: #ffffff;
+    background-color: rgb(255, 255, 255, 0.97);
 }
 
 /* Exclusivo header/cover del index --------------------------------------------------------------------------------- */
@@ -158,34 +212,12 @@
             margin: 30px;
         }
 
-        .coverLogo img {
-            height: 177px;
-        }
-
         .coverTexto p, .coverTexto h1 {
             font-weight: 700;
         }
 
         .coverTexto p {
-            color: #9cb8a0;
-            font-size: 30px;
-        }
-
-        .coverTexto h1 {
-            color: rgb(60, 60, 60);
-            font-size: 50px;
-        }
-
-        .coverIzq {
-            text-align: start;
-            display: block;
-            justify-content: left;
-        }
-
-        .coverDer {
-            text-align: end;
-            display: block;
-            justify-content: right;
+            color: $colorVerdeOscuro;
         }
 
         .coverBoton {
@@ -204,16 +236,28 @@
     }
 
     .coverFondo img {
-        height: 100vh;
         object-fit: cover;
     }
 
 }
 
+.coverIzq {
+    text-align: start;
+    display: block;
+    justify-content: left;
+}
+
+.coverDer {
+    text-align: end;
+    display: block;
+    justify-content: right;
+}
+
+
+
 /* Header diferente para las otras páginas -------------------------------------------------------------------------- */
 .headerPages {
     min-height: 50vh;
-    background-color: #f1f1f1;
     background-image: url(../assets/img/coverpages.jpg);
     background-position: center;
     background-size: cover;
@@ -221,4 +265,8 @@
 
 .headerLogo {
     height: 50vh;
+}
+
+.coverTexto h1 {
+    color: $colorGrisOscuro;
 }

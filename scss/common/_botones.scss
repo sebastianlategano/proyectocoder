@@ -11,17 +11,17 @@
 }
   
 .botonMarron button{
-    background-color: #e2b995;
+    background-color: $colorMarron;
     margin: 50px;
 }
   
 .botonVerde button {
-    background-color: #9cb8a0;
+    background-color: $colorVerdeOscuro;
     margin: 50px;
 }
   
 .botonRosa button {
-    background-color: #e7acaa;
+    background-color: $colorRosa;
 }
   
 .botonMarron button:hover , .botonVerde button:hover , .botonRosa button:hover {
@@ -30,13 +30,13 @@
 }
   
 .botonMarron button:hover {
-    background-color: #f5c8a1;
+    background-color: $colorMarronHover;
 }
   
 .botonVerde button:hover {
-    background-color: #b5d7ba;
+    background-color: $colorVerdeHover;
 }
   
 .botonRosa button:hover {
-    background-color: #fcbcba;
+    background-color: $colorRosaHover;
 }

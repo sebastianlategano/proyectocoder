@@ -1,88 +1,4 @@
 @charset "UTF-8";
-/* MEDIA QUERIES (RESPONSIVE) */
-/* ------------------------------------------------------------------------------- */
-@media only screen and (min-width: 1280px) {
-  .menuHamburguesa {
-    display: none;
-    visibility: hidden;
-  }
-  .categoriasMobile {
-    display: none;
-    visibility: hidden;
-  }
-}
-@media only screen and (max-width: 1279px) {
-  .categorias {
-    display: none;
-    visibility: hidden;
-  }
-  .coverLinks {
-    display: none;
-    visibility: hidden;
-  }
-  .scroll {
-    display: none;
-    visibility: hidden;
-  }
-  .footerLinks {
-    display: none;
-    visibility: hidden;
-  }
-  .contacto {
-    flex-direction: column;
-  }
-  .contactoFormulario {
-    width: 100%;
-  }
-  .contactoInfo {
-    max-width: 100%;
-  }
-}
-@media only screen and (max-width: 768px) {
-  /* #left {
-    margin: 0;
-  }
-
-  #right {
-    margin: 0;
-  } */
-  .tarjetaTexto {
-    font-size: 30px;
-  }
-  .whatsappIcon {
-    bottom: 6%;
-    right: 10%;
-  }
-  .aboutUs {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
-  .video h1 {
-    font-weight: 500;
-    font-size: 25px;
-  }
-  .coverLogo img {
-    height: 100px;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .coverIzq {
-    text-align: center;
-    justify-content: center;
-  }
-  .coverDer {
-    text-align: center;
-    justify-content: center;
-  }
-  .separador p {
-    font-size: 18px;
-  }
-  .informativo {
-    padding: 0;
-  }
-}
 .botonMarron, .botonVerde, .botonRosa {
   display: flex;
   justify-content: center;
@@ -127,55 +43,84 @@
 }
 
 /* Menu hamburguesa, solo resoluciones bajas ---------------------------------------------------------*/
-.menuHamburguesa {
+.menuHamburguesa, .hambScroll {
   padding: 0 31px;
-  height: 81px;
-  background-color: white;
+  height: 71px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
+  position: fixed;
   top: -1px;
   z-index: 3;
+  width: 100%;
 }
-.menuHamburguesa .menuEnlaces {
+.menuHamburguesa .menuEnlaces, .hambScroll .menuEnlaces {
   position: fixed;
   left: 0;
   bottom: 0;
-  top: 0;
+  top: 70px;
   right: 0;
-  background-color: #ffffff;
+  /*barra lateral izq grande*/
+  background-color: rgba(255, 255, 255, 0.98);
   display: grid;
-  place-items: center;
-  clip-path: circle(0% at top left);
+  place-items: left;
+  /*clip-path: circle(0% at top left);*/
+  clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
   transition: clip-path 0.4s;
   z-index: 1;
 }
-.menuHamburguesa .menuEnlaces .menuCerrar {
-  position: absolute;
+.menuHamburguesa .menuEnlaces .menuCerrar, .hambScroll .menuEnlaces .menuCerrar {
+  padding: 0 31px;
+  height: 71px;
+  /*barra arriba izq*/
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: -1px;
+  z-index: 3;
   width: 100%;
-  height: 100%;
-  left: 6.5%;
-  top: 3.5%;
 }
-.menuHamburguesa .menuEnlaces .menuEnlace {
+.menuHamburguesa .menuEnlaces .menuEnlace, .hambScroll .menuEnlaces .menuEnlace {
   text-decoration: none;
   z-index: 1;
 }
-.menuHamburguesa .menuEnlaces .menuEnlaces:target {
-  clip-path: circle(150% at top left);
+.menuHamburguesa .menuEnlaces img, .hambScroll .menuEnlaces img {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  height: 80px;
 }
-.menuHamburguesa .menuEnlaces p {
-  font-size: 20px;
-  color: rgb(255, 255, 255);
-  border-radius: 3px;
+.menuHamburguesa .miniLogo, .hambScroll .miniLogo {
+  width: 50%;
+  margin: 31px 0;
+  display: flex;
+  align-items: center;
+}
+.menuHamburguesa .menuEnlaces p, .hambScroll .menuEnlaces p {
+  font-size: 15px;
+  /*color: white;*/
+  color: #3c3c3c;
+  /*border-radius: 3px;*/
   padding: 10px;
   width: 250px;
-  text-align: center;
-  background-color: #e2b995;
+  text-align: left;
+  /*background-color: $colorMarron;*/
+  width: 50%;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
 }
-.menuHamburguesa .menuEnlaces:target {
-  clip-path: circle(150% at top left);
+.menuHamburguesa .nose img, .hambScroll .nose img {
+  width: 20px;
+  height: 20px;
+  margin-left: 31px;
+  margin-right: 10px;
+}
+.menuHamburguesa .menuEnlaces:target, .hambScroll .menuEnlaces:target {
+  /*clip-path: circle(150% at top left);*/
+  clip-path: polygon(-100% -100%, 50% -100%, 50% 100%, 0% 100%);
 }
 
 .menuHamburguesa img {
@@ -186,15 +131,36 @@
   height: 25px;
 }
 
+/* PRUEBA */
+.menuHamburguesa {
+  background-color: rgba(0, 166, 255, 0);
+}
+
+.hambScroll {
+  /*barra arriba der*/
+  background-color: rgb(255, 255, 255);
+}
+
+.hambScroll img {
+  height: 50px;
+}
+
+#menuImg {
+  height: 25px;
+  /*Fondito de las 3 rayitas*/
+  background-color: rgba(255, 3, 3, 0);
+}
+
+#hambTop {
+  transition: background-color 0.4s ease-out;
+}
+
 /*Common para los 2 tipos de header ---------------------------------------------------------------------------*/
 .coverLinks, .scroll, .headerPages {
   /* Efecto transición colores en links */
   /* Diferente para Inicio */
 }
-.coverLinks .linkUnderlined a,
-.coverLinks .linkInicio a, .scroll .linkUnderlined a,
-.scroll .linkInicio a, .headerPages .linkUnderlined a,
-.headerPages .linkInicio a {
+.coverLinks .linkUnderlined a, .scroll .linkUnderlined a, .headerPages .linkUnderlined a {
   background-size: 200% 100%;
   background-position: -100%;
   display: inline-block;
@@ -226,7 +192,7 @@
 .coverLinks .linkUnderlined a:hover::before, .scroll .linkUnderlined a:hover::before, .headerPages .linkUnderlined a:hover::before {
   width: 100%;
 }
-.coverLinks .linkInicio a, .scroll .linkInicio a, .headerPages .linkInicio a {
+.coverLinks .linkUnderlined a[href="#home"], .coverLinks .linkUnderlined a[href="../index.html"], .scroll .linkUnderlined a[href="#home"], .scroll .linkUnderlined a[href="../index.html"], .headerPages .linkUnderlined a[href="#home"], .headerPages .linkUnderlined a[href="../index.html"] {
   background-image: linear-gradient(to right, #000000, #000000 50%, #9cb8a0 50%);
 }
 
@@ -253,7 +219,7 @@
 }
 
 .scroll {
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.97);
 }
 
 /* Exclusivo header/cover del index --------------------------------------------------------------------------------- */
@@ -269,29 +235,11 @@
 .cover .coverFondo .coverLogo {
   margin: 30px;
 }
-.cover .coverFondo .coverLogo img {
-  height: 177px;
-}
 .cover .coverFondo .coverTexto p, .cover .coverFondo .coverTexto h1 {
   font-weight: 700;
 }
 .cover .coverFondo .coverTexto p {
   color: #9cb8a0;
-  font-size: 30px;
-}
-.cover .coverFondo .coverTexto h1 {
-  color: rgb(60, 60, 60);
-  font-size: 50px;
-}
-.cover .coverFondo .coverIzq {
-  text-align: start;
-  display: block;
-  justify-content: left;
-}
-.cover .coverFondo .coverDer {
-  text-align: end;
-  display: block;
-  justify-content: right;
 }
 .cover .coverFondo .coverBoton {
   display: flex;
@@ -305,14 +253,24 @@
   bottom: initial;
 }
 .cover .coverFondo img {
-  height: 100vh;
   object-fit: cover;
+}
+
+.coverIzq {
+  text-align: start;
+  display: block;
+  justify-content: left;
+}
+
+.coverDer {
+  text-align: end;
+  display: block;
+  justify-content: right;
 }
 
 /* Header diferente para las otras páginas -------------------------------------------------------------------------- */
 .headerPages {
   min-height: 50vh;
-  background-color: #f1f1f1;
   background-image: url(../assets/img/coverpages.jpg);
   background-position: center;
   background-size: cover;
@@ -320,6 +278,10 @@
 
 .headerLogo {
   height: 50vh;
+}
+
+.coverTexto h1 {
+  color: #3c3c3c;
 }
 
 /* FOOTER (Common para todas las pages) -------------------------------------------------------------------------*/
@@ -334,7 +296,7 @@ footer a:visited {
 
 footer a:hover {
   text-decoration: none;
-  color: rgb(143, 143, 143);
+  color: #3c3c3c;
 }
 
 footer a:link {
@@ -349,10 +311,13 @@ footer a:link {
 .flechita a .flechitaFondo {
   background-color: #e7acaa;
 }
+.flechita a .flechitaFondo h2 {
+  font-size: 35px;
+}
 
 .flechita a:hover {
   text-decoration: none;
-  color: rgb(143, 143, 143);
+  color: #3c3c3c;
 }
 
 /* Redes sociales footer ---------------------------------------------------------------------------------------*/
@@ -503,7 +468,7 @@ form div textarea {
 #genero, #suscribirse, ::placeholder {
   font-weight: 600;
   font-size: 1.1rem;
-  color: #757575;
+  color: #3c3c3c;
 }
 
 .contactoInfo {
@@ -617,13 +582,17 @@ body {
 }
 .informativo .informativoCaja {
   letter-spacing: 0.5px;
+  display: flex;
+  padding: 20px;
+  justify-content: space-evenly;
 }
 .informativo .informativoCaja .informativoIcono img {
   width: 50px;
-  margin: 50px;
+  margin: 10px;
 }
 .informativo .informativoCaja .informativoTexto h3 {
   font-size: 18px;
+  margin: 0 auto;
 }
 .informativo .informativoCaja .informativoTexto p {
   margin-bottom: 0px;
@@ -641,14 +610,9 @@ body {
   display: flex;
   align-items: center;
 }
-.tarjetas .tarjetasCaja .tarjetaImagen img {
-  margin: 50px;
-}
 .tarjetas .tarjetasCaja .tarjetaTexto {
   letter-spacing: -0.05rem;
-  font-size: 40px;
   text-align: center;
-  margin: 50px;
   font-weight: 700;
 }
 .tarjetas .tarjetasCaja .tarjetaTexto .tarjetaSpan1 {
@@ -716,6 +680,7 @@ body {
   position: fixed;
   bottom: 3%;
   right: 3%;
+  z-index: 1;
 }
 
 .whatsappIcon img {
@@ -739,6 +704,55 @@ body {
 /* MEDIA QUERIES (RESPONSIVE) */
 /* ------------------------------------------------------------------------------- */
 @media only screen and (min-width: 1280px) {
+  .tarjetaTexto {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 1279px) {
+  .contacto {
+    flex-direction: column;
+  }
+  .contactoFormulario {
+    width: 100%;
+  }
+  .contactoInfo {
+    max-width: 100%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .tarjetaImagen img {
+    margin: 50px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .tarjetaImagen img {
+    margin-top: 50px;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .informativoTexto h3 {
+    width: 245px;
+  }
+  .coverZoom {
+    height: 100vh;
+  }
+  .coverLogo img {
+    height: 177px;
+  }
+  .coverTexto h1 {
+    font-size: 50px;
+  }
+  .coverTexto p {
+    font-size: 30px;
+  }
+  .hambScroll {
+    display: none;
+    visibility: hidden;
+  }
+  #hambTop {
+    display: none;
+    visibility: hidden;
+  }
   .menuHamburguesa {
     display: none;
     visibility: hidden;
@@ -748,7 +762,14 @@ body {
     visibility: hidden;
   }
 }
-@media only screen and (max-width: 1279px) {
+@media only screen and (max-width: 768px) {
+  /* #left {
+    margin: 0;
+  }
+
+  #right {
+    margin: 0;
+  } */
   .categorias {
     display: none;
     visibility: hidden;
@@ -765,26 +786,16 @@ body {
     display: none;
     visibility: hidden;
   }
-  .contacto {
-    flex-direction: column;
+  .coverZoom {
+    height: 100vh;
   }
-  .contactoFormulario {
-    width: 100%;
-  }
-  .contactoInfo {
-    max-width: 100%;
-  }
-}
-@media only screen and (max-width: 768px) {
-  /* #left {
-    margin: 0;
-  }
-
-  #right {
-    margin: 0;
-  } */
-  .tarjetaTexto {
+  .coverTexto h1 {
     font-size: 30px;
+    text-align: center;
+  }
+  .coverTexto p {
+    font-size: 15px;
+    text-align: center;
   }
   .whatsappIcon {
     bottom: 6%;
@@ -803,6 +814,14 @@ body {
   .coverLogo img {
     height: 100px;
   }
+  .tarjetaImagen img {
+    margin-top: 12px;
+  }
+}
+@media only screen and (min-width: 481px) {
+  .tarjetaTexto {
+    margin-top: 50px;
+  }
 }
 @media only screen and (max-width: 480px) {
   .coverIzq {
@@ -819,6 +838,49 @@ body {
   .informativo {
     padding: 0;
   }
+  .tarjetasCaja {
+    padding: 0px;
+  }
+  .botonMarron button, .botonVerde button, .botonRosa button {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0px;
+    margin-bottom: 30px;
+  }
+  .tarjetaTexto {
+    font-size: 30px;
+    margin-top: 30px;
+  }
+  .tarjetaSpan1 {
+    font-size: 30px;
+  }
+  .corrector {
+    padding: 0;
+  }
+  .informativoIcono img {
+    margin: 10px;
+  }
+  .informativoTexto p {
+    font-size: 12px;
+  }
+  .informativoTexto h3 {
+    width: 196px;
+  }
+}
+@media only screen and (max-width: 365px) {
+  .menuHamburguesa .menuEnlaces p, .hambScroll .menuEnlaces p {
+    padding: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+  }
+}
+.animate__animated.animate__fadeInDown {
+  --animate-duration: 6s;
+}
+
+:root {
+  --animate-delay: 0.2s;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,4 +1,14 @@
-@import "mediaqueries";
+$colorRosa: #e7acaa;
+$colorMarron: #e2b995;
+$colorVerdeClaro: #eae9e4;
+$colorVerdeMedio: #d3e0ce;
+$colorVerdeOscuro: #9cb8a0;
+$colorGrisClaro: #f5f5f5;
+$colorGrisOscuro: #3c3c3c;
+$colorMarronHover: #f5c8a1;
+$colorVerdeHover: #b5d7ba;
+$colorRosaHover: #fcbcba;
+
 @import "common/botones", "common/header", "common/footer";
 @import "pages/productos", "pages/aboutus", "pages/faq", "pages/contacto.scss";
 
@@ -15,7 +25,7 @@ body {
 
 /* Separador ------------------------------------------------------------------------------------------------*/
 .separador {
-    background-color: #e2b995;
+    background-color: $colorMarron;
 }
 
 /* Productos destacados ----------------------------------------------------------------------------------------*/
@@ -98,19 +108,23 @@ body {
   
   /* Sección informativa ----------------------------------------------------------------------------------------------- */
   .informativo {
-    background-color: #f5f5f5;
+    background-color: $colorGrisClaro;
     padding: 30px;
 
     .informativoCaja {
         letter-spacing: 0.5px;
-
+        display: flex;
+        padding: 20px;
+        justify-content: space-evenly;
+        
         .informativoIcono img {
             width: 50px;
-            margin: 50px;
+            margin: 10px;
         }
 
         .informativoTexto h3 {
             font-size: 18px;
+            margin: 0 auto;
         }
           
         .informativoTexto p {
@@ -131,24 +145,18 @@ body {
             display: flex;
             align-items: center;
         }
-          
-        .tarjetaImagen img {
-            margin: 50px;
-        }
 
         .tarjetaTexto {
             letter-spacing: -.05rem;
-            font-size: 40px;
             text-align: center;
-            margin: 50px;
             font-weight: 700;
 
             .tarjetaSpan1 {
-                color: #e2b995;
+                color: $colorMarron;
             }
               
             .tarjetaSpan2 {
-                color: #9cb8a0;
+                color: $colorVerdeOscuro;
             }
         }
           
@@ -203,7 +211,7 @@ body {
         justify-content: center;
         max-width: 325px;
         margin: 0 auto;
-        background-color: #e7acaa;
+        background-color: $colorRosa;
         margin-bottom: 30px;
         border-radius: 3px;
     }
@@ -220,11 +228,13 @@ body {
     position: fixed;
     bottom: 3%;
     right: 3%;
+    z-index: 1;
 }
   
 .whatsappIcon img {
     width: 50px;
     height: 50px;
+
 }
 
 /* Esto es para el efecto zoom del cover del index */
@@ -242,3 +252,11 @@ body {
 }
 
 @import "mediaqueries";
+
+.animate__animated.animate__fadeInDown {
+    --animate-duration: 6s;
+  }
+
+  :root {
+    --animate-delay: 0.2s;
+  }

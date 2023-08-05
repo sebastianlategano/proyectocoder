@@ -6,7 +6,7 @@
   }
   
   .contactoFormulario {
-    background-color: #eae9e4;
+    background-color: $colorVerdeClaro;
     width: 65%;
   }
   
@@ -21,12 +21,12 @@
   #genero, #suscribirse , ::placeholder {
     font-weight: 600;
     font-size: 1.1rem;
-    color: #757575;
+    color: $colorGrisOscuro;
   }
   
   .contactoInfo {
     max-width: 35%;
-    background-color: #e7acaa;
+    background-color: $colorRosa;
     color: white;
   }
   

@@ -2,6 +2,66 @@
 /* ------------------------------------------------------------------------------- */
 
 @media only screen and (min-width: 1280px) {
+
+    .tarjetaTexto {
+        font-size: 40px;
+    }
+
+}
+
+@media only screen and (max-width: 1279px) {
+
+
+    .contacto {
+        flex-direction: column;
+    }
+
+    .contactoFormulario {
+        width: 100%;
+    }
+
+    .contactoInfo {
+        max-width: 100%;
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+.tarjetaImagen img {
+    margin: 50px;
+}
+}
+
+@media only screen and (max-width: 992px) {
+    .tarjetaImagen img {
+        margin-top: 50px;
+    }
+    }
+
+@media only screen and (min-width: 769px) {
+    .informativoTexto h3 {
+        width: 245px;
+    }
+    .coverZoom {
+        height: 100vh;
+    }
+    .coverLogo img {
+        height: 177px;
+    }
+    .coverTexto h1 {
+        font-size: 50px;
+    }
+    .coverTexto p {
+        font-size: 30px;
+    }
+    .hambScroll {
+        display: none;
+        visibility: hidden;
+    }
+    #hambTop {
+        display: none;
+        visibility: hidden;
+    }
     .menuHamburguesa {
         display: none;
         visibility: hidden;
@@ -11,9 +71,17 @@
         display: none;
         visibility: hidden;
     }
+
 }
 
-@media only screen and (max-width: 1279px) {
+@media only screen and (max-width: 768px) {
+    /* #left {
+      margin: 0;
+    }
+  
+    #right {
+      margin: 0;
+    } */
     .categorias {
         display: none;
         visibility: hidden;
@@ -33,32 +101,17 @@
         display: none;
         visibility: hidden;
     }
-
-    .contacto {
-        flex-direction: column;
+    .coverZoom {
+        height: 100vh;
     }
 
-    .contactoFormulario {
-        width: 100%;
-    }
-
-    .contactoInfo {
-        max-width: 100%;
-    }
-
-}
-
-@media only screen and (max-width: 768px) {
-    /* #left {
-      margin: 0;
-    }
-  
-    #right {
-      margin: 0;
-    } */
-
-    .tarjetaTexto {
+    .coverTexto h1 {
         font-size: 30px;
+        text-align: center;
+    }
+    .coverTexto p {
+        font-size: 15px;
+        text-align: center;
     }
 
     .whatsappIcon {
@@ -81,6 +134,15 @@
     .coverLogo img {
         height: 100px;
     }
+    .tarjetaImagen img {
+        margin-top: 12px;
+    }
+}
+
+@media only screen and (min-width: 481px) {
+    .tarjetaTexto {
+        margin-top: 50px;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -101,5 +163,45 @@
     .informativo {
         padding: 0;
     }
+    .tarjetasCaja {
+        padding: 0px;
+    }
 
+    .botonMarron button , .botonVerde button , .botonRosa button {
+        padding-left: 50px;
+        padding-right: 50px;
+        margin: 0px;
+        margin-bottom: 30px;
+    }
+    .tarjetaTexto {
+        font-size: 30px;
+        margin-top: 30px;
+    }
+    .tarjetaSpan1 {
+        font-size: 30px;
+    }
+    .corrector {
+        padding: 0;
+    }
+    .informativoIcono img {
+        margin: 10px;
+    }
+    .informativoTexto p {
+        font-size: 12px;
+    }
+    .informativoTexto h3 {
+        width: 196px;
+    }
+
+}
+
+@media only screen and (max-width: 365px) {
+    .menuHamburguesa , .hambScroll {
+        .menuEnlaces p {
+            padding: 0px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 14px;
+        }
+}
 }
