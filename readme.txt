@@ -3,4 +3,4 @@
 • Cambio de diseño para el menu hamburguesa
 • Incluidas animaciones
 • Añadida rotación de clase activa en el navbar para cambio de color
-• Modificada la distribución de los elementos en el cover del index
+• Modificada la distribución de los elementos en el cover del index desktop + mobile

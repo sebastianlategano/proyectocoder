@@ -855,8 +855,14 @@ body {
   .faq details p {
     font-size: 18px;
   }
+  .coverMobile {
+    display: none;
+  }
 }
 @media only screen and (max-width: 480px) {
+  .coverDesktop {
+    display: none;
+  }
   .coverIzq {
     text-align: center;
     justify-content: center;
