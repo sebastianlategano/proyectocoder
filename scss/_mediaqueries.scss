@@ -71,6 +71,7 @@
         display: none;
         visibility: hidden;
     }
+    
     #nombre , #email , #genero, #mensaje {
         width: 75%;
     }
@@ -111,7 +112,9 @@
     .coverZoom {
         height: 100vh;
     }
-
+    .coverTexto {
+        width: 100%;
+    }
     .coverTexto h1 {
         font-size: 30px;
         text-align: center;
@@ -154,9 +157,11 @@
         font-size: 18px;
     }
 
+
 }
 
 @media only screen and (max-width: 480px) {
+
     .coverIzq {
         text-align: center;
         justify-content: center;
@@ -201,6 +206,9 @@
     }
     .informativoTexto h3 {
         width: 196px;
+    }
+    .cover2 , .cover3 {
+        width: 75%;
     }
 
 

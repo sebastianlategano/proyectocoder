@@ -145,6 +145,7 @@
         -webkit-text-fill-color: transparent;
         transition: all 0.3s ease-in-out;
         font-weight: 700;
+
     }
 
     .linkUnderlined a {
@@ -205,6 +206,7 @@
     z-index: 3;
 }
 
+
 .scroll {
     background-color: rgb(255, 255, 255, 0.97);
 }
@@ -232,8 +234,8 @@
         .coverBoton {
             display: flex;
             z-index: 1;
-            margin-top: 100px;
-            margin-bottom: 100px;
+            margin-top: 50px;
+            margin-bottom: 50px;
         }
 
         /* Centrar caption del carousel */
@@ -290,3 +292,10 @@
     width: 120%;
 }
 
+.cover2 {
+    width: 25%;
+}
+
+.cover3 {
+    width: 115%;
+}

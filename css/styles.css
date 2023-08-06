@@ -246,8 +246,8 @@
 .cover .coverFondo .coverBoton {
   display: flex;
   z-index: 1;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .cover .coverFondo .carousel-caption {
   top: 50%;
@@ -293,6 +293,14 @@
 /*acomodar*/
 .w150 {
   width: 120%;
+}
+
+.cover2 {
+  width: 25%;
+}
+
+.cover3 {
+  width: 115%;
 }
 
 /* FOOTER (Common para todas las pages) -------------------------------------------------------------------------*/
@@ -672,7 +680,6 @@ body {
   background-position: center;
 }
 .insta .instaCaja {
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -809,6 +816,9 @@ body {
   .coverZoom {
     height: 100vh;
   }
+  .coverTexto {
+    width: 100%;
+  }
   .coverTexto h1 {
     font-size: 30px;
     text-align: center;
@@ -887,6 +897,9 @@ body {
   }
   .informativoTexto h3 {
     width: 196px;
+  }
+  .cover2, .cover3 {
+    width: 75%;
   }
 }
 @media only screen and (max-width: 365px) {
