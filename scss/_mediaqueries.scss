@@ -147,6 +147,9 @@
     .tarjetaImagen img {
         margin-top: 12px;
     }
+    .cover2 , .cover3 {
+        width: 70%;
+    }
 }
 
 @media only screen and (min-width: 481px) {
@@ -211,9 +214,6 @@
     }
     .informativoTexto h3 {
         width: 196px;
-    }
-    .cover2 , .cover3 {
-        width: 75%;
     }
 
 
