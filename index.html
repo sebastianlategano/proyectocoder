@@ -394,10 +394,11 @@
               <div class="popup rounded">
                 <div class="popupTexto">
                   <p>Video YouTube</p>
-                  <a href="#a" class="cerrar">x</a>
+                  <a href="#a" class="cerrar"><button onclick = "stop()">x</button></a>
                 </div>
                 <div class="conteindoPopUp">
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/Wrw1JEcRw1w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                  <!-- <iframe id="videoId" src="https://www.youtube.com/embed/Q4O6yxUC_8g?enablejsapi=1"></iframe> -->
+                  <iframe id="videoId" width="560" height="315" src="https://www.youtube.com/embed/Wrw1JEcRw1w?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
               </div>
             </div>
@@ -643,6 +644,20 @@
       }
     };
   </script>
+
+  <!-- Script para cerrar el video de youtube -->
+  <script>
+    // to stop the video
+    function stop() {
+       let video = document.getElementById("videoId")
+       video.contentWindow.postMessage( '{"event":"command", "func":"stopVideo", "args":""}', '*');
+    }
+    // to pause the video
+    function pause() {
+       let video = document.getElementById("videoId")
+       video.contentWindow.postMessage( '{"event":"command", "func":"pauseVideo", "args":""}', '*');
+    }
+ </script>
 
   <!-- SCRIPT BS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"

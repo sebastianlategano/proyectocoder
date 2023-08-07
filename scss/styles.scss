@@ -253,6 +253,15 @@ body {
   justify-content: space-between;
 }
 
+.popupTexto button {
+  padding: 0;
+  border: none;
+  background: none;
+  color: $colorGrisOscuro;
+  font-size: 30px;
+  font-weight: bold;
+}
+
 .conteindoPopUp {
   display: flex;
   justify-content: center;
