@@ -904,7 +904,7 @@ body {
     width: 196px;
   }
   .cover2, .cover3 {
-    width: 75%;
+    width: 100%;
   }
 }
 @media only screen and (max-width: 365px) {
