@@ -123,6 +123,23 @@
         font-size: 15px;
         text-align: center;
     }
+    .videoYouTube {
+        flex-direction: column-reverse;
+    }
+    .ytImagenFondo {
+        margin: 0 auto;
+    }
+    .recuadro img {
+        width: 250px;
+        height: 250px;
+      }
+    .botonPopUp {
+        width: 50px;
+        height: 50px;
+    }
+    .botonPopUp a {
+        font-size: 25px;
+    }
 
     .whatsappIcon {
         bottom: 6%;

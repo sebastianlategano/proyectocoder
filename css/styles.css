@@ -620,6 +620,128 @@ body {
   opacity: 0.75;
 }
 
+/* Sección video YouTube ----------------------------------------------------------------------------------------------- */
+.videoYouTube {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ytImagenFondo {
+  max-height: 500px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.ytImagenFondo img {
+  max-height: 500px;
+}
+
+.ytIzq {
+  display: flex;
+  min-height: 300px;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+.recuadro {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+
+.recuadro img {
+  width: 500px;
+  height: 400px;
+}
+
+.botonPopUp {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #9cb8a0;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.botonPopUp a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+}
+
+.botonPopUp a:hover {
+  color: #d3e0ce;
+}
+
+.cobertor {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 99;
+}
+
+.cobertor:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 0 auto;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding: 20px;
+  background: #f5f5f5;
+  max-width: 600px;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup, .cerrar {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #3c3c3c;
+}
+
+.cerrar:hover {
+  color: rgb(172, 172, 172);
+}
+
+.popupTexto, .cerrar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.conteindoPopUp {
+  display: flex;
+  justify-content: center;
+}
+
 /* Tarjetas promoción y acerca de nosotros --------------------------------------------------------------------------*/
 .tarjetas {
   padding-top: 50px;
@@ -825,6 +947,23 @@ body {
   .coverTexto p {
     font-size: 15px;
     text-align: center;
+  }
+  .videoYouTube {
+    flex-direction: column-reverse;
+  }
+  .ytImagenFondo {
+    margin: 0 auto;
+  }
+  .recuadro img {
+    width: 250px;
+    height: 250px;
+  }
+  .botonPopUp {
+    width: 50px;
+    height: 50px;
+  }
+  .botonPopUp a {
+    font-size: 25px;
   }
   .whatsappIcon {
     bottom: 6%;
