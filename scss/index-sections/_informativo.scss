@@ -1,0 +1,28 @@
+/* Sección informativa ----------------------------------------------------------------------------------------------- */
+.informativo {
+    background-color: $colorGrisClaro;
+    padding: 30px;
+  
+    .informativoCaja {
+      letter-spacing: 0.5px;
+      display: flex;
+      padding: 20px;
+      justify-content: space-evenly;
+  
+      .informativoIcono img {
+        width: 50px;
+        margin: 10px;
+      }
+      
+      .informativoTexto {
+        h3 {
+          font-size: 18px;
+          margin: 0 auto;
+        }
+        p {
+          margin-bottom: 0px;
+          opacity: 0.75;
+        }
+      }
+    }
+  }

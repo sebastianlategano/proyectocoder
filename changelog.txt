@@ -4,3 +4,6 @@
 • Incluidas animaciones
 • Añadida rotación de clase activa en el navbar para cambio de color
 • Modificada la distribución de los elementos en el cover del index desktop + mobile
+• Agregado video youtube en el index, en la sección "Conocenos"
+• Debugged
+• Utilizados mixin, for, nesting+&, vars, import, include, maps

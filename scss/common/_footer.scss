@@ -1,80 +1,77 @@
 /* FOOTER (Common para todas las pages) -------------------------------------------------------------------------*/
-footer a {
+footer {
+  a {
     transition: all 0.5s ease-out;
+    &:visited {
+      text-decoration: none;
+      color: white;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $colorGrisOscuro;
+    }
+    &:link {
+      text-decoration: none;
+      color: white;
+    }
+  }
 }
-  
-footer a:visited {
-    text-decoration: none;
-    color: white;
-}
-  
-footer a:hover {
-    text-decoration: none;
-    color: $colorGrisOscuro;
-}
-  
-footer a:link {
-    text-decoration: none;
-    color: white;
-}
-  
+
 /* Flechita up ------------------------------------------------------------------------------------------------*/
-.flechita a {
+.flechita {
+  a {
     transition: all 0.5s ease-out;
 
     .flechitaFondo {
-        background-color: $colorRosa;
-
-    }
-    .flechitaFondo h2{
+      background-color: $colorRosa;
+      h2 {
         font-size: 35px;
+      }
     }
-}
-  
-.flechita a:hover {
-    text-decoration: none;
-    color: $colorGrisOscuro;
+
+    &:hover {
+      text-decoration: none;
+      color: $colorGrisOscuro;
+    }
+  }
 }
 
 /* Redes sociales footer ---------------------------------------------------------------------------------------*/
 
 .redesFooter {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 30px;
-}
-  
-.redesFooter a img {
+  @include fjcenter;
+  gap: 30px;
+  margin: 30px;
+  a img {
     width: 50px;
+  }
 }
-  
+
 /* Menu de links en footer -------------------------------------------------------------------------------------*/
 .footerMenu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: $colorRosa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $colorRosa;
 
-    .footerLogo {
-        text-align: center;
-        margin: 20px;
+  .footerLogo {
+    text-align: center;
+    margin: 20px;
+    a img {
+      width: 50%;
     }
-      
-    .footerLogo a img {
-        width: 50%;
-    }
+  }
 
-    .footerLinks ul li {
-        display: inline-block;
-        margin-right: 10px;
-        color: white;
-        font-weight: 600;
-        letter-spacing: 0.3px;
-    }
+  .footerLinks ul li {
+    display: inline-block;
+    margin-right: 10px;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
 
-    .footerBottom {
-        text-align: center;
-        opacity: 0.5;
-    }
+  .footerBottom {
+    text-align: center;
+    opacity: 0.5;
+  }
 }

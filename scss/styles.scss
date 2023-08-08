@@ -8,417 +8,69 @@ $colorGrisOscuro: #3c3c3c;
 $colorMarronHover: #f5c8a1;
 $colorVerdeHover: #b5d7ba;
 $colorRosaHover: #fcbcba;
+$colorBlanco: white;
+
+@mixin medidas($ancho, $alto){
+  width: $ancho;
+  height: $alto;
+}
+
+@mixin fjcenter {
+  display: flex;
+  justify-content: center;
+}
+
+/* SASS - FOR: En el archivo pages/_aboutus.scss uso un "for", en las últimas líneas */
 
 @import "common/botones", "common/header", "common/footer";
 @import "pages/productos", "pages/aboutus", "pages/faq", "pages/contacto.scss";
+@import "index-sections/separador", "index-sections/catalogo", "index-sections/categorias", 
+"index-sections/categoriasMobile", "index-sections/informativo", "index-sections/tarjetas", 
+"index-sections/testimonios", "index-sections/indexContacto", "index-sections/insta", "index-sections/whatsAppIcon";
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    max-width: 1920px;
-    font-family: 'Montserrat', sans-serif;
+  max-width: 1920px;
+  font-family: "Montserrat", sans-serif;
 }
 
 
 
-/* Separador ------------------------------------------------------------------------------------------------*/
-.separador {
-    background-color: $colorMarron;
-}
-
-/* Productos destacados ----------------------------------------------------------------------------------------*/
-.catalogo {
-
-    .dontOverflow {
-        overflow: hidden;
-        max-width: 300px;
-        max-height: 300px;
-        margin: 0 auto;
-
-        .catalogoImagen {
-            transition: 1s;
-        }
-          
-        .catalogoImagen:hover {
-            transform: scale(1.1);
-        }
-    }
-
-    .carrito {
-        height: 30px;
-        width: 30px;
-        transition: .5s ease;
-    }
-      
-    .carrito:hover {
-        filter: brightness(0.75);
-    }
-  }
-
-/* Categorías selector ------------------------------------------------------------------------------------- */
-.categorias {
-    display: flex;
-    width: 100%;
-    height: 430px;
-  }
-  
-  .categorias img {
-    width: 0px;
-    flex-grow: 1;
-    object-fit: cover;
-    opacity: .8;
-    transition: .5s ease;
-  }
-  
-  .categorias img:hover {
-    width: 300px;
-    opacity: 1;
-    filter: contrast(120%);
-  }
-  
-  .categorias a {
-    display: contents;
-  }
-  
-  
-  /* Categorías mobile -----------------------------------------------------------------------------------------*/
-  
-  .categoriasMobile {
-    width: 100%;
-    max-height: 450px;
-    position: relative;
-    display: flex;
-    overflow: scroll;
-    scroll-snap-type: x mandatory;
-  }
-  
-  .categoriasMobile img {
-    width: 100%;
-    left: 0;
-    object-fit: cover;
-    border-radius: 5px;
-    scroll-snap-align: center;
-  }
-  
-  .categoriasMobile a {
-    display: contents;
-  }
-  
-  /* Sección informativa ----------------------------------------------------------------------------------------------- */
-  .informativo {
-    background-color: $colorGrisClaro;
-    padding: 30px;
-
-    .informativoCaja {
-        letter-spacing: 0.5px;
-        display: flex;
-        padding: 20px;
-        justify-content: space-evenly;
-        
-        .informativoIcono img {
-            width: 50px;
-            margin: 10px;
-        }
-
-        .informativoTexto h3 {
-            font-size: 18px;
-            margin: 0 auto;
-        }
-          
-        .informativoTexto p {
-            margin-bottom: 0px;
-            opacity: 0.75;
-        }
-    }
-  }
-
-/* Sección video YouTube ----------------------------------------------------------------------------------------------- */
-.videoYouTube {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-}
-
-.ytImagenFondo {
-  max-height: 500px;
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
-.ytImagenFondo img {
-  max-height: 500px;
-}
-
-.ytIzq {
-  display: flex;
-  min-height: 300px;
-  align-items: center;
-  margin: 0 auto;
-  position: relative;
-}
-
-.recuadro {
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  z-index: -1;
-}
-
-.recuadro img {
-  width: 500px;
-  height: 400px;
-}
-
-.botonPopUp {
-  display: flex;
-  position: absolute;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: $colorVerdeOscuro;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  left: 50%;
- -webkit-transform: translateX(-50%);
- -moz-transform: translateX(-50%);
- transform: translateX(-50%);
-}
-
-.botonPopUp a {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  font-size: 50px;
-
-
-}
-
-.botonPopUp a:hover {
-  color: $colorVerdeMedio;
-}
-
-.cobertor {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-  z-index: 99;
-}
-
-.cobertor:target {
-  visibility: visible;
-  opacity: 1;
-}
-
-.popup {
-  margin: 0 auto;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  padding: 20px;
-  background: $colorGrisClaro;
-  max-width: 600px;
-  position: relative;
-  transition: all 5s ease-in-out;
-}
-
-.popup, .cerrar {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  position: relative;
-  transition: all 200ms;
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  color: $colorGrisOscuro;
-}
-
-.cerrar:hover {
-  color: rgb(172, 172, 172);
-}
-
-.popupTexto, .cerrar {
-  display: flex;
-  justify-content: space-between;
-}
-
-.popupTexto button {
-  padding: 0;
-  border: none;
-  background: none;
-  color: $colorGrisOscuro;
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.conteindoPopUp {
-  display: flex;
-  justify-content: center;
-}
-
-/* Tarjetas promoción y acerca de nosotros --------------------------------------------------------------------------*/
-.tarjetas {
-    padding-top: 50px;
-
-    .tarjetasCaja {
-        margin: 0 auto;
-
-        .tarjetaImagen {
-            display: flex;
-            align-items: center;
-        }
-
-        .tarjetaTexto {
-            letter-spacing: -.05rem;
-            text-align: center;
-            font-weight: 700;
-
-            .tarjetaSpan1 {
-                color: $colorMarron;
-            }
-              
-            .tarjetaSpan2 {
-                color: $colorVerdeOscuro;
-            }
-        }
-          
-        .tarjetaTexto p {
-            text-align: center;
-        }
-
-        .tarjetaDescripcion {
-            margin: 30px;
-        }
-    }
-}
-
-/* Sección testimonios ----------------------------------------------------------------------------------------- */
-.testimonios .col-lg-4 {
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-.testimonios .col-lg-4 p {
-    margin-right: .75rem;
-    margin-left: .75rem;
-}
-
-.testimonios {
-    .testimoniosImg {
-        width: 100px;
-        height: 100px;
-        margin: 20px;
-    }
-    
-    .estrellas {
-        width: 99px;
-        height: 30px;
-        margin: 10px;
-    }
-}
-
-/* Instagram -------------------------------------------------------------------------------------------------*/
-
-.insta {
-    display: block;
-    background-image: url(../assets/img/instaBack.png);
-    background-size: cover;
-    background-position: center;
-
-    .instaCaja {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-        max-width: 325px;
-        margin: 0 auto;
-        background-color: $colorRosa;
-        margin-bottom: 30px;
-        border-radius: 3px;
-    }
-      
-    .instaCaja h2 {
-        padding: 20px;
-        color: white;
-        font-weight: 700;
-    }
-  }
-
-/* Icono Whats App ---------------------------------------------------------------------------------------------*/
-.whatsappIcon {
-    position: fixed;
-    bottom: 3%;
-    right: 3%;
-    z-index: 1;
-}
-  
-.whatsappIcon img {
-    width: 50px;
-    height: 50px;
-
-}
-
-/* Esto es para el efecto zoom del cover del index */
+/* Keyframes para el efecto zoom del cover del index */
 /* ------------------------------------------------------------------------------- */
 @keyframes zoom-in-zoom-out {
-    0% {
-      transform: scale(1, 1);
-    }
-    50% {
-      transform: scale(1.1, 1.1);
-    }
-    100% {
-      transform: scale(1, 1);
-    }
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
 }
 
 @import "mediaqueries";
 
+
+/* Modificacion del animate.css*/
 .animate__animated.animate__fadeInDown {
-    --animate-duration: 6s;
-  }
+  --animate-duration: 6s;
+}
 
-  :root {
-    --animate-delay: 0.2s;
-  }
+:root {
+  --animate-delay: 0.2s;
+}
 
-  .elemento-con-delay {
-    animation-delay: 0.3s;
-  }
+.elemento-con-delay {
+  animation-delay: 0.3s;
+}
 
-  .elemento-oculto , .elemento-con-delay {
-    visibility: hidden;
-    opacity: 0;
-  }
-
-  .indexContacto {
-    background-image: url(../assets/img/indexContacto.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin: 0 auto;
-  }
-
-  .indexContacto p {
-    font-weight: 700;
-    font-size: 25px;
-    text-shadow: 1px ;
-    background-color: rgba(0, 0, 0, 0.153);
-    padding: 10px;
-    margin: 0 auto;
-    width: 100%;
-  }
+.elemento-oculto,
+.elemento-con-delay {
+  visibility: hidden;
+  opacity: 0;
+}

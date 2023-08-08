@@ -1,0 +1,25 @@
+/* Productos destacados ----------------------------------------------------------------------------------------*/
+.catalogo {
+    .dontOverflow {
+      overflow: hidden;
+      max-width: 300px;
+      max-height: 300px;
+      margin: 0 auto;
+  
+      .catalogoImagen {
+        transition: 1s;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  
+    .carrito {
+      @include medidas(30px,30px);
+      transition: 0.5s ease;
+      &:hover {
+        filter: brightness(0.75);
+      }
+    }
+  
+  }

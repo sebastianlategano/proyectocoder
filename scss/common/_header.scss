@@ -1,301 +1,245 @@
 /* Menu hamburguesa, solo resoluciones bajas ---------------------------------------------------------*/
-.menuHamburguesa , .hambScroll {
-    padding: 0 31px;
-    height: 71px;
+.menuHamburguesa, .hambScroll {
+  padding: 0 31px;
+  @include medidas(100%,71px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: -1px;
+  z-index: 3;
+
+  .menuEnlaces {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 70px;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.98);
+    display: grid;
+    place-items: left;
+    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+    transition: clip-path 0.4s;
+    z-index: 1;
+
+    .menuCerrar {
+      padding: 0 31px;
+      @include medidas(100%,71px);
+      background-color: rgba(255, 255, 255);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      top: -1px;
+      z-index: 3;
+    }
+
+    .menuEnlace {
+      text-decoration: none;
+      z-index: 1;
+    }
+
+    img {
+      @include fjcenter;
+      margin: 0 auto;
+      height: 80px;
+    }
+
+    p {
+      font-size: 15px;
+      padding: 10px;
+      width: 250px;
+      text-align: left;
+      width: 50%;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+    }
+
+    &:target {
+      clip-path: polygon(-100% -100%, 50% -100%, 50% 100%, 0% 100%);
+    }
+  }
+
+  .miniLogo {
+    width: 50%;
+    margin: 31px 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    top: -1px;
-    z-index: 3;
-    width: 100%;
+  }
 
-    .menuEnlaces {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        top: 70px;
-        right: 0;
-        /*barra lateral izq grande*/
-        background-color: rgba(255, 255, 255, 0.98);
-        display: grid;
-        place-items: left;
-        /*clip-path: circle(0% at top left);*/
-        clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
-        transition: clip-path .4s;
-        z-index: 1;
+  .linkResaltado {
+    color: $colorMarron;
+  }
 
-        .menuCerrar {
-            padding: 0 31px;
-            height: 71px;
-            /*barra arriba izq*/
-            background-color: rgba(255, 255, 255);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: fixed;
-            top: -1px;
-            z-index: 3;
-            width: 100%;
-        }
+  .linkComun {
+    color: $colorGrisOscuro;
+  }
 
-        .menuEnlace {
-            text-decoration: none;
-            z-index: 1;
-        }
-
-
-    }
-    .menuEnlaces img {
-        display: flex;
-        justify-content: center;
-        margin: 0 auto;
-        height: 80px;
-    }
-
-    .miniLogo {
-        width: 50%;
-        margin: 31px 0;
-        display: flex;
-        align-items: center;
-    }
-
-
-
-    .menuEnlaces p {
-        font-size: 15px;
-        /*color: white;*/
-
-        /*border-radius: 3px;*/
-        padding: 10px;
-        width: 250px;
-        text-align: left;
-        /*background-color: $colorMarron;*/
-        width: 50%;
-        font-weight: 700;
-        display: flex;
-        align-items: center;
-    }
-
-    .linkResaltado {
-        color: $colorMarron;
-    }
-
-    .linkComun {
-        color: $colorGrisOscuro;
-    }
-
-    .nose img{
-        width: 20px;
-        height: 20px;
-        margin-left: 31px;
-        margin-right: 10px;
-    }
-
-    .menuEnlaces:target {
-        /*clip-path: circle(150% at top left);*/
-        clip-path: polygon(-100% -100%,50% -100%,50% 100%,0% 100%);
-    }
+  .menuIcon img {
+    @include medidas(20px, 20px);
+    margin-left: 31px;
+    margin-right: 10px;
+  }
 }
 
-.menuHamburguesa img {
-    height: 50px;
+.cover2 {
+  width: 25%;
+}
+
+.cover3 {
+  width: 115%;
 }
 
 #menuImg {
-    height: 25px;
-}
-
-/* PRUEBA */
-.menuHamburguesa {
-    background-color: rgba(0, 166, 255, 0);
-}
-
-.hambScroll {
-    /*barra arriba der*/
-    background-color: rgba(255, 255, 255);
-}
-
-.hambScroll img {
-    height: 50px;
-}
-
-#menuImg {
-    height: 25px;
-    /*Fondito de las 3 rayitas*/
-    background-color:  rgba(255, 3, 3, 0);
+  height: 25px;
 }
 
 #hambTop {
-    transition: background-color 0.4s ease-out;
+  transition: background-color 0.4s ease-out;
+}
+
+/* Fondo diferente para cuando se hace scroll */
+.hambScroll {
+  background-color: $colorBlanco;
+  img {
+    height: 50px;
+  }
 }
 
 /*Common para los 2 tipos de header ---------------------------------------------------------------------------*/
 
 .coverLinks, .scroll, .headerPages {
-    /* Efecto transición colores en links */
-    .linkUnderlined a {
-        background-size: 200% 100%;
-        background-position: -100%;
-        display: inline-block;
-        padding: 5px 0;
-        position: relative;
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        transition: all 0.3s ease-in-out;
-        font-weight: 700;
-
+  .linkUnderlined a {
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+    font-weight: 700;
+    background: {
+      size: 200% 100%;
+      position: -100%;
+      clip: text;
+      image: linear-gradient(
+      to right,
+      $colorVerdeOscuro,
+      $colorVerdeOscuro 50%,
+      $colorGrisOscuro 50%
+    );
     }
 
-    .linkUnderlined a {
-        background-image: linear-gradient(to right,
-                #9cb8a0,
-                #9cb8a0 50%,
-                rgb(49, 49, 49) 50%);
+    &:before {
+      content: "";
+      background: $colorVerdeOscuro;
+      display: block;
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      @include medidas(0,3px);
+      transition: all 0.3s ease-in-out;
     }
 
-    .linkUnderlined a:before {
-        content: '';
-        background: #9cb8a0;
-        display: block;
-        position: absolute;
-        bottom: -3px;
-        left: 0;
-        width: 0;
-        height: 3px;
-        transition: all 0.3s ease-in-out;
+    &:hover {
+      background-position: 0;
     }
 
-    .linkUnderlined a:hover {
-        background-position: 0;
+    &:hover::before {
+      width: 100%;
     }
+  }
 
-    .linkUnderlined a:hover::before {
-        width: 100%;
-    }
+  /* Diferente para la pagina active */
+  .linkInicio a {
+    background-image: linear-gradient(
+      to right,
+      $colorGrisOscuro,
+      $colorGrisOscuro 50%,
+      $colorVerdeOscuro 50%
+    );
+  }
+}
 
-    /* Diferente para Inicio */
-    .linkInicio a{
-        background-image: linear-gradient(to right,
-                #000000,
-                #000000 50%,
-                $colorVerdeOscuro 50%);
-    }
+/* Cambia el color del bg del menu top al hacer scroll */
+#navTop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include medidas(100%,70px);
+  box-sizing: border-box;
+  padding: 12px 18px;
+  transition: background-color 0.4s ease-out;
+  z-index: 3;
+}
+
+.scroll {
+  background-color: rgb(255, 255, 255, 0.97);
 }
 
 .coverLinks, .scroll {
-    text-align: center;
+  text-align: center;
 }
 
 .coverLinks ul li, .scroll ul li {
-    display: inline-block;
-    margin: 5px 10px;
-}
-
-/* Cambiar el color del bg del menu top al hacer scroll */
-#navTop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 70px;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 12px 18px;
-    transition: background-color 0.4s ease-out;
-    z-index: 3;
-}
-
-
-.scroll {
-    background-color: rgb(255, 255, 255, 0.97);
+  display: inline-block;
+  margin: 5px 10px;
 }
 
 /* Exclusivo header/cover del index --------------------------------------------------------------------------------- */
 .cover {
-    min-height: 100vh;
+  min-height: 100vh;
 
-    .coverFondo {
-
-        .coverZoom {
-            animation: zoom-in-zoom-out 40s ease infinite;
-        }
-
-        .coverLogo {
-            margin: 30px;
-        }
-
-
-
-        .coverTexto p {
-            color: $colorVerdeOscuro;
-        }
-
-        .coverBoton {
-            display: flex;
-            z-index: 1;
-            margin-top: 50px;
-            margin-bottom: 50px;
-        }
-
-        /* Centrar caption del carousel */
-        .carousel-caption {
-            top: 50%;
-            transform: translateY(-50%);
-            bottom: initial;
-        }
+  .coverFondo {
+    .coverZoom {
+      animation: zoom-in-zoom-out 40s ease infinite;
     }
 
-    .coverFondo img {
-        object-fit: cover;
+    .coverLogo {
+      margin: 30px;
     }
 
+    .coverTexto p {
+      color: $colorVerdeOscuro;
+    }
+
+    .coverBoton {
+      display: flex;
+      z-index: 1;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    .carousel-caption {
+      top: 50%;
+      transform: translateY(-50%);
+      bottom: initial;
+    }
+  }
+
+  img {
+    object-fit: cover;
+  }
 }
 
 .coverTexto p, .coverTexto h1 {
-    font-weight: 700;
+  font-weight: 700;
 }
-
-.coverIzq {
-    text-align: start;
-    display: block;
-    justify-content: left;
-}
-
-.coverDer {
-    text-align: end;
-    display: block;
-    justify-content: right;
-}
-
-
 
 /* Header diferente para las otras páginas -------------------------------------------------------------------------- */
 .headerPages {
-    min-height: 50vh;
-    background-image: url(../assets/img/coverpages.jpg);
-    background-position: center;
-    background-size: cover;
+  min-height: 50vh;
+  background: {
+    image: url(../assets/img/coverpages.jpg);
+    position: center;
+    size: cover;
+  }
 }
 
 .headerLogo {
-    height: 50vh;
+  height: 50vh;
 }
 
 .coverTexto h1 {
-    color: $colorGrisOscuro;
-}
-
-
-/*acomodar*/
-.w150 {
-    width: 120%;
-}
-
-.cover2 {
-    width: 25%;
-}
-
-.cover3 {
-    width: 115%;
+  color: $colorGrisOscuro;
 }

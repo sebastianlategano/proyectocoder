@@ -1,0 +1,11 @@
+/* Icono Whats App ---------------------------------------------------------------------------------------------*/
+.whatsappIcon {
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+    z-index: 1;
+    img {
+      @include medidas(50px, 50px);
+    }
+  }
+  
