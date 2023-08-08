@@ -21,12 +21,14 @@ $colorBlanco: white;
 }
 
 /* SASS - FOR: En el archivo pages/_aboutus.scss uso un "for", en las últimas líneas */
-
-@import "common/botones", "common/header", "common/footer";
-@import "pages/productos", "pages/aboutus", "pages/faq", "pages/contacto.scss";
+@import "themes/darktheme";
+@import "common/botones", "common/header", "common/footer", "common/toggler";
+@import "pages/productos", "pages/aboutus", "pages/faq", "pages/contacto";
 @import "index-sections/separador", "index-sections/catalogo", "index-sections/categorias", 
 "index-sections/categoriasMobile", "index-sections/informativo", "index-sections/tarjetas", 
 "index-sections/testimonios", "index-sections/indexContacto", "index-sections/insta", "index-sections/whatsAppIcon";
+
+
 
 html {
   scroll-behavior: smooth;
@@ -36,8 +38,6 @@ body {
   max-width: 1920px;
   font-family: "Montserrat", sans-serif;
 }
-
-
 
 /* Keyframes para el efecto zoom del cover del index */
 /* ------------------------------------------------------------------------------- */

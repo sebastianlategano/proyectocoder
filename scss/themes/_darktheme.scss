@@ -1,0 +1,103 @@
+:root[data-theme=darktheme] {
+    color-scheme: dark;
+    body {
+    background-color: black;
+    color: white;
+    }
+    .informativo, .separador, .flechitaFondo, .footerMenu, .tarjetasCaja, .scroll, .menuEnlaces, .hambScroll {
+        background-color: $colorGrisOscuro;
+    }
+
+    .coverLinks, .scroll, .headerPages {
+        .linkUnderlined a {
+          display: inline-block;
+          padding: 5px 0;
+          position: relative;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          transition: all 0.3s ease-in-out;
+          font-weight: 700;
+          background: {
+            size: 200% 100%;
+            position: -100%;
+            clip: text;
+            image: linear-gradient(
+            to right,
+            $colorVerdeOscuro,
+            $colorVerdeOscuro 50%,
+            $colorBlanco 50%
+          );
+          }
+      
+          &:before {
+            content: "";
+            background: $colorVerdeOscuro;
+            display: block;
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            @include medidas(0,3px);
+            transition: all 0.3s ease-in-out;
+          }
+      
+          &:hover {
+            background-position: 0;
+          }
+      
+          &:hover::before {
+            width: 100%;
+          }
+        }
+      
+        /* Diferente para la pagina active */
+        .linkInicio a {
+          background-image: linear-gradient(
+            to right,
+            $colorBlanco,
+            $colorBlanco 50%,
+            $colorVerdeOscuro 50%
+          );
+        }
+      }
+
+      .coverLinks {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .recuadro {
+        z-index: 0;
+      }
+
+      .linkComun {
+        color: $colorBlanco;
+      }
+
+      #menuImg {
+        filter: brightness(2000%);
+      }
+
+      .menuHamburguesa {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      div.menuCerrar {
+        background-color: $colorGrisOscuro;
+      }
+
+      div.popup , .popupTexto {
+        background-color: $colorGrisOscuro;
+      }
+
+      .popup , .popupTexto button {
+        color: white;
+      }
+
+      footer {
+        a {
+          &:hover {
+            text-decoration: none;
+            color: $colorRosa;
+          }
+        }
+      }
+}

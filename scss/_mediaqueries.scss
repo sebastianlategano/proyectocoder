@@ -31,6 +31,13 @@
   .tarjetaImagen img {
     margin-top: 50px;
   }
+  .wrapper{
+    top:9.5%;
+    left:96%;
+  }
+  input.switch {
+      transform: scale(0.40);
+  }
 }
 
 @media only screen and (min-width: 769px) {
@@ -173,6 +180,17 @@
     width: 70%;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .wrapper{
+    top:9.5%;
+    left:85%;
+  }
+  input.switch {
+      transform: scale(0.40);
+  }
+}
+
 
 @media only screen and (min-width: 481px) {
   .tarjetaTexto {
