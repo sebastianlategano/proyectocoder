@@ -7,4 +7,5 @@
 • Agregado video youtube en el index, en la sección "Conocenos"
 • Debugged
 • Utilizados mixin, for, nesting+&, vars, import, include, maps
-• Agregado modo oscuro en el index
+• Agregado modo oscuro en todo el sitio
+• Agregado SEO y lighthouse 100/100

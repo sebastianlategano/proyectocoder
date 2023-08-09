@@ -46,7 +46,7 @@
     }
 
     p {
-      font-size: 15px;
+      font-size: 1rem;
       padding: 10px;
       width: 250px;
       text-align: left;
@@ -223,7 +223,7 @@
   }
 }
 
-.coverTexto p, .coverTexto h1 {
+.coverTexto p, .coverTexto h1, .coverTexto h2 {
   font-weight: 700;
   transition: 0.5s ease;
 }
@@ -242,6 +242,10 @@
   height: 60vh;
 }
 
-.coverTexto h1 {
+.coverTexto h1, .coverTexto h2 {
   color: $colorGrisOscuro;
+}
+
+.coverTexto h2 {
+  font-size: 3rem;
 }

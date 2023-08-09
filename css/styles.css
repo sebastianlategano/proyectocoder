@@ -67,7 +67,7 @@
   filter: brightness(50%);
   transition: 0.5s ease;
 }
-:root[data-theme=darktheme] .coverTexto h1 {
+:root[data-theme=darktheme] .coverTexto h1, :root[data-theme=darktheme] .coverTexto h2 {
   color: #f5f5f5;
   transition: 0.5s ease;
 }
@@ -179,7 +179,7 @@
   height: 80px;
 }
 .menuHamburguesa .menuEnlaces p, .hambScroll .menuEnlaces p {
-  font-size: 15px;
+  font-size: 1rem;
   padding: 10px;
   width: 250px;
   text-align: left;
@@ -327,7 +327,7 @@
   object-fit: cover;
 }
 
-.coverTexto p, .coverTexto h1 {
+.coverTexto p, .coverTexto h1, .coverTexto h2 {
   font-weight: 700;
   transition: 0.5s ease;
 }
@@ -344,8 +344,12 @@
   height: 60vh;
 }
 
-.coverTexto h1 {
+.coverTexto h1, .coverTexto h2 {
   color: #3c3c3c;
+}
+
+.coverTexto h2 {
+  font-size: 3rem;
 }
 
 /* FOOTER (Common para todas las pages) -------------------------------------------------------------------------*/
@@ -373,7 +377,7 @@ footer a:link {
   background-color: #e7acaa;
 }
 .flechita a .flechitaFondo h2 {
-  font-size: 35px;
+  font-size: 2.188rem;
 }
 .flechita a:hover {
   text-decoration: none;
@@ -591,9 +595,9 @@ input.switch {
 .video {
   max-height: 450px;
 }
-.video .video h1 {
+.video .video h2 {
   font-weight: 700;
-  font-size: 60px;
+  font-size: 3.75rem;
 }
 
 .aboutUs {
@@ -808,7 +812,7 @@ form div textarea {
   margin: 10px;
 }
 .informativo .informativoCaja .informativoTexto h3 {
-  font-size: 18px;
+  font-size: 1.125rem;
   margin: 0 auto;
 }
 .informativo .informativoCaja .informativoTexto p {
@@ -882,7 +886,7 @@ form div textarea {
 .ytIzq .botonPopUp a {
   text-decoration: none;
   color: white;
-  font-size: 50px;
+  font-size: 3.125rem;
 }
 .ytIzq .botonPopUp a:hover {
   color: #d3e0ce;
@@ -918,7 +922,7 @@ form div textarea {
   padding: 0;
   border: none;
   background: none;
-  font-size: 30px;
+  font-size: 1.875rem;
   font-weight: bold;
 }
 .ytIzq .cobertor .popup .conteindoPopUp {
@@ -932,7 +936,7 @@ form div textarea {
   text-align: center;
   position: relative;
   transition: all 200ms;
-  font-size: 30px;
+  font-size: 1.875rem;
   font-weight: bold;
   text-decoration: none;
   color: #3c3c3c;
@@ -981,7 +985,7 @@ form div textarea {
   margin: 0 auto;
   width: 100%;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 1.563rem;
 }
 
 /* Instagram -------------------------------------------------------------------------------------------------*/
@@ -1046,7 +1050,7 @@ body {
 /* ------------------------------------------------------------------------------- */
 @media only screen and (min-width: 1280px) {
   .tarjetaTexto {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
 }
 @media only screen and (max-width: 1279px) {
@@ -1087,11 +1091,11 @@ body {
   .coverLogo img {
     height: 177px;
   }
-  .coverTexto h1 {
-    font-size: 50px;
+  .coverTexto h1, .coverTexto h2 {
+    font-size: 3.125rem;
   }
   .coverTexto p {
-    font-size: 30px;
+    font-size: 1.875rem;
   }
   .hambScroll {
     display: none;
@@ -1139,12 +1143,12 @@ body {
   .coverTexto {
     width: 100%;
   }
-  .coverTexto h1 {
-    font-size: 30px;
+  .coverTexto h1, .coverTexto h2 {
+    font-size: 1.875rem;
     text-align: center;
   }
   .coverTexto p {
-    font-size: 15px;
+    font-size: 0.938rem;
     text-align: center;
   }
   .videoYouTube {
@@ -1162,7 +1166,7 @@ body {
     height: 50px;
   }
   .botonPopUp a {
-    font-size: 25px;
+    font-size: 1.563rem;
   }
   .whatsappIcon {
     bottom: 6%;
@@ -1174,9 +1178,9 @@ body {
     justify-content: center;
     text-align: center;
   }
-  .video h1 {
+  .video h2 {
     font-weight: 500;
-    font-size: 25px;
+    font-size: 1.563rem;
   }
   .coverLogo img {
     height: 100px;
@@ -1202,7 +1206,7 @@ body {
     margin-top: 50px;
   }
   .faq details p {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
   .coverMobile {
     display: none;
@@ -1213,7 +1217,7 @@ body {
     display: none;
   }
   .separador p {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
   .informativo {
     padding: 0;
@@ -1227,11 +1231,11 @@ body {
     margin: 0px;
   }
   .tarjetaTexto {
-    font-size: 30px;
+    font-size: 1.875rem;
     margin-top: 30px;
   }
   .tarjetaSpan1 {
-    font-size: 30px;
+    font-size: 1.875rem;
   }
   .corrector {
     padding: 0;
@@ -1240,7 +1244,7 @@ body {
     margin: 10px;
   }
   .informativoTexto p {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
   .informativoTexto h3 {
     width: 196px;
@@ -1251,10 +1255,10 @@ body {
     padding: 0px;
     padding-top: 10px;
     padding-bottom: 10px;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .faq details summary {
-    font-size: 15px;
+    font-size: 0.938rem;
   }
 }
 /* Modificacion del animate.css*/

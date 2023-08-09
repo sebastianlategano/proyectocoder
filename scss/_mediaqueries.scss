@@ -3,7 +3,7 @@
 
 @media only screen and (min-width: 1280px) {
   .tarjetaTexto {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
 }
 
@@ -53,12 +53,12 @@
     height: 177px;
   }
 
-  .coverTexto h1 {
-    font-size: 50px;
+  .coverTexto h1, .coverTexto h2 {
+    font-size: 3.125rem;
   }
 
   .coverTexto p {
-    font-size: 30px;
+    font-size: 1.875rem;
   }
 
   .hambScroll {
@@ -119,13 +119,13 @@
     width: 100%;
   }
 
-  .coverTexto h1 {
-    font-size: 30px;
+  .coverTexto h1, .coverTexto h2 {
+    font-size: 1.875rem;
     text-align: center;
   }
 
   .coverTexto p {
-    font-size: 15px;
+    font-size: 0.938rem;
     text-align: center;
   }
 
@@ -148,7 +148,7 @@
   }
 
   .botonPopUp a {
-    font-size: 25px;
+    font-size: 1.563rem;
   }
 
   .whatsappIcon {
@@ -163,9 +163,9 @@
     text-align: center;
   }
 
-  .video h1 {
+  .video h2 {
     font-weight: 500;
-    font-size: 25px;
+    font-size: 1.563rem;
   }
 
   .coverLogo img {
@@ -198,7 +198,7 @@
   }
 
   .faq details p {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 
   .coverMobile {
@@ -212,7 +212,7 @@
   }
 
   .separador p {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 
   .informativo {
@@ -230,12 +230,12 @@
   }
 
   .tarjetaTexto {
-    font-size: 30px;
+    font-size: 1.875rem;
     margin-top: 30px;
   }
 
   .tarjetaSpan1 {
-    font-size: 30px;
+    font-size: 1.875rem;
   }
 
   .corrector {
@@ -247,7 +247,7 @@
   }
 
   .informativoTexto p {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 
   .informativoTexto h3 {
@@ -261,11 +261,11 @@
       padding: 0px;
       padding-top: 10px;
       padding-bottom: 10px;
-      font-size: 14px;
+      font-size: 0.875rem;
     }
   }
 
   .faq details summary {
-    font-size: 15px;
+    font-size: 0.938rem;
   }
 }
