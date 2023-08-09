@@ -595,11 +595,24 @@
    <script type="text/javascript">
     const themeToggle = document.getElementById("theme-toggle");
 
+    // Verificar si hay una configuración previa en el almacenamiento local
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      if (savedTheme === "light") {
+        themeToggle.checked = true;
+      } else {
+        themeToggle.checked = false;
+      }
+    }
+
     themeToggle.addEventListener('change', () => {
       if (themeToggle.checked) {
         document.documentElement.setAttribute('data-theme', "light");
+        localStorage.setItem("theme", "light");
       } else {
         document.documentElement.setAttribute('data-theme', "darktheme");
+        localStorage.setItem("theme", "darktheme");
       }
     });
   </script>
