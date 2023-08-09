@@ -27,14 +27,19 @@
           <img src="../assets/img/logo.png" alt="">
         </div>
         
-        <a href="../index.html" class="menuEnlace"><p class="linkComun"><span class="nose"><img src="../assets/img/hambHome5.png" alt=""></span>Inicio</p></a>
-        <a href="producto.html" class="menuEnlace"><p class="linkComun"><span class="nose"><img src="../assets/img/hambProductos.png" alt=""></span>Productos</p></a>
-        <a href="aboutus.html" class="menuEnlace"><p class="linkResaltado"><span class="nose"><img src="../assets/img/hambAboutUs.png" alt=""></span>Sobre nosotros</p></a>
-        <a href="faq.html" class="menuEnlace"><p class="linkComun"><span class="nose"><img src="../assets/img/hambFaq.png" alt=""></span>Preguntas frecuentes</p></a>
-        <a href="contacto.html" class="menuEnlace"><p class="linkComun"><span class="nose"><img src="../assets/img/hambContacto.png" alt=""></span>Contacto</p></a>
+        <a href="../index.html" class="menuEnlace"><p class="linkComun"><span class="menuIcon"><img src="../assets/img/hambHome5.png" alt=""></span>Inicio</p></a>
+        <a href="producto.html" class="menuEnlace"><p class="linkComun"><span class="menuIcon"><img src="../assets/img/hambProductos.png" alt=""></span>Productos</p></a>
+        <a href="aboutus.html" class="menuEnlace"><p class="linkResaltado"><span class="menuIcon"><img src="../assets/img/hambAboutUs.png" alt=""></span>Sobre nosotros</p></a>
+        <a href="faq.html" class="menuEnlace"><p class="linkComun"><span class="menuIcon"><img src="../assets/img/hambFaq.png" alt=""></span>Preguntas frecuentes</p></a>
+        <a href="contacto.html" class="menuEnlace"><p class="linkComun"><span class="menuIcon"><img src="../assets/img/hambContacto.png" alt=""></span>Contacto</p></a>
       </div>
     </nav>
   </header>
+
+  <!-- Switch toggler para modo oscuro ------------------------------------------------------------------------------------>
+  <div class="wrapper">
+    <input type="checkbox" name="checkbox" class="switch" id="theme-toggle" checked>
+  </div>
 
   <!-- NAV Desktop ----------------------------------------------------------------------------------------------------------->
 
@@ -51,7 +56,7 @@
       </nav>
     </header>
     <div class="headerLogo justify-content-center d-flex flex-column align-items-center">
-      <a href="../index.html"><img src="../assets/img/logo.png" alt="Logo" class="m-4"></a>
+      <a href="../index.html"><img src="../assets/img/logo.png" alt="Logo" class="m-5"></a>
       <div class="coverTexto text-center animate__animated animate__fadeInUp animate__delay-1s">
         <h1>Sobre nosotros</h1>
       </div>
@@ -81,7 +86,7 @@
       </p>
       <img class="faq1img mx-auto" src="../assets/img/aboutus1.jpg" alt="Productos naturales">
       <div class="faq1texto rounded">
-        <h3>Ingredientes de calidad</h3>
+        <h3 class="m-5">Ingredientes de calidad</h3>
       <p class="m-2 m-sm-3 m-md-5">
         En Legioma natural, creemos en la belleza que proviene de la naturaleza. Nuestro compromiso es
         proporcionar productos que te hagan sentir bien tanto por dentro como por fuera, utilizando ingredientes
@@ -89,7 +94,7 @@
       </p></div>
       <img class="faq2img mx-auto" src="../assets/img/aboutus2.jpg" alt="Productos naturales">
       <div class="faq2texto rounded">
-        <h3>Sin químicos</h3>
+        <h3 class="m-5">Sin químicos</h3>
       <p class="m-2 m-sm-3 m-md-5">
         Nos esforzamos por mantener nuestros productos libres de
         químicos agresivos, toxinas y ingredientes sintéticos dañinos, para que puedas disfrutar de una experiencia de
@@ -97,14 +102,14 @@
       </p></div>
       <img class="faq3img mx-auto" src="../assets/img/aboutus3.jpg" alt="Productos naturales">
       <div class="faq3texto rounded">
-      <h3>Envases sustentables</h3>
+      <h3 class="m-5">Envases sustentables</h3>
       <p class="m-2 m-sm-3 m-md-5">
         Nos comprometemos a utilizar envases y embalajes
         eco-amigables, minimizando así nuestro impacto en el medio ambiente.
       </p></div>
       <img class="faq4img mx-auto" src="../assets/img/aboutus4.jpg" alt="Productos naturales">
       <div class="faq4texto rounded">
-        <h3>Nuestro compromiso</h3>
+        <h3 class="m-5">Nuestro compromiso</h3>
       <p class="m-2 m-sm-3 m-md-5">
         En Legioma natural, creemos en el empoderamiento a través del cuidado personal. Queremos que te sientas
         maravillosamente bien al usar nuestros productos y que disfrutes de una experiencia que va más allá de los
@@ -113,7 +118,7 @@
       </p></div>
       <img class="faq5img mx-auto" src="../assets/img/crueltyfree.png" alt="Cruelty free logo">
       <div class="faq5texto rounded">
-        <h3>Apto Vegan</h3>
+        <h3 class="m-5">Apto Vegan</h3>
       <p class="m-2 m-sm-3 m-md-5">
         Creemos que la belleza puede ser alcanzada sin causar sufrimiento, y nos esforzamos por marcar la diferencia en la industria al proporcionar productos que son amigables tanto para ti como para los animales. 
       </p></div>
@@ -187,6 +192,19 @@
       }
     };
   </script>
+
+    <!-- Script modo oscuro -->
+    <script type="text/javascript">
+      const themeToggle = document.getElementById("theme-toggle");
+  
+      themeToggle.addEventListener('change', () => {
+        if (themeToggle.checked) {
+          document.documentElement.setAttribute('data-theme', "light");
+        } else {
+          document.documentElement.setAttribute('data-theme', "darktheme");
+        }
+      });
+    </script>
 
   <!-- SCRIPT BS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"

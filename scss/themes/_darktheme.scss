@@ -4,10 +4,11 @@
     background-color: black;
     color: white;
     }
-    .informativo, .separador, .flechitaFondo, .footerMenu, .tarjetasCaja, .scroll, .menuEnlaces, .hambScroll {
+    .informativo, .separador, .flechitaFondo, .footerMenu, .tarjetasCaja, .scroll, .menuEnlaces, .hambScroll, div.menuCerrar, div.popup , 
+    .popupTexto, .faqProfile, .faq1texto, .faq2texto, .faq3texto, .faq4texto, .faq5texto, .faq, .contactoFormulario {
         background-color: $colorGrisOscuro;
     }
-
+    
     .coverLinks, .scroll, .headerPages {
         .linkUnderlined a {
           display: inline-block;
@@ -58,46 +59,71 @@
             $colorVerdeOscuro 50%
           );
         }
-      }
+    }
 
-      .coverLinks {
-        background-color: rgba(0, 0, 0, 0.5);
-      }
+    .coverLinks, .menuHamburguesa {
+    background-color: rgba(0, 0, 0, 0.5);
+    }
 
-      .recuadro {
-        z-index: 0;
-      }
+    .recuadro {
+    z-index: 0;
+    }
 
-      .linkComun {
-        color: $colorBlanco;
-      }
+    .linkComun, .popup , .popupTexto button, #genero, #suscribirse, ::placeholder {
+    color: $colorBlanco;
+    }
 
-      #menuImg {
-        filter: brightness(2000%);
-      }
+    #menuImg {
+    filter: brightness(2000%);
+    }
 
-      .menuHamburguesa {
-        background-color: rgba(0, 0, 0, 0.5);
-      }
+    footer {
+    a {
+        &:hover {
+        text-decoration: none;
+        color: $colorRosa;
+        }
+    }
+    }
 
-      div.menuCerrar {
-        background-color: $colorGrisOscuro;
-      }
+    .coverZoom {
+    filter: brightness(50%);
+    transition: 0.5s ease;
+    }
 
-      div.popup , .popupTexto {
-        background-color: $colorGrisOscuro;
-      }
+    .coverTexto h1 {
+    color: $colorGrisClaro;
+    transition: 0.5s ease;
+    }
 
-      .popup , .popupTexto button {
-        color: white;
-      }
+    .insta {
+        display: block;
+        background: {
+          image: url(../assets/img/instaBackDark.png);
+          size: cover;
+          position: center;
+        }
+    }
 
-      footer {
-        a {
-          &:hover {
-            text-decoration: none;
-            color: $colorRosa;
-          }
+    .indexContacto {
+        background: {
+          image: url(../assets/img/indexContactoDark.jpg);
+        }
+    }
+
+    .headerPages {
+        background: {
+          image: url(../assets/img/coverpagesDark.jpg);
         }
       }
+    
+    .detalles {
+        background-color: black;
+    }
+
+    input, select, textarea {
+        background-color: rgb(95, 95, 95);
+    }
+
+
 }

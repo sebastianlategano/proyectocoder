@@ -7,7 +7,8 @@
   background-color: black;
   color: white;
 }
-:root[data-theme=darktheme] .informativo, :root[data-theme=darktheme] .separador, :root[data-theme=darktheme] .flechitaFondo, :root[data-theme=darktheme] .footerMenu, :root[data-theme=darktheme] .tarjetasCaja, :root[data-theme=darktheme] .scroll, :root[data-theme=darktheme] .menuEnlaces, :root[data-theme=darktheme] .hambScroll {
+:root[data-theme=darktheme] .informativo, :root[data-theme=darktheme] .separador, :root[data-theme=darktheme] .flechitaFondo, :root[data-theme=darktheme] .footerMenu, :root[data-theme=darktheme] .tarjetasCaja, :root[data-theme=darktheme] .scroll, :root[data-theme=darktheme] .menuEnlaces, :root[data-theme=darktheme] .hambScroll, :root[data-theme=darktheme] div.menuCerrar, :root[data-theme=darktheme] div.popup,
+:root[data-theme=darktheme] .popupTexto, :root[data-theme=darktheme] .faqProfile, :root[data-theme=darktheme] .faq1texto, :root[data-theme=darktheme] .faq2texto, :root[data-theme=darktheme] .faq3texto, :root[data-theme=darktheme] .faq4texto, :root[data-theme=darktheme] .faq5texto, :root[data-theme=darktheme] .faq, :root[data-theme=darktheme] .contactoFormulario {
   background-color: #3c3c3c;
 }
 :root[data-theme=darktheme] .coverLinks, :root[data-theme=darktheme] .scroll, :root[data-theme=darktheme] .headerPages {
@@ -46,33 +47,47 @@
 :root[data-theme=darktheme] .coverLinks .linkInicio a, :root[data-theme=darktheme] .scroll .linkInicio a, :root[data-theme=darktheme] .headerPages .linkInicio a {
   background-image: linear-gradient(to right, white, white 50%, #9cb8a0 50%);
 }
-:root[data-theme=darktheme] .coverLinks {
+:root[data-theme=darktheme] .coverLinks, :root[data-theme=darktheme] .menuHamburguesa {
   background-color: rgba(0, 0, 0, 0.5);
 }
 :root[data-theme=darktheme] .recuadro {
   z-index: 0;
 }
-:root[data-theme=darktheme] .linkComun {
+:root[data-theme=darktheme] .linkComun, :root[data-theme=darktheme] .popup, :root[data-theme=darktheme] .popupTexto button, :root[data-theme=darktheme] #genero, :root[data-theme=darktheme] #suscribirse, :root[data-theme=darktheme] ::placeholder {
   color: white;
 }
 :root[data-theme=darktheme] #menuImg {
   filter: brightness(2000%);
 }
-:root[data-theme=darktheme] .menuHamburguesa {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-:root[data-theme=darktheme] div.menuCerrar {
-  background-color: #3c3c3c;
-}
-:root[data-theme=darktheme] div.popup, :root[data-theme=darktheme] .popupTexto {
-  background-color: #3c3c3c;
-}
-:root[data-theme=darktheme] .popup, :root[data-theme=darktheme] .popupTexto button {
-  color: white;
-}
 :root[data-theme=darktheme] footer a:hover {
   text-decoration: none;
   color: #e7acaa;
+}
+:root[data-theme=darktheme] .coverZoom {
+  filter: brightness(50%);
+  transition: 0.5s ease;
+}
+:root[data-theme=darktheme] .coverTexto h1 {
+  color: #f5f5f5;
+  transition: 0.5s ease;
+}
+:root[data-theme=darktheme] .insta {
+  display: block;
+  background-image: url(../assets/img/instaBackDark.png);
+  background-size: cover;
+  background-position: center;
+}
+:root[data-theme=darktheme] .indexContacto {
+  background-image: url(../assets/img/indexContactoDark.jpg);
+}
+:root[data-theme=darktheme] .headerPages {
+  background-image: url(../assets/img/coverpagesDark.jpg);
+}
+:root[data-theme=darktheme] .detalles {
+  background-color: black;
+}
+:root[data-theme=darktheme] input, :root[data-theme=darktheme] select, :root[data-theme=darktheme] textarea {
+  background-color: rgb(95, 95, 95);
 }
 
 .botonMarron, .botonVerde, .botonRosa {
@@ -289,6 +304,7 @@
 }
 .cover .coverFondo .coverZoom {
   animation: zoom-in-zoom-out 40s ease infinite;
+  transition: 0.5s ease;
 }
 .cover .coverFondo .coverLogo {
   margin: 30px;
@@ -313,18 +329,19 @@
 
 .coverTexto p, .coverTexto h1 {
   font-weight: 700;
+  transition: 0.5s ease;
 }
 
 /* Header diferente para las otras páginas -------------------------------------------------------------------------- */
 .headerPages {
-  min-height: 50vh;
+  min-height: 60vh;
   background-image: url(../assets/img/coverpages.jpg);
   background-position: center;
   background-size: cover;
 }
 
 .headerLogo {
-  height: 50vh;
+  height: 60vh;
 }
 
 .coverTexto h1 {
@@ -408,7 +425,7 @@ input.switch {
   width: 130px;
   height: 100px;
   position: fixed;
-  top: 9.5%;
+  top: 8.3%;
   left: 90%;
   transform: translate(-50%, -50%);
   z-index: 5;
@@ -650,6 +667,9 @@ input.switch {
 .faq {
   max-width: 1200px;
   background-color: #eae9e4;
+}
+.faq .detalles {
+  background-color: #F8F9FA;
 }
 .faq .faqAclaracion {
   font-style: italic;
@@ -1170,7 +1190,7 @@ body {
 }
 @media only screen and (max-width: 768px) {
   .wrapper {
-    top: 9.5%;
+    top: 8.3%;
     left: 85%;
   }
   input.switch {

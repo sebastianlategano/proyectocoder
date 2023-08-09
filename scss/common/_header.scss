@@ -193,6 +193,7 @@
   .coverFondo {
     .coverZoom {
       animation: zoom-in-zoom-out 40s ease infinite;
+      transition: 0.5s ease; 
     }
 
     .coverLogo {
@@ -224,11 +225,12 @@
 
 .coverTexto p, .coverTexto h1 {
   font-weight: 700;
+  transition: 0.5s ease;
 }
 
 /* Header diferente para las otras páginas -------------------------------------------------------------------------- */
 .headerPages {
-  min-height: 50vh;
+  min-height: 60vh;
   background: {
     image: url(../assets/img/coverpages.jpg);
     position: center;
@@ -237,7 +239,7 @@
 }
 
 .headerLogo {
-  height: 50vh;
+  height: 60vh;
 }
 
 .coverTexto h1 {

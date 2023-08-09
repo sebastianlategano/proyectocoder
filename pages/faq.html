@@ -27,14 +27,19 @@
           <img src="../assets/img/logo.png" alt="">
         </div>
         
-        <a href="../index.html" class="menuEnlace"><p class="linkComun"><span class="nose"><img src="../assets/img/hambHome5.png" alt=""></span>Inicio</p></a>
-        <a href="producto.html" class="menuEnlace"><p class="linkComun"><span class="nose"><img src="../assets/img/hambProductos.png" alt=""></span>Productos</p></a>
-        <a href="aboutus.html" class="menuEnlace"><p class="linkComun"><span class="nose"><img src="../assets/img/hambAboutUs.png" alt=""></span>Sobre nosotros</p></a>
-        <a href="faq.html" class="menuEnlace"><p class="linkResaltado"><span class="nose"><img src="../assets/img/hambFaq.png" alt=""></span>Preguntas frecuentes</p></a>
-        <a href="contacto.html" class="menuEnlace"><p class="linkComun"><span class="nose"><img src="../assets/img/hambContacto.png" alt=""></span>Contacto</p></a>
+        <a href="../index.html" class="menuEnlace"><p class="linkComun"><span class="menuIcon"><img src="../assets/img/hambHome5.png" alt=""></span>Inicio</p></a>
+        <a href="producto.html" class="menuEnlace"><p class="linkComun"><span class="menuIcon"><img src="../assets/img/hambProductos.png" alt=""></span>Productos</p></a>
+        <a href="aboutus.html" class="menuEnlace"><p class="linkComun"><span class="menuIcon"><img src="../assets/img/hambAboutUs.png" alt=""></span>Sobre nosotros</p></a>
+        <a href="faq.html" class="menuEnlace"><p class="linkResaltado"><span class="menuIcon"><img src="../assets/img/hambFaq.png" alt=""></span>Preguntas frecuentes</p></a>
+        <a href="contacto.html" class="menuEnlace"><p class="linkComun"><span class="menuIcon"><img src="../assets/img/hambContacto.png" alt=""></span>Contacto</p></a>
       </div>
     </nav>
   </header>
+
+  <!-- Switch toggler para modo oscuro ------------------------------------------------------------------------------------>
+  <div class="wrapper">
+    <input type="checkbox" name="checkbox" class="switch" id="theme-toggle" checked>
+  </div>
 
   <!-- NAV Desktop ----------------------------------------------------------------------------------------------------------->
 
@@ -51,7 +56,7 @@
       </nav>
     </header>
     <div class="headerLogo justify-content-center d-flex flex-column align-items-center">
-      <a href="../index.html"><img src="../assets/img/logo.png" alt="Logo" class="m-4"></a>
+      <a href="../index.html"><img src="../assets/img/logo.png" alt="Logo" class="m-5"></a>
       <div class="coverTexto text-center animate__animated animate__fadeInUp animate__delay-1s">
         <h1>Preguntas frecuentes</h1>
       </div>
@@ -64,7 +69,7 @@
 
     <section class="faq m-5 mx-auto p-1 rounded shadow">
 
-      <details class="rounded shadow bg-light p-2 pe-auto mt-5 m-sm-5">
+      <details class="rounded shadow p-2 pe-auto mt-5 m-sm-5 detalles">
         <summary class="h4 m-2">¿Qué es la cosmética natural?</summary>
         <p class="m-3">La cosmética natural se basa en el uso de ingredientes provenientes de fuentes
           naturales, como
@@ -78,7 +83,7 @@
       </details>
 
       <div class="faqItem">
-        <details class="rounded shadow bg-light p-2 pe-auto mt-5 m-sm-5">
+        <details class="rounded shadow p-2 pe-auto mt-5 m-sm-5 detalles">
           <summary class="h4 m-2">¿Son seguros los productos de cosmética natural?</summary>
           <p class="m-3">Sí, nuestros productos de cosmética natural son seguros para su uso. Nos esforzamos
             por
@@ -93,7 +98,7 @@
       </div>
 
       <div class="faqItem">
-        <details class="rounded shadow bg-light p-2 pe-auto mt-5 m-sm-5">
+        <details class="rounded shadow p-2 pe-auto mt-5 m-sm-5 detalles">
           <summary class="h4 m-2">¿Los productos de cosmética natural son adecuados para todo tipo de piel?</summary>
           <p class="m-3">Sí, nuestros productos de cosmética natural están diseñados para ser adecuados para
             la
@@ -108,7 +113,7 @@
       </div>
 
       <div class="faqItem">
-        <details class="rounded shadow bg-light p-2 pe-auto mt-5 m-sm-5">
+        <details class="rounded shadow p-2 pe-auto mt-5 m-sm-5 detalles">
           <summary class="h4 m-2">¿Hacen pruebas en animales?</summary>
           <p class="m-3">En absoluto. En Legioma natural, nos oponemos firmemente a las pruebas en
             animales y
@@ -122,7 +127,7 @@
       </div>
 
       <div class="faqItem">
-        <details class="rounded shadow bg-light p-2 pe-auto mt-5 m-sm-5">
+        <details class="rounded shadow p-2 pe-auto mt-5 m-sm-5 detalles">
           <summary class="h4 m-2">¿Son sus envases respetuosos con el medio ambiente?</summary>
           <p class="m-3">Sí, nos preocupamos por el medio ambiente y nos esforzamos por minimizar nuestro
             impacto
@@ -137,7 +142,7 @@
       </div>
 
       <div class="faqItem">
-        <details class="rounded shadow bg-light p-2 pe-auto mt-5 m-sm-5">
+        <details class="rounded shadow p-2 pe-auto mt-5 m-sm-5 detalles">
           <summary class="h4 m-2">¿Cómo puedo realizar un pedido?</summary>
           <p class="m-3">Realizar un pedido en nuestro sitio web es rápido y sencillo. Navega por nuestra tienda
             en línea, selecciona los productos que deseas y añádelos a tu carrito de compras. Luego, sigue las
@@ -212,6 +217,19 @@
         hambTop.className = 'hambScroll';
       }
     };
+  </script>
+
+  <!-- Script modo oscuro -->
+  <script type="text/javascript">
+    const themeToggle = document.getElementById("theme-toggle");
+
+    themeToggle.addEventListener('change', () => {
+      if (themeToggle.checked) {
+        document.documentElement.setAttribute('data-theme', "light");
+      } else {
+        document.documentElement.setAttribute('data-theme', "darktheme");
+      }
+    });
   </script>
 
   <!-- SCRIPT BS -->
