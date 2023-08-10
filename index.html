@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Legioma natural</title>
+  <meta name="description" content="Descubre nuestra línea de cosméticos naturales que realzan tu belleza de manera saludable. Ingredientes puros para cuidar tu piel al máximo.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/styles.css">
   <link rel="shortcut icon" href="assets/img/favicon.png">
 </head>
 
@@ -14,135 +16,154 @@
   
   <div id="home"></div>
 
-  <!-- Menu hamburguesa y logo, solo para moviles (resoluciones pequenias) -------------------------------------------------->
-  <!-- Si pongo este nav dentro del header o de un <section>, no funciona el position: sticky. No me gustó el de bootstrap -->
-  <nav class="menuHamburguesa">
-      <a href="#menuDesplegable">
-        <img src="assets/img/menu.png" alt="Menu hamburguesa" id="menuImg">
-      </a>
-      <a href="index.html">
-        <img src="assets/img/logo.png" alt="Logo">
-      </a>
-
+  <!-- Nav mobile --------------------------------------------------------------------------------------------------------->
+  <header>
+    <nav class="menuHamburguesa" id="hambTop">
+      <a href="#menuDesplegable"><img src="assets/img/menu.png" alt="Menu hamburguesa" id="menuImg"></a>
       <div class="menuEnlaces" id="menuDesplegable">
         <div class="menuCerrar">
-          <a href="#home"><img src="assets/img/menu.png" alt="Menu hamburguesa" id="menuImg"></a>
+          <a href="#a"><img src="assets/img/menu.png" alt="Menu hamburguesa" id="menuImg"></a>
         </div>
-        <a href="index.html" class="menuEnlace"><p>Inicio</p></a>
-        <a href="pages/producto.html" class="menuEnlace"><p>Productos</p></a>
-        <a href="pages/aboutus.html" class="menuEnlace"><p>Sobre nosotros</p></a>
-        <a href="pages/faq.html" class="menuEnlace"><p>Preguntas frecuentes</p></a>
-        <a href="pages/contacto.html" class="menuEnlace"><p>Contacto</p></a>
+        <div class="miniLogo">
+          <img src="assets/img/logo.png" alt="Logo">
+        </div>
+        
+        <a href="index.html" class="menuEnlace"><p class="linkResaltado"><span class="menuIcon"><img src="assets/img/hambHome5.png" alt=""></span>Inicio</p></a>
+        <a href="pages/producto.html" class="menuEnlace"><p class="linkComun"><span class="menuIcon"><img src="assets/img/hambProductos.png" alt=""></span>Productos</p></a>
+        <a href="pages/aboutus.html" class="menuEnlace"><p class="linkComun"><span class="menuIcon"><img src="assets/img/hambAboutUs.png" alt=""></span>Sobre nosotros</p></a>
+        <a href="pages/faq.html" class="menuEnlace"><p class="linkComun"><span class="menuIcon"><img src="assets/img/hambFaq.png" alt=""></span>Preguntas frecuentes</p></a>
+        <a href="pages/contacto.html" class="menuEnlace"><p class="linkComun"><span class="menuIcon"><img src="assets/img/hambContacto.png" alt=""></span>Contacto</p></a>
       </div>
-  </nav>
+    </nav>
+  </header>
 
-  <!-- HEADER // COVER ------------------------------------------------------------------------------------------------------>
-  <header>
-    <section class="cover">
+  <!-- Switch toggler para modo oscuro ------------------------------------------------------------------------------------>
+  <div class="wrapper">
+    <input type="checkbox" name="checkbox" class="switch" id="theme-toggle" checked>
+  </div>
 
+  <!-- COVER Nav Desktop --------------------------------------------------------------------------------------------------->
+  <section class="cover">
+    <header>
       <nav class="coverLinks" id="navTop">
         <ul class="linkUnderlined">
-          <li><a href="pages/producto.html">Productos</li></a>
-          <li><a href="pages/aboutus.html">Sobre nosotros</li></a>
-          <li class="linkInicio"><a href="#home">Inicio</li></a>
-          <li><a href="pages/faq.html">Preguntas frecuentes</li></a>
-          <li><a href="pages/contacto.html">Contacto</li></a>
+          <li><a href="pages/producto.html">Productos</a></li>
+          <li><a href="pages/aboutus.html">Sobre nosotros</a></li>
+          <li class="linkInicio"><a href="#home">Inicio</a></li>
+          <li><a href="pages/faq.html">Preguntas frecuentes</a></li>
+          <li><a href="pages/contacto.html">Contacto</a></li>
+
         </ul>
       </nav>
+    </header>
 
-      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-interval="7000" data-bs-ride="carousel" data-bs-touch="true">
-        
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        
-        <div class="carousel-inner">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-interval="7000" data-bs-ride="carousel" data-bs-touch="true">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
 
-          <div class="carousel-item active coverFondo">
+      <div class="carousel-inner">
+        <div class="carousel-item active coverFondo">
+          <div class="coverDesktop">
             <img src="assets/img/cover1.jpg" class="d-block w-100 coverZoom" alt="Envases de cosmética natural">
-            <div class="carousel-caption d-md-block">
-              <div class="coverLogo">
-                <a href="index.html"><img src="assets/img/logo.png" alt="Logo"></a>
-              </div>
-              <div class="coverTexto">
-                <p>natural & vegan</p>
-                <h1>Cosmética natural</h1>
-              </div>
-              <div class="coverBoton justify-content-center">
-                <a href="pages/producto.html"><button type="button" class="btn btn-light btn-lg">Shop</button></a>
-              </div>
+          </div>
+          <div class="coverMobile">
+            <img src="assets/img/coverMobile1.jpg" class="d-block w-100 coverZoom" alt="Envases de cosmética natural">
+          </div>
+          <div class="carousel-caption d-md-block">
+            <div class="coverLogo">
+              <a href="index.html"><img src="assets/img/logo.png" alt="Logo"></a>
+            </div>
+            <div class="coverTexto">
+              <p class="animate__animated animate__fadeInUp animate__delay-3s">natural & vegan</p>
+              <h1 class="animate__animated animate__fadeInUp animate__delay-2s">Cosmética natural</h1>
+            </div>
+            <div class="coverBoton justify-content-center animate__animated animate__fadeInUp animate__delay-1s">
+              <a href="pages/producto.html"><button type="button" class="btn btn-light btn-lg">Shop</button></a>
             </div>
           </div>
-
-          <div class="carousel-item coverFondo">
-            <img src="assets/img/cover2.jpg" class="d-block w-100 coverZoom" alt="Tabla con toallón y jabón">
-            <div class="carousel-caption d-md-block">
-              <div class="coverLogo justify-content-center">
-                <a href="index.html"><img src="assets/img/logo.png" alt="Logo"></a>
-              </div>
-              <div class="coverTexto coverIzq">
-                <p>conoce más sobre</p>
-                <h1>Legioma</h1>
-              </div>
-              <div class="coverBoton coverIzq">
-                <a href="pages/aboutus.html"><button type="button" class="btn btn-light btn-lg">Sobre nosotros</button></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item coverFondo">
-            <img src="assets/img/cover3.jpg" class="d-block w-100 coverZoom" alt="Preparación natural">
-            <div class="carousel-caption d-md-block">
-              <div class="coverLogo">
-                <a href="index.html"><img src="assets/img/logo.png" alt="Logo"></a>
-              </div>
-              <div class="coverTexto coverDer">
-                <p>Haz tu pedido personalizado</p>
-                <h1>Contáctanos</h1>
-              </div>
-              <div class="coverBoton coverDer">
-                <a href="pages/contacto.html"><button type="button" class="btn btn-light btn-lg">Escribir
-                    mensaje</button></a>
-              </div>
-            </div>
-          </div>
-
         </div>
 
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        <div class="carousel-item coverFondo">
+          <div class="coverDesktop">
+            <img src="assets/img/cover2.jpg" class="d-block w-100 coverZoom" alt="Tabla con toallón y jabón">
+          </div>
+          <div class="coverMobile">
+            <img src="assets/img/coverMobile2.jpg" class="d-block w-100 coverZoom" alt="Envases de cosmética natural">
+          </div>
+          <div class="carousel-caption d-md-block cover2">
+            <div class="coverLogo justify-content-center">
+              <a href="index.html"><img src="assets/img/logo.png" alt="Logo"></a>
+            </div>
+            <div class="coverTexto">
+              <p class="animate__animated animate__fadeInUp animate__delay-3s">conoce más sobre</p>
+              <h2 class="animate__animated animate__fadeInUp animate__delay-2s">Legioma</h2>
+            </div>
+            <div class="coverBoton animate__animated animate__fadeInUp animate__delay-1s d-flex justify-content-center">
+              <a href="pages/aboutus.html"><button type="button" class="btn btn-light btn-lg">Sobre nosotros</button></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item coverFondo">
+          <div class="coverDesktop">
+            <img src="assets/img/cover3.jpg" class="d-block w-100 coverZoom" alt="Preparación natural">
+          </div>
+          <div class="coverMobile">
+            <img src="assets/img/coverMobile3.jpg" class="d-block w-100 coverZoom" alt="Envases de cosmética natural">
+          </div>
+          <div class="carousel-caption d-md-block cover3">
+            <div class="coverLogo justify-content-center">
+              <a href="index.html"><img src="assets/img/logo.png" alt="Logo"></a>
+            </div>
+            <div class="coverTexto">
+              <p class="animate__animated animate__fadeInUp animate__delay-3s">Haz tu pedido personalizado</p>
+              <h2 class="animate__animated animate__fadeInUp animate__delay-2s">Contáctanos</h2>
+            </div>
+            <div class="coverBoton animate__animated animate__fadeInUp animate__delay-1s d-flex justify-content-center">
+              <a href="pages/contacto.html"><button type="button" class="btn btn-light btn-lg">Escribir
+                  mensaje</button></a>
+            </div>
+          </div>
+        </div>
 
       </div>
 
-    </section>
-  </header>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+    </div>
+
+  </section>
+
+
+
 
   <!-- MAIN -->
   <main>
 
-    <!-- Separador -->
-    <section class="separador">
-      <div class="iconitos">
-        <img src="assets/img/icon-1.png" alt="Hojas">
-        <img src="assets/img/icon-2.png" alt="Mortero">
-        <img src="assets/img/icon-3.png" alt="Crema">
+    <!-- Separador ------------------------------------------------------------------------------------------------------------------------>
+    <section class="separador text-center">
+      <div class="p-4 elemento-con-delay">
+        <img src="assets/img/icon-1.png" alt="Hojas" class="me-4">
+        <img src="assets/img/icon-2.png" alt="Mortero" class="me-4">
+        <img src="assets/img/icon-3.png" alt="Crema" class="me-4">
       </div>
 
-      <div class="separadorTexto">
-        <p>Descubre nuestra tienda de cosmética natural: ingredientes puros y respetuosos con tu piel. Belleza en
-          armonía con la naturaleza</p>
+      <div class="pb-3 elemento-oculto">
+        <p class="text-white h4">Descubre nuestra tienda de cosmética natural: ingredientes puros y respetuosos con tu piel. Belleza en armonía con la naturaleza</p>
       </div>
     </section>
 
-    <!-- Productos destacados -->
+    <!-- Productos destacados --------------------------------------------------------------------------------------------------------------->
     <section class="catalogo container-fluid mb-5">
 
       <h2 class="text-center mt-5">Productos destacados</h2>
@@ -150,7 +171,7 @@
       <div class="row text-center gx-5 gy-5 m-3">
 
         <div class="col-lg-6 col-xl-3 d-inline-block mx-auto">
-          <div class="dontOverflow mx-auto">
+          <div class="dontOverflow">
             <img class="img-fluid catalogoImagen" src="assets/img/facial1.jpg" alt="Producto de la línea facial">
           </div>
           <p class="mt-3 h4">Producto 1</p>
@@ -160,7 +181,7 @@
         </div>
 
         <div class="col-lg-6 col-xl-3 d-inline-block mx-auto">
-          <div class="dontOverflow mx-auto">
+          <div class="dontOverflow">
             <img class="img-fluid catalogoImagen" src="assets/img/facial2.jpg" alt="Producto de la línea facial">
           </div>
           <p class="mt-3 h4">Producto 2</p>
@@ -170,7 +191,7 @@
         </div>
 
         <div class="col-lg-6 col-xl-3 d-inline-block mx-auto">
-          <div class="dontOverflow mx-auto">
+          <div class="dontOverflow">
             <img class="img-fluid catalogoImagen" src="assets/img/capilar1.jpg" alt="Producto de la línea capilar">
           </div>
           <p class="mt-3 h4">Producto 3</p>
@@ -180,7 +201,7 @@
         </div>
 
         <div class="col-lg-6 col-xl-3 d-inline-block mx-auto">
-          <div class="dontOverflow mx-auto">
+          <div class="dontOverflow">
             <img class="img-fluid catalogoImagen" src="assets/img/capilar2.jpg" alt="Producto de la línea capilar">
           </div>
           <p class="mt-3 h4">Producto 4</p>
@@ -194,7 +215,7 @@
       <div class="row text-center gx-5 gy-5 m-3">
 
         <div class="col-lg-6 col-xl-3 d-inline-block mx-auto">
-          <div class="dontOverflow mx-auto">
+          <div class="dontOverflow">
             <img class="img-fluid catalogoImagen" src="assets/img/corporal1.jpg" alt="Producto de la línea corporal">
           </div>
           <p class="mt-3 h4">Producto 5</p>
@@ -204,7 +225,7 @@
         </div>
 
         <div class="col-lg-6 col-xl-3 d-inline-block mx-auto">
-          <div class="dontOverflow mx-auto">
+          <div class="dontOverflow">
             <img class="img-fluid catalogoImagen" src="assets/img/corporal2.jpg" alt="Producto de la línea corporal">
           </div>
           <p class="mt-3 h4">Producto 6</p>
@@ -214,7 +235,7 @@
         </div>
 
         <div class="col-lg-6 col-xl-3 d-inline-block mx-auto">
-          <div class="dontOverflow mx-auto">
+          <div class="dontOverflow">
             <img class="img-fluid catalogoImagen" src="assets/img/banio1.jpg" alt="Producto de la línea de baño">
           </div>
           <p class="mt-3 h4">Producto 7</p>
@@ -224,7 +245,7 @@
         </div>
 
         <div class="col-lg-6 col-xl-3 d-inline-block mx-auto">
-          <div class="dontOverflow mx-auto">
+          <div class="dontOverflow">
             <img class="img-fluid catalogoImagen" src="assets/img/accesorios1.jpg" alt="Producto de la línea de accesorios">
           </div>
           <p class="mt-3 h4">Producto 8</p>
@@ -248,7 +269,7 @@
 
     <!-- Categorías mobile ------------------------------------------------------------------------------------------>
     <section class="categoriasMobile">
-      <a href="pages/producto.html#facial"><img src="assets/img/carrusel1.jpg" alt="Cosméticos faciales"></a></span>
+      <a href="pages/producto.html#facial"><img src="assets/img/carrusel1.jpg" alt="Cosméticos faciales"></a>
       <a href="pages/producto.html#corporal"><img src="assets/img/carrusel2.jpg" alt="Cosméticos de linea corporal"></a>
       <a href="pages/producto.html#capilar"><img src="assets/img/carrusel3.jpg" alt="Cosméticos de línea capilar"></a>
       <a href="pages/producto.html#banio"><img src="assets/img/carrusel4.jpg" alt="Cosméticos de línea de baño"></a>
@@ -256,11 +277,11 @@
     </section>
 
     <!-- Sección informativa ---------------------------------------------------------------------------------------->
-    <section class="informativo pt-80 pb-80">
+    <section class="informativo pt-80 pb-80 p5 elemento-con-delay">
       <div class="container">
 
         <div class="row">
-          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <div class="col-lg-4 col-md-6 mb-lg-0 corrector">
             <div class="informativoCaja d-flex align-items-center">
               <div class="informativoIcono">
                 <img src="assets/img/infoenvios.png" alt="Camión de envíos">
@@ -271,7 +292,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <div class="col-lg-4 col-md-6 mb-lg-0 corrector">
             <div class="informativoCaja d-flex align-items-center">
               <div class="informativoIcono">
                 <img src="assets/img/infollamadas.png" alt="Teléfono">
@@ -282,8 +303,8 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="informativoCaja d-flex justify-content-start align-items-center">
+          <div class="col-lg-4 col-md-6 corrector">
+            <div class="informativoCaja d-flex align-items-center">
               <div class="informativoIcono">
                 <img src="assets/img/infotarjeta.png" alt="Tarjeta de crédito">
               </div>
@@ -299,65 +320,92 @@
     </section>
 
     <!-- Tarjetas promoción y acerca de nosotros --------------------------------------------------------------------->
-    <section class="tarjetas px-2">
+    <section class="tarjetas">
       <div class="container-fluid row tarjetasCaja rounded-3 border shadow-lg">
+        
         <div class="col-lg-5 tarjetaImagen text-center">
-          <img src="assets/img/accesoriospromo.jpg" alt="Accesorios para cosmética" class="img-fluid mx-auto"></img>
+          <img src="assets/img/accesoriospromo.jpg" alt="Accesorios para cosmética" class="img-fluid mx-auto rounded">
         </div>
-        <div class="col-lg-7 justify-content-center d-flex flex-column">
+
+        <div class="col-lg-7 justify-content-center d-flex flex-column corrector">
           <h2 class="tarjetaTexto">Este mes accesorios, con grandes <span class="tarjetaSpan1">descuentos...</span></h2>
           <p class="lead tarjetaDescripcion text-center">
             Descubre la belleza de lo natural con nuestros accesorios para cosmética natural.
             Estamos comprometidos con la sostenibilidad, por lo que nos aseguramos de que cada accesorio que encuentres
             en nuestra tienda esté hecho con materiales amigables con el medio ambiente.</p>
-          <div class="botonMarron">
+          
+          <div class="botonMarron mb-5 elemento-oculto">
             <a href="pages/producto.html#accesorios"><button type="button" class="btn btn-light btn-lg">Comprar</button></a>
           </div>
+
         </div>
+
       </div>
     </section>
 
-    <section class="tarjetas px-2">
+    <section class="tarjetas">
       <div class="container-fluid row tarjetasCaja rounded-3 border shadow-lg">
-        <div class="col-lg-5 tarjetaImagen text-center order-md-1">
-          <img src="assets/img/aboutusindex.jpg" alt="Cosméticos hechos con aloe" class="img-fluid mx-auto"></img>
-        </div>
-        <div class="col-lg-7 justify-content-center d-flex flex-column">
+
+        <div class="col-lg-7 justify-content-center d-flex flex-column corrector">
           <h2 class="tarjetaTexto">Somos <span class="tarjetaSpan2">Legioma</span></h2>
           <p class="lead tarjetaDescripcion text-center">
             Conoce más acerca de nuestra pasión por la belleza natural. En nuestra empresa de cosmética, fusionamos la
             pureza de la naturaleza con la ciencia para brindarte productos seguros, efectivos y respetuosos con el
             medio ambiente. Descubre tu mejor versión, de manera natural.</p>
-          <div class="botonVerde">
+          <div class="botonVerde elemento-oculto">
             <a href="pages/aboutus.html"><button type="button" class="btn btn-light btn-lg">Conocenos</button></a>
           </div>
         </div>
+
+        <div class="col-lg-5 tarjetaImagen text-center mb-2"> 
+          <div class="ytIzq">
+            <div class="recuadro">
+              <img src="assets/img/aboutusindex.jpg" alt="" class="rounded img-fluid">
+            </div>
+            <div class="botonPopUp">
+              <a class="button" href="#popup1">►</a>
+            </div>
+            <div class="cobertor" id="popup1">
+              <div class="popup rounded">
+                <div class="popupTexto">
+                  <p>Video YouTube</p>
+                  <a href="#a" class="cerrar"><button onclick = "stop()">x</button></a>
+                </div>
+                <div class="conteindoPopUp">
+                  <iframe id="videoId" width="560" height="315" src="https://www.youtube.com/embed/Wrw1JEcRw1w?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
+
     <!-- Sección testimonios -------------------------------------------------------------------------------------------->
-    <section id="carouselExampleDark2" class="carousel carousel-dark slide" data-bs-interval="7000" data-bs-ride="carousel" data-bs-touch="true">
-      <div class="carousel-inner">
+    <section id="carouselExampleDark2" class="carousel carousel-dark slide" data-bs-interval="3000" data-bs-ride="carousel" data-bs-touch="true">
+      <div class="carousel-inner elemento-oculto">
         
         <div class="carousel-item active">
           <div class="container mt-5 mb-5 testimonios">
             <div class="row">
               <div class="col-lg-4">
-                <img src="assets/img/iconWhatsapp.png" alt="Ícono WhatsApp" class="testimoniosImg img-fluid mx-auto"></img>
+                <img src="assets/img/iconWhatsapp.png" alt="Ícono WhatsApp" class="testimoniosImg img-fluid mx-auto">
                 <h2 style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 50px;">❝ Joana</h2>
-                <img src="assets/img/estrellas.png" alt="5 de 5 estrellas" class="estrellas img-fluid mx-auto"></img>
+                <img src="assets/img/estrellas.png" alt="5 de 5 estrellas" class="estrellas img-fluid mx-auto">
                 <p>La calidad de los productos es excepcional, y brindan asesoramiento experto, de manera casi inmediata y muy agradable. Los recomiendo sin dudarlo!</p>
               </div>
               <div class="col-lg-4">
-                <img src="assets/img/iconInstagram.png" alt="Ícono Instagram" class="testimoniosImg img-fluid mx-auto"></img>
+                <img src="assets/img/iconInstagram.png" alt="Ícono Instagram" class="testimoniosImg img-fluid mx-auto">
                 <h2 style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 50px;">❝ Sofía</h2>
-                <img src="assets/img/estrellas.png" alt="5 de 5 estrellas" class="estrellas img-fluid mx-auto"></img>
+                <img src="assets/img/estrellas.png" alt="5 de 5 estrellas" class="estrellas img-fluid mx-auto">
                 <p>Consumo sus productos y mi hija peque también! nos encantan los aromas! sin duda los recomendamos, sobre todo por su calidad ♥!</p>
               </div>
               <div class="col-lg-4">
-                <img src="assets/img/iconFacebook.png" alt="Ícono Facebook" class="testimoniosImg img-fluid mx-auto"></img>
+                <img src="assets/img/iconFacebook.png" alt="Ícono Facebook" class="testimoniosImg img-fluid mx-auto">
                 <h2 style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 50px;">❝ Valentina</h2>
-                <img src="assets/img/estrellas2.png" alt="4.5 de 5 estrellas" class="estrellas img-fluid mx-auto"></img>
+                <img src="assets/img/estrellas2.png" alt="4.5 de 5 estrellas" class="estrellas img-fluid mx-auto">
                 <p>Son productos muy buenos con optimos reultados super recomendables y naturales</p>
               </div>
             </div>
@@ -368,21 +416,21 @@
           <div class="container mt-5 mb-5 testimonios">
             <div class="row">
               <div class="col-lg-4">
-                <img src="assets/img/iconWhatsapp.png" alt="Ícono WhatsApp" class="testimoniosImg img-fluid mx-auto"></img>
+                <img src="assets/img/iconWhatsapp.png" alt="Ícono WhatsApp" class="testimoniosImg img-fluid mx-auto">
                 <h2 style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 50px;">❝ Camila</h2>
-                <img src="assets/img/estrellas2.png" alt="4.5 de 5 estrellas" class="estrellas img-fluid mx-auto"></img>
+                <img src="assets/img/estrellas2.png" alt="4.5 de 5 estrellas" class="estrellas img-fluid mx-auto">
                 <p>Excelentes productos artesanales, me cambiaron la piel por completo!</p>
               </div>
               <div class="col-lg-4">
-                <img src="assets/img/iconInstagram.png" alt="Ícono Instagram" class="testimoniosImg img-fluid mx-auto"></img>
+                <img src="assets/img/iconInstagram.png" alt="Ícono Instagram" class="testimoniosImg img-fluid mx-auto">
                 <h2 style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 50px;">❝ Sofía</h2>
-                <img src="assets/img/estrellas.png" alt="5 de 5 estrellas" class="estrellas img-fluid mx-auto"></img>
+                <img src="assets/img/estrellas.png" alt="5 de 5 estrellas" class="estrellas img-fluid mx-auto">
                 <p>Productos Realmente Naturales y de excelente calidad. La atención es personalizada. Totalmente recomendable.</p>
               </div>
               <div class="col-lg-4">
-                <img src="assets/img/iconFacebook.png" alt="Ícono Facebook" class="testimoniosImg img-fluid mx-auto"></img>
+                <img src="assets/img/iconFacebook.png" alt="Ícono Facebook" class="testimoniosImg img-fluid mx-auto">
                 <h2 style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 50px;">❝ Martina</h2>
-                <img src="assets/img/estrellas.png" alt="5 de 5 estrellas" class="estrellas img-fluid mx-auto"></img>
+                <img src="assets/img/estrellas.png" alt="5 de 5 estrellas" class="estrellas img-fluid mx-auto">
                 <p>Excelentes productos ... Equilibrados productos de muy bella fragancia y textura!!! Súper recomiendo.</p>
               </div>
             </div>
@@ -393,21 +441,21 @@
           <div class="container mt-5 mb-5 testimonios">
             <div class="row">
               <div class="col-lg-4">
-                <img src="assets/img/iconWhatsapp.png" alt="Ícono WhatsApp" class="testimoniosImg img-fluid mx-auto"></img>
+                <img src="assets/img/iconWhatsapp.png" alt="Ícono WhatsApp" class="testimoniosImg img-fluid mx-auto">
                 <h2 style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 50px;">❝ Victoria</h2>
-                <img src="assets/img/estrellas2.png" alt="5 de 5 estrellas" class="estrellas img-fluid mx-auto"></img>
+                <img src="assets/img/estrellas2.png" alt="5 de 5 estrellas" class="estrellas img-fluid mx-auto">
                 <p>Excelentes productos, probé los jabones, óleos y cremas. Todo genial y muy buena atención.</p>
               </div>
               <div class="col-lg-4">
-                <img src="assets/img/iconInstagram.png" alt="Ícono Instagram" class="testimoniosImg img-fluid mx-auto"></img>
+                <img src="assets/img/iconInstagram.png" alt="Ícono Instagram" class="testimoniosImg img-fluid mx-auto">
                 <h2 style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 50px;">❝ Florencia</h2>
-                <img src="assets/img/estrellas2.png" alt="4.5 de 5 estrellas" class="estrellas img-fluid mx-auto"></img>
+                <img src="assets/img/estrellas2.png" alt="4.5 de 5 estrellas" class="estrellas img-fluid mx-auto">
                 <p>Productos de primera calidad, muy por encima de las primeras marcas que solo son marketineras. Muy recomendable.</p>
               </div>
               <div class="col-lg-4">
-                <img src="assets/img/iconFacebook.png" alt="Ícono Facebook" class="testimoniosImg img-fluid mx-auto"></img>
+                <img src="assets/img/iconFacebook.png" alt="Ícono Facebook" class="testimoniosImg img-fluid mx-auto">
                 <h2 style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 50px;">❝ Ana</h2>
-                <img src="assets/img/estrellas.png" alt="5 de 5 estrellas" class="estrellas img-fluid mx-auto"></img>
+                <img src="assets/img/estrellas.png" alt="5 de 5 estrellas" class="estrellas img-fluid mx-auto">
                 <p>Divinos los productos, excelente la presentación, el asesoramiento un lujo gracias por toda la atención</p>
               </div>
             </div>
@@ -425,103 +473,23 @@
       </button>
     </section>
 
+    <!-- Sección contactanos --------------------------------------------------------------------------------------------------->
+    <section class="indexContacto rounded mb-5">
+      <p class="text-light text-center">Te gustaría aparecer en la web? Envianos tu reseña!</p>
+      <div class="botonMarron elemento-oculto">
+        <a href="pages/contacto.html"><button type="button" class="btn btn-light btn-lg">Contactar</button></a>
+      </div>
+    </section>
+
     <!-- Sección Instagram --------------------------------------------------------------------------------------------------->
     <section class="insta">
+      <div class="instaBackground"></div>
       <div class="instaCaja">
-        <h2>Seguinos!</h2>
+        <h2 class="elemento-oculto">Seguinos!</h2>
 
-        <!-- Choclo de codigo copiado y pegado para el iframe de instagram -->
-        <blockquote class="instagram-media" data-instgrm-captioned
-          data-instgrm-permalink="https://www.instagram.com/p/CtXho64MvHA/?utm_source=ig_embed&amp;utm_campaign=loading"
-          data-instgrm-version="14"
-          style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-          <div style="padding:16px;"> <a
-              href="https://www.instagram.com/p/CtXho64MvHA/?utm_source=ig_embed&amp;utm_campaign=loading"
-              style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;"
-              target="_blank">
-              <div style=" display: flex; flex-direction: row; align-items: center;">
-                <div
-                  style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;">
-                </div>
-                <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
-                  <div
-                    style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;">
-                  </div>
-                  <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;">
-                  </div>
-                </div>
-              </div>
-              <div style="padding: 19% 0;"></div>
-              <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px"
-                  viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg"
-                  xmlns:xlink="https://www.w3.org/1999/xlink">
-                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                    <g transform="translate(-511.000000, -20.000000)" fill="#000000">
-                      <g>
-                        <path
-                          d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631">
-                        </path>
-                      </g>
-                    </g>
-                  </g>
-                </svg></div>
-              <div style="padding-top: 8px;">
-                <div
-                  style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">
-                  Ver esta publicación en Instagram</div>
-              </div>
-              <div style="padding: 12.5% 0;"></div>
-              <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;">
-                <div>
-                  <div
-                    style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);">
-                  </div>
-                  <div
-                    style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;">
-                  </div>
-                  <div
-                    style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);">
-                  </div>
-                </div>
-                <div style="margin-left: 8px;">
-                  <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;">
-                  </div>
-                  <div
-                    style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)">
-                  </div>
-                </div>
-                <div style="margin-left: auto;">
-                  <div
-                    style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);">
-                  </div>
-                  <div
-                    style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);">
-                  </div>
-                  <div
-                    style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);">
-                  </div>
-                </div>
-              </div>
-              <div
-                style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;">
-                <div
-                  style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;">
-                </div>
-                <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;">
-                </div>
-              </div>
-            </a>
-            <p
-              style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
-              <a href="https://www.instagram.com/p/CtXho64MvHA/?utm_source=ig_embed&amp;utm_campaign=loading"
-                style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;"
-                target="_blank">Una publicación compartida por Cosmética Natural &amp; Responsable
-                (@naturale.cosmetica)</a>
-            </p>
-          </div>
-        </blockquote>
-        <script async src="//www.instagram.com/embed.js"></script>
-
+       <!-- Choclo de codigo copiado y pegado para el iframe de instagram -->
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CviSTpKol-7/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/CviSTpKol-7/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Ver esta publicación en Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/CviSTpKol-7/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Una publicación compartida por Au Naturale Cosmetics (@aunaturalelife)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+  
       </div>
     </section>
 
@@ -572,31 +540,88 @@
 
   </footer>
 
+<!-- Script para que las animaciones ocurran solo cuando esten en pantalla ------------------------------------------------------------->
+<script>
+  function applyAnimation(className, delayClassName) {
+    const elements = document.querySelectorAll('.' + className);
+    function handleIntersect(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.visibility = 'visible';
+          entry.target.style.opacity = 1;
+          entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+          observer.unobserve(entry.target);
+        }
+      });
+    }
 
+    const options = {
+      threshold: 0.5
+    };
 
+    const observer = new IntersectionObserver(handleIntersect, options);
+    elements.forEach(element => observer.observe(element));
+  }
 
+  applyAnimation('elemento-oculto');
+  applyAnimation('elemento-con-delay');
+  </script>
 
-
-  <!-- Script cambia color del fondo del menu top -->
+  <!-- Script cambia color de fondo del navbar top, tanto en version mobile como en version desktop--------------------------------------->
   <script type="text/javascript">
     window.onscroll = () => {
-      const nav = document.querySelector('#navTop');
-      if (this.scrollY <= 10) nav.className = 'coverLinks'; else nav.className = 'scroll';
+      const navTop = document.querySelector('#navTop');
+      const hambTop = document.querySelector('#hambTop');
+  
+      if (this.scrollY <= 10) {
+        navTop.className = 'coverLinks';
+        hambTop.className = 'menuHamburguesa';
+      } else {
+        navTop.className = 'scroll';
+        hambTop.className = 'hambScroll';
+      }
     };
   </script>
-  
-  <!-- Script para que el carrousel sea draggable en mobile -->
-  <script type="text/javascript">
-    var myCarousel = document.querySelector('#myCarousel')
-    var carousel = new bootstrap.Carousel(myCarousel)
+
+  <!-- Script para darle stop al video de youtube cuando se cierra el popup -------------------------------------------------------------->
+  <script>
+    function stop() {
+       let video = document.getElementById("videoId")
+       video.contentWindow.postMessage( '{"event":"command", "func":"stopVideo", "args":""}', '*');
+    }
+ </script>
+
+   <!-- Script modo oscuro -->
+   <script type="text/javascript">
+    const themeToggle = document.getElementById("theme-toggle");
+
+    // Verificar si hay una configuración previa en el almacenamiento local
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      if (savedTheme === "light") {
+        themeToggle.checked = true;
+      } else {
+        themeToggle.checked = false;
+      }
+    }
+
+    themeToggle.addEventListener('change', () => {
+      if (themeToggle.checked) {
+        document.documentElement.setAttribute('data-theme', "light");
+        localStorage.setItem("theme", "light");
+      } else {
+        document.documentElement.setAttribute('data-theme', "darktheme");
+        localStorage.setItem("theme", "darktheme");
+      }
+    });
   </script>
 
-  <!-- SCRIPT BS -->
+  <!-- Script Bootstrap ------------------------------------------------------------------------------------------------------------------>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous">
   </script>
-
 
 </body>
 

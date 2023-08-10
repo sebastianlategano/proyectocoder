@@ -1,0 +1,21 @@
+/* Sección testimonios ----------------------------------------------------------------------------------------- */
+.testimonios .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    p {
+      margin-right: 0.75rem;
+      margin-left: 0.75rem;
+    }
+  }
+  
+.testimonios {
+  .testimoniosImg {
+    @include medidas(100px,100px);
+    margin: 20px;
+  }
+
+  .estrellas {
+    @include medidas(99px,30px);
+    margin: 10px;
+  }
+}

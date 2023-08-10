@@ -1,0 +1,23 @@
+/* Categorías mobile -----------------------------------------------------------------------------------------*/
+
+.categoriasMobile {
+    width: 100%;
+    max-height: 450px;
+    position: relative;
+    display: flex;
+    overflow: scroll;
+    scroll-snap-type: x mandatory;
+    img {
+      width: 100%;
+      left: 0;
+      object-fit: cover;
+      border-radius: 5px;
+      scroll-snap-align: center;
+    }
+    a {
+      display: contents;
+    }
+  }
+  
+
+  
