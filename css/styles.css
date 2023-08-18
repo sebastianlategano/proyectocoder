@@ -1057,19 +1057,19 @@ form div textarea {
   background-size: cover;
 }
 .categoriasSelector .categoria2 {
-  background: url(../assets/img/accesorios2.jpg) no-repeat 50%;
+  background: url(../assets/img/categoriacorporal.jpg) no-repeat 50%;
   background-size: cover;
 }
 .categoriasSelector .categoria3 {
-  background: url(../assets/img/accesorios3.jpg) no-repeat 50%;
+  background: url(../assets/img/categoriacapilar.jpg) no-repeat 50%;
   background-size: cover;
 }
 .categoriasSelector .categoria4 {
-  background: url(../assets/img/accesorios4.jpg) no-repeat 50%;
+  background: url(../assets/img/categoriakits.jpg) no-repeat 50%;
   background-size: cover;
 }
 .categoriasSelector .categoria5 {
-  background: url(../assets/img/banio1.jpg) no-repeat 50%;
+  background: url(../assets/img/categoriaaccesorios.jpg) no-repeat 50%;
   background-size: cover;
 }
 
@@ -1310,7 +1310,7 @@ body {
     width: 100%;
   }
   .categoriasSelector .categoria1:hover, .categoriasSelector .categoria2:hover, .categoriasSelector .categoria3:hover, .categoriasSelector .categoria4:hover, .categoriasSelector .categoria5:hover {
-    flex-basis: 50%;
+    flex-basis: 150%;
   }
 }
 @media only screen and (max-width: 365px) {
@@ -1324,7 +1324,7 @@ body {
     font-size: 0.938rem;
   }
   .categoriasSelector .categoria1:hover, .categoriasSelector .categoria2:hover, .categoriasSelector .categoria3:hover, .categoriasSelector .categoria4:hover, .categoriasSelector .categoria5:hover {
-    flex-basis: 80%;
+    flex-basis: 150%;
   }
 }
 /* Modificacion del animate.css*/

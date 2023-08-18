@@ -269,7 +269,7 @@
     width: 100%;
     .categoria1 , .categoria2 , .categoria3, .categoria4, .categoria5 {
     &:hover {
-      flex-basis: 50%;
+      flex-basis: 150%;
     }
     }
   }
@@ -291,7 +291,7 @@
   .categoriasSelector {
     .categoria1 , .categoria2 , .categoria3, .categoria4, .categoria5 {
     &:hover {
-      flex-basis: 80%;
+      flex-basis: 150%;
     }
     }
   }
