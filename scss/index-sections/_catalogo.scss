@@ -44,3 +44,15 @@
   .tarjetaSpan2 {
     color: $colorVerdeOscuro;
   }
+
+  .tarjetaSpan3 {
+    color: $colorRosa;
+  }
+
+  .lineaSubrayadoRosa {
+    @include fjcenter;
+    margin: 0 auto;
+    color: $colorRosa;
+    font-weight: 700;
+    margin-bottom: 50px;
+  }

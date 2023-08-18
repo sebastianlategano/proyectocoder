@@ -1,12 +1,12 @@
 /* Instagram -------------------------------------------------------------------------------------------------*/
 
 .insta {
-  display: block;
-  background: {
-    image: url(../assets/img/instaBack.png);
-    size: cover;
-    position: center;
-  }
+  width: 80%;
+  max-width: 1400px;
+  margin: 150px auto;
+  background-image: url(../../assets/img/instaBack.png);
+  background-position: center;
+  background-repeat: no-repeat;
 
   .instaCaja {
     @include fjcenter;
@@ -14,13 +14,15 @@
     text-align: center;
     max-width: 325px;
     margin: 0 auto;
-    background-color: $colorRosa;
-    margin-bottom: 30px;
+    background-color: $colorMarron;
+    margin-top: 10px;
+    margin-bottom: 10px;
     border-radius: 3px;
     h2 {
       padding: 20px;
       color: $colorBlanco;
       font-weight: 700;
     }
+    box-shadow: 0px 5px 50px white;
   }
 }
