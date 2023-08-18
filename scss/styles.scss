@@ -24,9 +24,8 @@ $colorBlanco: white;
 @import "themes/darktheme";
 @import "common/botones", "common/header", "common/footer", "common/toggler";
 @import "pages/productos", "pages/aboutus", "pages/faq", "pages/contacto";
-@import "index-sections/separador", "index-sections/catalogo", "index-sections/categorias", 
-"index-sections/categoriasMobile", "index-sections/informativo", "index-sections/tarjetas", 
-"index-sections/testimonios", "index-sections/indexContacto", "index-sections/insta", "index-sections/whatsAppIcon";
+@import "index-sections/separador", "index-sections/catalogo", "index-sections/informativo", "index-sections/tarjetas", 
+"index-sections/testimonios", "index-sections/indexContacto", "index-sections/insta", "index-sections/whatsAppIcon", "index-sections/categories";
 
 
 
@@ -74,3 +73,4 @@ body {
   visibility: hidden;
   opacity: 0;
 }
+

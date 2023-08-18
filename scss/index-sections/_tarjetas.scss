@@ -1,6 +1,9 @@
 /* Tarjetas promoción y acerca de nosotros --------------------------------------------------------------------------*/
 .tarjetas {
     padding-top: 50px;
+    width: 80%;
+    max-width: 1400px;
+    margin: 0 auto;
   
     .tarjetasCaja {
       margin: 0 auto;
@@ -17,18 +20,6 @@
         p {
           text-align: center;
         }
-  
-        .tarjetaSpan1 {
-          color: $colorMarron;
-        }
-  
-        .tarjetaSpan2 {
-          color: $colorVerdeOscuro;
-        }
-      }
-  
-      .tarjetaDescripcion {
-        margin: 30px;
       }
     }
   }
