@@ -69,7 +69,7 @@
     z-index: 0;
     }
 
-    .linkComun, .popup , .popupTexto button, #genero, #suscribirse, ::placeholder, .separador {
+    .linkComun, .popup , .popupTexto button, #genero, #suscribirse, ::placeholder, .separador, .participa {
     color: $colorBlanco;
     }
 
@@ -96,14 +96,7 @@
     transition: 0.5s ease;
     }
 
-    .insta {
-        display: block;
-        background: {
-          image: url(../assets/img/instaBackDark.png);
-          size: cover;
-          position: center;
-        }
-    }
+
 
     .indexContacto {
         background: {
@@ -125,5 +118,8 @@
         background-color: rgb(95, 95, 95);
     }
 
+    #scrollTop {
+      filter: invert(100%) sepia(3%) saturate(659%) hue-rotate(152deg) brightness(116%) contrast(92%);
+    }
 
 }

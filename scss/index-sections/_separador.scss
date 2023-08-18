@@ -1,5 +1,8 @@
 /* Separador ------------------------------------------------------------------------------------------------*/
 .separador {
-    background-color: $colorGrisClaro;
-    color: $colorGrisOscuro;
+    background-color: $colorMarron;
+    color: $colorBlanco;
+    div img {
+      filter: brightness(500%);
+    }
   }

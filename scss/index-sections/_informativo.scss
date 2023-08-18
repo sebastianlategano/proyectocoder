@@ -1,8 +1,9 @@
 /* Sección informativa ----------------------------------------------------------------------------------------------- */
 .informativo {
-    background-color: $colorGrisClaro;
+    width: 80%;
+    max-width: 1400px;
+    margin: 150px auto;
     padding: 30px;
-    margin-top: 150px;
   
     .informativoCaja {
       letter-spacing: 0.5px;

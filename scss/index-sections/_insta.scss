@@ -3,7 +3,9 @@
 .insta {
   width: 80%;
   max-width: 1400px;
-  margin: 150px auto;
+  text-align: center;
+  @include fjcenter;
+  margin: 0 auto;
   background-image: url(../../assets/img/instaBack.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -23,6 +25,10 @@
       color: $colorBlanco;
       font-weight: 700;
     }
-    box-shadow: 0px 5px 50px white;
+
   }
+}
+
+.instagram-media {
+  margin: 0 auto;
 }

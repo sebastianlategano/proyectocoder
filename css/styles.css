@@ -53,7 +53,7 @@
 :root[data-theme=darktheme] .recuadro {
   z-index: 0;
 }
-:root[data-theme=darktheme] .linkComun, :root[data-theme=darktheme] .popup, :root[data-theme=darktheme] .popupTexto button, :root[data-theme=darktheme] #genero, :root[data-theme=darktheme] #suscribirse, :root[data-theme=darktheme] ::placeholder, :root[data-theme=darktheme] .separador {
+:root[data-theme=darktheme] .linkComun, :root[data-theme=darktheme] .popup, :root[data-theme=darktheme] .popupTexto button, :root[data-theme=darktheme] #genero, :root[data-theme=darktheme] #suscribirse, :root[data-theme=darktheme] ::placeholder, :root[data-theme=darktheme] .separador, :root[data-theme=darktheme] .participa {
   color: white;
 }
 :root[data-theme=darktheme] #menuImg {
@@ -71,12 +71,6 @@
   color: #f5f5f5;
   transition: 0.5s ease;
 }
-:root[data-theme=darktheme] .insta {
-  display: block;
-  background-image: url(../assets/img/instaBackDark.png);
-  background-size: cover;
-  background-position: center;
-}
 :root[data-theme=darktheme] .indexContacto {
   background-image: url(../assets/img/indexContactoDark.jpg);
 }
@@ -88,6 +82,9 @@
 }
 :root[data-theme=darktheme] input, :root[data-theme=darktheme] select, :root[data-theme=darktheme] textarea {
   background-color: rgb(95, 95, 95);
+}
+:root[data-theme=darktheme] #scrollTop {
+  filter: invert(100%) sepia(3%) saturate(659%) hue-rotate(152deg) brightness(116%) contrast(92%);
 }
 
 .botonMarron, .botonVerde, .botonRosa {
@@ -405,6 +402,9 @@ footer a:link {
 .footerMenu .footerLogo {
   text-align: center;
   margin: 20px;
+  position: relative;
+  top: 0;
+  left: 0;
 }
 .footerMenu .footerLogo a img {
   width: 50%;
@@ -419,6 +419,15 @@ footer a:link {
 .footerMenu .footerBottom {
   text-align: center;
   opacity: 0.5;
+}
+.footerMenu .poweredBy {
+  font-size: 12px;
+}
+.footerMenu .redesSociales svg {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  filter: invert(100%) sepia(3%) saturate(659%) hue-rotate(152deg) brightness(116%) contrast(92%);
 }
 
 input.switch {
@@ -729,8 +738,11 @@ form div textarea {
 
 /* Separador ------------------------------------------------------------------------------------------------*/
 .separador {
-  background-color: #f5f5f5;
-  color: #3c3c3c;
+  background-color: #e2b995;
+  color: white;
+}
+.separador div img {
+  filter: brightness(500%);
 }
 
 /* Productos destacados ----------------------------------------------------------------------------------------*/
@@ -792,9 +804,10 @@ form div textarea {
 
 /* Sección informativa ----------------------------------------------------------------------------------------------- */
 .informativo {
-  background-color: #f5f5f5;
+  width: 80%;
+  max-width: 1400px;
+  margin: 150px auto;
   padding: 30px;
-  margin-top: 150px;
 }
 .informativo .informativoCaja {
   letter-spacing: 0.5px;
@@ -996,7 +1009,10 @@ form div textarea {
 .insta {
   width: 80%;
   max-width: 1400px;
-  margin: 150px auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
   background-image: url(../../assets/img/instaBack.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -1012,12 +1028,15 @@ form div textarea {
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 3px;
-  box-shadow: 0px 5px 50px white;
 }
 .insta .instaCaja h2 {
   padding: 20px;
   color: white;
   font-weight: 700;
+}
+
+.instagram-media {
+  margin: 0 auto;
 }
 
 /* Icono Whats App ---------------------------------------------------------------------------------------------*/
@@ -1030,6 +1049,25 @@ form div textarea {
 .whatsappIcon img {
   width: 50px;
   height: 50px;
+}
+
+#scrollTop {
+  position: fixed;
+  bottom: 11%;
+  right: 3%;
+  z-index: 5;
+}
+
+#scrollTop,
+#wppIcon {
+  transition: opacity 1s ease-in-out; /* Agrega una transición de opacidad */
+  opacity: 0; /* Inicialmente oculto */
+}
+
+#scrollTop.show,
+#wppIcon.show {
+  display: block;
+  opacity: 1; /* Mostrar con opacidad completa */
 }
 
 /* Selector de categorías */
@@ -1077,7 +1115,7 @@ form div textarea {
 }
 .categoriasSelector .categoria1:hover, .categoriasSelector .categoria2:hover, .categoriasSelector .categoria3:hover, .categoriasSelector .categoria4:hover, .categoriasSelector .categoria5:hover {
   flex-basis: 30%;
-  box-shadow: 1px 3px 15px #f5f5f5;
+  box-shadow: 1px 3px 15px #3c3c3c;
 }
 .categoriasSelector .categoria1:hover .categoriaTexto, .categoriasSelector .categoria2:hover .categoriaTexto, .categoriasSelector .categoria3:hover .categoriaTexto, .categoriasSelector .categoria4:hover .categoriaTexto, .categoriasSelector .categoria5:hover .categoriaTexto {
   opacity: 1;
@@ -1256,6 +1294,14 @@ body {
   }
   .whatsappIcon {
     bottom: 6%;
+    right: 10%;
+    /*img {
+      width: 25px;
+      height: 25px;
+    }*/
+  }
+  #scrollTop {
+    bottom: 15%;
     right: 10%;
   }
   .aboutUs {
