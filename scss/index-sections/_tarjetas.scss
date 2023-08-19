@@ -38,9 +38,7 @@
     position: relative;
     align-items: center;
     z-index: -1;
-    img {
-      @include medidas (500px,400px);
-    }
+
   }
 
   .botonPopUp {

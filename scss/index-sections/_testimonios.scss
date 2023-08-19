@@ -31,3 +31,11 @@
   font-weight: 500;
   color: $colorGrisOscuro;
 }
+
+.lineaSubrayadoRosa {
+  @include fjcenter;
+  margin: 0 auto;
+  color: $colorRosa;
+  font-weight: 700;
+  margin-bottom: 50px;
+}

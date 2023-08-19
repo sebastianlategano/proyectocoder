@@ -350,6 +350,9 @@
 }
 
 /* FOOTER (Common para todas las pages) -------------------------------------------------------------------------*/
+footer {
+  margin-top: 150px;
+}
 footer a {
   transition: all 0.5s ease-out;
 }
@@ -612,7 +615,7 @@ input.switch {
 .aboutUs {
   max-width: 1200px;
   display: grid;
-  grid-row-gap: 100px;
+  grid-row-gap: 150px;
   grid-template-areas: "txt0 txt0" "txt1 img1" "img2 txt2" "txt3 img3" "img4 txt4" "txt5 img5" "prof prof";
   /*Utilización de un for -------------------------------------------------------------------------------------*/
 }
@@ -623,22 +626,32 @@ input.switch {
 .aboutUs .faq1texto {
   grid-area: txt1;
   box-shadow: #e7acaa 10px 11px 0px, rgba(0, 0, 0, 0.25) 4px 4px 0px;
+  border-top: 1px solid #e7acaa;
+  border-left: 1px solid #e7acaa;
 }
 .aboutUs .faq2texto {
   grid-area: txt2;
   box-shadow: #e2b995 10px 11px 0px, rgba(0, 0, 0, 0.25) 4px 4px 0px;
+  border-top: 1px solid #e2b995;
+  border-left: 1px solid #e2b995;
 }
 .aboutUs .faq3texto {
   grid-area: txt3;
   box-shadow: #eae9e4 10px 11px 0px, rgba(0, 0, 0, 0.25) 4px 4px 0px;
+  border-top: 1px solid #eae9e4;
+  border-left: 1px solid #eae9e4;
 }
 .aboutUs .faq4texto {
   grid-area: txt4;
   box-shadow: #d3e0ce 10px 11px 0px, rgba(0, 0, 0, 0.25) 4px 4px 0px;
+  border-top: 1px solid #d3e0ce;
+  border-left: 1px solid #d3e0ce;
 }
 .aboutUs .faq5texto {
   grid-area: txt5;
   box-shadow: #9cb8a0 10px 11px 0px, rgba(0, 0, 0, 0.25) 4px 4px 0px;
+  border-top: 1px solid #9cb8a0;
+  border-left: 1px solid #9cb8a0;
 }
 .aboutUs .faq1img, .aboutUs .faq2img, .aboutUs .faq3img, .aboutUs .faq4img, .aboutUs .faq5img {
   width: 300px;
@@ -772,7 +785,7 @@ form div textarea {
   filter: brightness(0.75);
 }
 
-.lineaSubrayado {
+.lineaSubrayadoMarron {
   display: flex;
   justify-content: center;
   margin: 0 auto;
@@ -791,15 +804,6 @@ form div textarea {
 
 .tarjetaSpan3 {
   color: #e7acaa;
-}
-
-.lineaSubrayadoRosa {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  color: #e7acaa;
-  font-weight: 700;
-  margin-bottom: 50px;
 }
 
 /* Sección informativa ----------------------------------------------------------------------------------------------- */
@@ -866,10 +870,6 @@ form div textarea {
   position: relative;
   align-items: center;
   z-index: -1;
-}
-.ytIzq .recuadro img {
-  width: 500px;
-  height: 400px;
 }
 .ytIzq .botonPopUp {
   display: flex;
@@ -981,6 +981,15 @@ form div textarea {
 .participa {
   font-weight: 500;
   color: #3c3c3c;
+}
+
+.lineaSubrayadoRosa {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  color: #e7acaa;
+  font-weight: 700;
+  margin-bottom: 50px;
 }
 
 .indexContacto {
@@ -1099,7 +1108,7 @@ form div textarea {
   flex-direction: column;
   height: 100%;
   justify-content: flex-end;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0) 100%);
   transform: translatey(100%);
   transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
   visibility: hidden;
@@ -1146,6 +1155,15 @@ form div textarea {
 .categoriasTitulo {
   margin-top: 100px;
   text-align: center;
+}
+
+.lineaSubrayadoVerde {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  color: #9cb8a0;
+  font-weight: 700;
+  margin-bottom: 50px;
 }
 
 html {
@@ -1197,6 +1215,20 @@ body {
   }
 }
 @media only screen and (max-width: 992px) {
+  .aboutUs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    grid-row-gap: 0px;
+  }
+  .faq1texto, .faq2texto, .faq3texto, .faq4texto, .faq5texto {
+    margin-top: 20px;
+    margin-bottom: 150px;
+  }
+  .faq1img {
+    margin-top: 150px;
+  }
   .tarjetaImagen img {
     margin-top: 50px;
   }
@@ -1281,10 +1313,6 @@ body {
   .ytImagenFondo {
     margin: 0 auto;
   }
-  .recuadro img {
-    width: 250px;
-    height: 250px;
-  }
   .botonPopUp {
     width: 50px;
     height: 50px;
@@ -1294,7 +1322,7 @@ body {
   }
   .whatsappIcon {
     bottom: 6%;
-    right: 10%;
+    right: 5%;
     /*img {
       width: 25px;
       height: 25px;
@@ -1302,13 +1330,7 @@ body {
   }
   #scrollTop {
     bottom: 15%;
-    right: 10%;
-  }
-  .aboutUs {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+    right: 5%;
   }
   .video h2 {
     font-weight: 500;
@@ -1344,6 +1366,9 @@ body {
   }
   .coverMobile {
     display: none;
+  }
+  .faq1texto, .faq2texto, .faq3texto, .faq4texto, .faq5texto {
+    height: 300px;
   }
 }
 @media only screen and (max-width: 480px) {

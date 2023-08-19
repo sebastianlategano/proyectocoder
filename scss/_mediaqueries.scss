@@ -32,6 +32,21 @@
 }
 
 @media only screen and (max-width: 992px) {
+
+  .aboutUs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    grid-row-gap: 0px;
+  }
+  .faq1texto, .faq2texto, .faq3texto, .faq4texto, .faq5texto {
+    margin-top: 20px;
+    margin-bottom: 150px;
+  }
+  .faq1img {
+    margin-top: 150px;
+  }
   .tarjetaImagen img {
     margin-top: 50px;
   }
@@ -140,10 +155,7 @@
     margin: 0 auto;
   }
 
-  .recuadro img {
-    width: 250px;
-    height: 250px;
-  }
+
 
   .botonPopUp {
     width: 50px;
@@ -156,7 +168,7 @@
 
   .whatsappIcon {
     bottom: 6%;
-    right: 10%;
+    right: 5%;
     /*img {
       width: 25px;
       height: 25px;
@@ -165,15 +177,10 @@
 
   #scrollTop {
     bottom: 15%;
-    right: 10%;
+    right: 5%;
   }
 
-  .aboutUs {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
+
 
   .video h2 {
     font-weight: 500;
@@ -222,6 +229,10 @@
 
   .coverMobile {
     display: none;
+  }
+
+  .faq1texto, .faq2texto, .faq3texto, .faq4texto, .faq5texto {
+    height: 300px;
   }
 }
 

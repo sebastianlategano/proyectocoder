@@ -29,7 +29,7 @@
   
   }
   
-  .lineaSubrayado {
+  .lineaSubrayadoMarron {
     @include fjcenter;
     margin: 0 auto;
     color: $colorMarron;
@@ -49,10 +49,4 @@
     color: $colorRosa;
   }
 
-  .lineaSubrayadoRosa {
-    @include fjcenter;
-    margin: 0 auto;
-    color: $colorRosa;
-    font-weight: 700;
-    margin-bottom: 50px;
-  }
+

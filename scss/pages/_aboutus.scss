@@ -11,9 +11,9 @@
 }
 
 .aboutUs {
-  max-width: 1200px;
+  max-width: 1200px;  
   display: grid;
-  grid-row-gap: 100px;
+  grid-row-gap: 150px;
   grid-template-areas:
     "txt0 txt0"
     "txt1 img1"
@@ -33,6 +33,8 @@
     box-shadow:
       #e7acaa 10px 11px 0px,
       rgba(0, 0, 0, 0.25) 4px 4px 0px;
+      border-top: 1px solid #e7acaa;
+      border-left: 1px solid #e7acaa;
   }
 
   .faq2texto {
@@ -40,6 +42,8 @@
     box-shadow:
       #e2b995 10px 11px 0px,
       rgba(0, 0, 0, 0.25) 4px 4px 0px;
+    border-top: 1px solid #e2b995;
+    border-left: 1px solid #e2b995;
   }
 
   .faq3texto {
@@ -47,6 +51,8 @@
     box-shadow:
       #eae9e4 10px 11px 0px,
       rgba(0, 0, 0, 0.25) 4px 4px 0px;
+    border-top: 1px solid #eae9e4;
+    border-left: 1px solid #eae9e4;
   }
 
   .faq4texto {
@@ -54,6 +60,8 @@
     box-shadow:
       #d3e0ce 10px 11px 0px,
       rgba(0, 0, 0, 0.25) 4px 4px 0px;
+    border-top: 1px solid #d3e0ce;
+    border-left: 1px solid #d3e0ce;
   }
 
   .faq5texto {
@@ -61,7 +69,11 @@
     box-shadow:
       #9cb8a0 10px 11px 0px,
       rgba(0, 0, 0, 0.25) 4px 4px 0px;
+    border-top: 1px solid #9cb8a0;
+    border-left: 1px solid #9cb8a0;
   }
+
+
 
   .faq1img, .faq2img, .faq3img, .faq4img, .faq5img {
     width: 300px;

@@ -31,8 +31,9 @@
         justify-content: flex-end;
         background: linear-gradient(
           0deg,
-          rgba(0, 0, 0, 0.5) 0%,
-          rgba(0, 0, 0, 0) 100%
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0.5) 40%,
+          rgba(0, 0, 0, 0) 100%,
         );
         transform: translatey(100%);
         transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
@@ -85,4 +86,12 @@
   .categoriasTitulo {
     margin-top: 100px;
     text-align: center;
+  }
+
+  .lineaSubrayadoVerde {
+    @include fjcenter;
+    margin: 0 auto;
+    color: $colorVerdeOscuro;
+    font-weight: 700;
+    margin-bottom: 50px;
   }

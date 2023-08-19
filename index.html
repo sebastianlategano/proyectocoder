@@ -167,7 +167,7 @@
     <section class="catalogo container-fluid mb-5">
 
       <h2 class="text-center mt-5">Productos <span class="tarjetaSpan1">destacados</span></h2>
-      <p class="lineaSubrayado">______</p>
+      <p class="lineaSubrayadoMarron">______</p>
       
       <div class="row text-center gx-5 gy-5">
 
@@ -300,8 +300,8 @@
 
     <!-- Categorías ---------------------------------------------------------------------------------------------------------------->
     <section class="categorias">
-      <h2 class="categoriasTitulo">Categorías</h2>
-      <p class="lineaSubrayado">______</p>
+      <h2 class="categoriasTitulo">Nuestras <span class="tarjetaSpan1">categorías</span></h2>
+      <p class="lineaSubrayadoMarron">______</p>
     <div class="categoriasSelector">
       <div class="categoria1">
         <div class="categoriaTexto">
@@ -484,6 +484,12 @@
             <div class="recuadro">
               <img src="assets/img/aboutusindex.jpg" alt="" class="rounded img-fluid">
             </div>
+
+            <!-- <div class="col-lg-5 tarjetaImagen text-center">
+              <img src="assets/img/accesoriospromo.jpg" alt="Accesorios para cosmética" class="img-fluid mx-auto rounded">
+            </div> -->
+
+
             <div class="botonPopUp">
               <a class="button" href="#popup1">►</a>
             </div>
@@ -666,7 +672,6 @@ window.addEventListener("load", () => {
     }
   }
 
-  // When the user clicks on the button, scroll to the top of the document
   mybutton.addEventListener("click", function() {
     topFunction();
   });
@@ -690,6 +695,7 @@ window.addEventListener("load", () => {
   <script type="text/javascript">
     const themeToggle = document.getElementById("theme-toggle");
     const carouselExampleDark = document.getElementById("carouselExampleDark");
+    const carouselExampleDark2 = document.getElementById("carouselExampleDark2");
 
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
@@ -698,11 +704,13 @@ window.addEventListener("load", () => {
         themeToggle.checked = true;
         if (carouselExampleDark) {
           carouselExampleDark.classList.add("carousel-dark");
+          carouselExampleDark2.classList.add("carousel-dark");
         }
       } else {
         themeToggle.checked = false;
         if (carouselExampleDark) {
           carouselExampleDark.classList.remove("carousel-dark");
+          carouselExampleDark2.classList.remove("carousel-dark");
         }
       }
     }
@@ -713,12 +721,14 @@ window.addEventListener("load", () => {
         localStorage.setItem("theme", "light");
         if (carouselExampleDark) {
           carouselExampleDark.classList.add("carousel-dark");
+          carouselExampleDark2.classList.add("carousel-dark");
         }
       } else {
         document.documentElement.setAttribute('data-theme', "darktheme");
         localStorage.setItem("theme", "darktheme");
         if (carouselExampleDark) {
           carouselExampleDark.classList.remove("carousel-dark");
+          carouselExampleDark2.classList.remove("carousel-dark");
         }
       }
     });
