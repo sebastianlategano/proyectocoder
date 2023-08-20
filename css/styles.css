@@ -1018,7 +1018,7 @@ form div textarea {
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  background-image: url(../../assets/img/instaBack.png);
+  background-image: url(../assets/img/instaBackground.png);
   background-position: center;
   background-repeat: no-repeat;
 }
