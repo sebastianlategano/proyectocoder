@@ -5,12 +5,13 @@
   .tarjetaTexto {
     font-size: 2.5rem;
   }
+  .contactoFormulario {
+    padding: 100px;
+  }
 }
 
 @media only screen and (max-width: 1279px) {
-  .contacto {
-    flex-direction: column;
-  }
+
 
   .contactoFormulario {
     width: 100%;
@@ -23,15 +24,31 @@
   .wrapper {
     right: -50px;
   }
+
+  .contactoFormulario {
+    padding: 20px;
+  }
 }
 
 @media only screen and (min-width: 992px) {
   .tarjetaImagen img {
     margin: 50px;
   }
+
+  .contacto, .mapa {
+    width: 80%;
+  }
 }
 
 @media only screen and (max-width: 992px) {
+
+  .contacto {
+    flex-direction: column;
+  }
+
+  .contacto, .mapa {
+    width: 90%;
+  }
 
   .aboutUs {
     display: flex;
@@ -107,6 +124,7 @@
 }
 
 @media only screen and (max-width: 768px) {
+
   .wrapper {
     right: -60px;
   }
@@ -206,6 +224,9 @@
     }
     }
   }
+  .catalogo {
+    max-width: 100%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -214,6 +235,9 @@
   }
   .tarjetas {
     width: 95%;
+  }
+  .contactoFormulario {
+    padding: 60px;
   }
 }
 
@@ -293,6 +317,11 @@
     }
     }
   }
+  
+  .contactoFormulario {
+    padding: 60px;
+  }
+
 }
 
 @media only screen and (max-width: 365px) {
@@ -314,5 +343,16 @@
       flex-basis: 150%;
     }
     }
+  }
+  .informativo {
+    width: 95%;
+  }
+
+  .contactoFormulario {
+    padding: 20px;
+  }
+
+  .contacto, .mapa {
+    width: 95%;
   }
 }

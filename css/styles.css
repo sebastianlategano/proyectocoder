@@ -1,98 +1,5 @@
 @charset "UTF-8";
 /* SASS - FOR: En el archivo pages/_aboutus.scss uso un "for", en las últimas líneas */
-:root[data-theme=darktheme] {
-  color-scheme: dark;
-}
-:root[data-theme=darktheme] body {
-  background-color: black;
-  color: white;
-}
-:root[data-theme=darktheme] .informativo, :root[data-theme=darktheme] .separador, :root[data-theme=darktheme] .flechitaFondo, :root[data-theme=darktheme] .footerMenu, :root[data-theme=darktheme] .tarjetasCaja, :root[data-theme=darktheme] .scroll, :root[data-theme=darktheme] .menuEnlaces, :root[data-theme=darktheme] .hambScroll, :root[data-theme=darktheme] div.menuCerrar, :root[data-theme=darktheme] div.popup,
-:root[data-theme=darktheme] .popupTexto, :root[data-theme=darktheme] .faqProfile, :root[data-theme=darktheme] .faq1texto, :root[data-theme=darktheme] .faq2texto, :root[data-theme=darktheme] .faq3texto, :root[data-theme=darktheme] .faq4texto, :root[data-theme=darktheme] .faq5texto, :root[data-theme=darktheme] .faq, :root[data-theme=darktheme] .contactoFormulario {
-  background-color: #3c3c3c;
-}
-:root[data-theme=darktheme] .coverLinks, :root[data-theme=darktheme] .scroll, :root[data-theme=darktheme] .headerPages {
-  /* Diferente para la pagina active */
-}
-:root[data-theme=darktheme] .coverLinks .linkUnderlined a, :root[data-theme=darktheme] .scroll .linkUnderlined a, :root[data-theme=darktheme] .headerPages .linkUnderlined a {
-  display: inline-block;
-  padding: 5px 0;
-  position: relative;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 0.3s ease-in-out;
-  font-weight: 700;
-  background-size: 200% 100%;
-  background-position: -100%;
-  background-clip: text;
-  background-image: linear-gradient(to right, #9cb8a0, #9cb8a0 50%, white 50%);
-}
-:root[data-theme=darktheme] .coverLinks .linkUnderlined a:before, :root[data-theme=darktheme] .scroll .linkUnderlined a:before, :root[data-theme=darktheme] .headerPages .linkUnderlined a:before {
-  content: "";
-  background: #9cb8a0;
-  display: block;
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 0;
-  height: 3px;
-  transition: all 0.3s ease-in-out;
-}
-:root[data-theme=darktheme] .coverLinks .linkUnderlined a:hover, :root[data-theme=darktheme] .scroll .linkUnderlined a:hover, :root[data-theme=darktheme] .headerPages .linkUnderlined a:hover {
-  background-position: 0;
-}
-:root[data-theme=darktheme] .coverLinks .linkUnderlined a:hover::before, :root[data-theme=darktheme] .scroll .linkUnderlined a:hover::before, :root[data-theme=darktheme] .headerPages .linkUnderlined a:hover::before {
-  width: 100%;
-}
-:root[data-theme=darktheme] .coverLinks .linkInicio a, :root[data-theme=darktheme] .scroll .linkInicio a, :root[data-theme=darktheme] .headerPages .linkInicio a {
-  background-image: linear-gradient(to right, white, white 50%, #9cb8a0 50%);
-}
-:root[data-theme=darktheme] .coverLinks, :root[data-theme=darktheme] .menuHamburguesa {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-:root[data-theme=darktheme] .recuadro {
-  z-index: 0;
-}
-:root[data-theme=darktheme] .linkComun, :root[data-theme=darktheme] .popup, :root[data-theme=darktheme] .popupTexto button, :root[data-theme=darktheme] #genero, :root[data-theme=darktheme] #suscribirse, :root[data-theme=darktheme] ::placeholder, :root[data-theme=darktheme] .separador, :root[data-theme=darktheme] .participa {
-  color: white;
-}
-:root[data-theme=darktheme] #menuImg {
-  filter: brightness(2000%);
-}
-:root[data-theme=darktheme] footer a:hover {
-  text-decoration: none;
-  color: #e7acaa;
-}
-:root[data-theme=darktheme] .coverZoom {
-  filter: brightness(50%);
-  transition: 0.5s ease;
-}
-:root[data-theme=darktheme] .coverTexto h1, :root[data-theme=darktheme] .coverTexto h2 {
-  color: #f5f5f5;
-  transition: 0.5s ease;
-}
-:root[data-theme=darktheme] .indexContacto {
-  background-image: url(../assets/img/indexContactoDark.jpg);
-}
-:root[data-theme=darktheme] .headerPages {
-  background-image: url(../assets/img/coverpagesDark.jpg);
-}
-:root[data-theme=darktheme] .detalles {
-  background-color: black;
-}
-:root[data-theme=darktheme] input, :root[data-theme=darktheme] select, :root[data-theme=darktheme] textarea {
-  background-color: rgb(95, 95, 95);
-}
-:root[data-theme=darktheme] #scrollTop {
-  filter: invert(100%) sepia(3%) saturate(659%) hue-rotate(152deg) brightness(116%) contrast(92%);
-}
-:root[data-theme=darktheme] .separador {
-  color: white;
-}
-:root[data-theme=darktheme] .separador div img {
-  filter: none;
-}
-
 .botonMarron, .botonVerde, .botonRosa {
   display: flex;
   justify-content: center;
@@ -158,6 +65,11 @@
   clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
   transition: clip-path 0.4s;
   z-index: 1;
+}
+.menuHamburguesa .menuEnlaces ul, .hambScroll .menuEnlaces ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 .menuHamburguesa .menuEnlaces .menuCerrar, .hambScroll .menuEnlaces .menuCerrar {
   padding: 0 31px;
@@ -355,6 +267,19 @@
   font-size: 3rem;
 }
 
+/* Keyframes para el efecto zoom del cover del index */
+/* ------------------------------------------------------------------------------- */
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
 /* FOOTER (Common para todas las pages) -------------------------------------------------------------------------*/
 footer {
   margin-top: 150px;
@@ -598,8 +523,105 @@ input.switch {
     filter: blur(0px);
   }
 }
+:root[data-theme=darktheme] {
+  color-scheme: dark;
+}
+:root[data-theme=darktheme] body {
+  background-color: black;
+  color: white;
+}
+:root[data-theme=darktheme] .informativo, :root[data-theme=darktheme] .separador, :root[data-theme=darktheme] .flechitaFondo, :root[data-theme=darktheme] .footerMenu, :root[data-theme=darktheme] .tarjetasCaja, :root[data-theme=darktheme] .scroll, :root[data-theme=darktheme] .menuEnlaces, :root[data-theme=darktheme] .hambScroll, :root[data-theme=darktheme] div.menuCerrar, :root[data-theme=darktheme] div.popup,
+:root[data-theme=darktheme] .popupTexto, :root[data-theme=darktheme] .faqProfile, :root[data-theme=darktheme] .faq1texto, :root[data-theme=darktheme] .faq2texto, :root[data-theme=darktheme] .faq3texto, :root[data-theme=darktheme] .faq4texto, :root[data-theme=darktheme] .faq5texto, :root[data-theme=darktheme] .faq, :root[data-theme=darktheme] .contactoFormulario {
+  background-color: #3c3c3c;
+}
+:root[data-theme=darktheme] .coverLinks, :root[data-theme=darktheme] .scroll, :root[data-theme=darktheme] .headerPages {
+  /* Diferente para la pagina active */
+}
+:root[data-theme=darktheme] .coverLinks .linkUnderlined a, :root[data-theme=darktheme] .scroll .linkUnderlined a, :root[data-theme=darktheme] .headerPages .linkUnderlined a {
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+  font-weight: 700;
+  background-size: 200% 100%;
+  background-position: -100%;
+  background-clip: text;
+  background-image: linear-gradient(to right, #9cb8a0, #9cb8a0 50%, white 50%);
+}
+:root[data-theme=darktheme] .coverLinks .linkUnderlined a:before, :root[data-theme=darktheme] .scroll .linkUnderlined a:before, :root[data-theme=darktheme] .headerPages .linkUnderlined a:before {
+  content: "";
+  background: #9cb8a0;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+:root[data-theme=darktheme] .coverLinks .linkUnderlined a:hover, :root[data-theme=darktheme] .scroll .linkUnderlined a:hover, :root[data-theme=darktheme] .headerPages .linkUnderlined a:hover {
+  background-position: 0;
+}
+:root[data-theme=darktheme] .coverLinks .linkUnderlined a:hover::before, :root[data-theme=darktheme] .scroll .linkUnderlined a:hover::before, :root[data-theme=darktheme] .headerPages .linkUnderlined a:hover::before {
+  width: 100%;
+}
+:root[data-theme=darktheme] .coverLinks .linkInicio a, :root[data-theme=darktheme] .scroll .linkInicio a, :root[data-theme=darktheme] .headerPages .linkInicio a {
+  background-image: linear-gradient(to right, white, white 50%, #9cb8a0 50%);
+}
+:root[data-theme=darktheme] .coverLinks, :root[data-theme=darktheme] .menuHamburguesa {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+:root[data-theme=darktheme] .recuadro {
+  z-index: 0;
+}
+:root[data-theme=darktheme] .linkComun, :root[data-theme=darktheme] .popup, :root[data-theme=darktheme] .popupTexto button, :root[data-theme=darktheme] #genero, :root[data-theme=darktheme] #suscribirse, :root[data-theme=darktheme] ::placeholder, :root[data-theme=darktheme] .separador, :root[data-theme=darktheme] .participa {
+  color: white;
+}
+:root[data-theme=darktheme] #menuImg {
+  filter: brightness(2000%);
+}
+:root[data-theme=darktheme] footer a:hover {
+  text-decoration: none;
+  color: #e7acaa;
+}
+:root[data-theme=darktheme] .coverZoom {
+  filter: brightness(50%);
+  transition: 0.5s ease;
+}
+:root[data-theme=darktheme] .coverTexto h1, :root[data-theme=darktheme] .coverTexto h2 {
+  color: #f5f5f5;
+  transition: 0.5s ease;
+}
+:root[data-theme=darktheme] .indexContacto {
+  background-image: url(../assets/img/indexContactoDark.jpg);
+}
+:root[data-theme=darktheme] .headerPages {
+  background-image: url(../assets/img/coverpagesDark.jpg);
+}
+:root[data-theme=darktheme] .detalles {
+  background-color: black;
+}
+:root[data-theme=darktheme] input, :root[data-theme=darktheme] select, :root[data-theme=darktheme] textarea {
+  background-color: rgb(95, 95, 95);
+}
+:root[data-theme=darktheme] #scrollTop {
+  filter: invert(100%) sepia(3%) saturate(659%) hue-rotate(152deg) brightness(116%) contrast(92%);
+}
+:root[data-theme=darktheme] .separador {
+  color: white;
+}
+:root[data-theme=darktheme] .separador div img {
+  filter: none;
+}
+
 /* PÁGINA "PRODUCTOS" */
 /* ------------------------------------------------------------------------------- */
+.catalogo h2 {
+  margin-top: 150px;
+}
+
 #facial,
 #corporal,
 #capilar,
@@ -696,8 +718,17 @@ input.switch {
 
 /* PÁGINA "PREGUNTAS FRECUENTES" */
 /* ------------------------------------------------------------------------------- */
+.faqImg {
+  transform: translateY(30%);
+}
+.faqImg img {
+  width: 300px;
+  height: 300px;
+}
+
 .faq {
-  max-width: 1200px;
+  width: 80%;
+  max-width: 1400px;
   background-color: #eae9e4;
 }
 .faq .detalles {
@@ -709,8 +740,8 @@ input.switch {
 
 /* PÁGINA "CONTACTO" */
 /* ------------------------------------------------------------------------------- */
-.contacto {
-  max-width: 1200px;
+.contacto, .mapa {
+  max-width: 1400px;
 }
 
 .contactoFormulario {
@@ -752,7 +783,7 @@ form div textarea {
 }
 
 .mapa {
-  max-width: 1200px;
+  max-width: 1400px;
 }
 
 /* Separador ------------------------------------------------------------------------------------------------*/
@@ -1171,30 +1202,17 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-/* Keyframes para el efecto zoom del cover del index */
-/* ------------------------------------------------------------------------------- */
-@keyframes zoom-in-zoom-out {
-  0% {
-    transform: scale(1, 1);
-  }
-  50% {
-    transform: scale(1.1, 1.1);
-  }
-  100% {
-    transform: scale(1, 1);
-  }
-}
 /* MEDIA QUERIES (RESPONSIVE) */
 /* ------------------------------------------------------------------------------- */
 @media only screen and (min-width: 1280px) {
   .tarjetaTexto {
     font-size: 2.5rem;
   }
+  .contactoFormulario {
+    padding: 100px;
+  }
 }
 @media only screen and (max-width: 1279px) {
-  .contacto {
-    flex-direction: column;
-  }
   .contactoFormulario {
     width: 100%;
   }
@@ -1204,13 +1222,25 @@ body {
   .wrapper {
     right: -50px;
   }
+  .contactoFormulario {
+    padding: 20px;
+  }
 }
 @media only screen and (min-width: 992px) {
   .tarjetaImagen img {
     margin: 50px;
   }
+  .contacto, .mapa {
+    width: 80%;
+  }
 }
 @media only screen and (max-width: 992px) {
+  .contacto {
+    flex-direction: column;
+  }
+  .contacto, .mapa {
+    width: 90%;
+  }
   .aboutUs {
     display: flex;
     flex-direction: column;
@@ -1344,6 +1374,9 @@ body {
   .categoriasSelector .categoria1:hover, .categoriasSelector .categoria2:hover, .categoriasSelector .categoria3:hover, .categoriasSelector .categoria4:hover, .categoriasSelector .categoria5:hover {
     flex-basis: 80%;
   }
+  .catalogo {
+    max-width: 100%;
+  }
 }
 @media only screen and (max-width: 768px) {
   input.switch {
@@ -1351,6 +1384,9 @@ body {
   }
   .tarjetas {
     width: 95%;
+  }
+  .contactoFormulario {
+    padding: 60px;
   }
 }
 @media only screen and (min-width: 481px) {
@@ -1411,6 +1447,9 @@ body {
   .categoriasSelector .categoria1:hover, .categoriasSelector .categoria2:hover, .categoriasSelector .categoria3:hover, .categoriasSelector .categoria4:hover, .categoriasSelector .categoria5:hover {
     flex-basis: 150%;
   }
+  .contactoFormulario {
+    padding: 60px;
+  }
 }
 @media only screen and (max-width: 365px) {
   .menuHamburguesa .menuEnlaces p, .hambScroll .menuEnlaces p {
@@ -1424,6 +1463,15 @@ body {
   }
   .categoriasSelector .categoria1:hover, .categoriasSelector .categoria2:hover, .categoriasSelector .categoria3:hover, .categoriasSelector .categoria4:hover, .categoriasSelector .categoria5:hover {
     flex-basis: 150%;
+  }
+  .informativo {
+    width: 95%;
+  }
+  .contactoFormulario {
+    padding: 20px;
+  }
+  .contacto, .mapa {
+    width: 95%;
   }
 }
 /* Modificacion del animate.css*/

@@ -1,33 +1,11 @@
-$colorRosa: #e7acaa;
-$colorMarron: #e2b995;
-$colorVerdeClaro: #eae9e4;
-$colorVerdeMedio: #d3e0ce;
-$colorVerdeOscuro: #9cb8a0;
-$colorGrisClaro: #f5f5f5;
-$colorGrisOscuro: #3c3c3c;
-$colorMarronHover: #f5c8a1;
-$colorVerdeHover: #b5d7ba;
-$colorRosaHover: #fcbcba;
-$colorBlanco: white;
-
-@mixin medidas($ancho, $alto){
-  width: $ancho;
-  height: $alto;
-}
-
-@mixin fjcenter {
-  display: flex;
-  justify-content: center;
-}
-
 /* SASS - FOR: En el archivo pages/_aboutus.scss uso un "for", en las últimas líneas */
+
+@import "common/variables", "common/botones", "common/header", "common/footer", "common/toggler";
 @import "themes/darktheme";
-@import "common/botones", "common/header", "common/footer", "common/toggler";
+
 @import "pages/productos", "pages/aboutus", "pages/faq", "pages/contacto";
 @import "index-sections/separador", "index-sections/catalogo", "index-sections/informativo", "index-sections/tarjetas", 
 "index-sections/testimonios", "index-sections/indexContacto", "index-sections/insta", "index-sections/whatsAppIcon", "index-sections/categories";
-
-
 
 html {
   scroll-behavior: smooth;
@@ -36,20 +14,6 @@ html {
 body {
   max-width: 1920px;
   font-family: "Montserrat", sans-serif;
-}
-
-/* Keyframes para el efecto zoom del cover del index */
-/* ------------------------------------------------------------------------------- */
-@keyframes zoom-in-zoom-out {
-  0% {
-    transform: scale(1, 1);
-  }
-  50% {
-    transform: scale(1.1, 1.1);
-  }
-  100% {
-    transform: scale(1, 1);
-  }
 }
 
 @import "mediaqueries";

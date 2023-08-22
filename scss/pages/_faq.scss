@@ -1,8 +1,16 @@
 /* PÁGINA "PREGUNTAS FRECUENTES" */
 /* ------------------------------------------------------------------------------- */
+.faqImg {
+  transform: translateY(30%);
+  img {
+    @include medidas(300px,300px);
+  }
+}
+
 
 .faq {
-  max-width: 1200px;
+  width: 80%;
+  max-width: 1400px;
   background-color: $colorVerdeClaro;
 
   .detalles {
