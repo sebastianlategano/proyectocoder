@@ -1449,7 +1449,7 @@ body {
   .tarjetaDescripcion {
     padding: 20px;
   }
-  .informativo, .insta, .resenias, .categoriasSelector, .tarjetas {
+  .informativo, .insta, .resenias, .categoriasSelector, .tarjetas, .faq {
     width: 90%;
   }
 }
