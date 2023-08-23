@@ -1349,10 +1349,6 @@ body {
   .whatsappIcon {
     bottom: 6%;
     right: 5%;
-    /*img {
-      width: 25px;
-      height: 25px;
-    }*/
   }
   #scrollTop {
     bottom: 15%;
@@ -1381,9 +1377,6 @@ body {
 @media only screen and (max-width: 768px) {
   input.switch {
     transform: scale(0.4);
-  }
-  .tarjetas {
-    width: 95%;
   }
   .contactoFormulario {
     padding: 60px;
@@ -1441,14 +1434,23 @@ body {
   .informativoTexto h3 {
     width: 196px;
   }
-  .categoriasSelector {
-    width: 100%;
-  }
   .categoriasSelector .categoria1:hover, .categoriasSelector .categoria2:hover, .categoriasSelector .categoria3:hover, .categoriasSelector .categoria4:hover, .categoriasSelector .categoria5:hover {
     flex-basis: 150%;
   }
   .contactoFormulario {
     padding: 60px;
+  }
+  .tarjetaImagen {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+  }
+  .tarjetaDescripcion {
+    padding: 20px;
+  }
+  .informativo, .insta, .resenias, .categoriasSelector, .tarjetas {
+    width: 90%;
   }
 }
 @media only screen and (max-width: 365px) {
@@ -1463,9 +1465,6 @@ body {
   }
   .categoriasSelector .categoria1:hover, .categoriasSelector .categoria2:hover, .categoriasSelector .categoria3:hover, .categoriasSelector .categoria4:hover, .categoriasSelector .categoria5:hover {
     flex-basis: 150%;
-  }
-  .informativo {
-    width: 95%;
   }
   .contactoFormulario {
     padding: 20px;

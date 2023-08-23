@@ -5,14 +5,13 @@
   .tarjetaTexto {
     font-size: 2.5rem;
   }
+
   .contactoFormulario {
     padding: 100px;
   }
 }
 
 @media only screen and (max-width: 1279px) {
-
-
   .contactoFormulario {
     width: 100%;
   }
@@ -41,7 +40,6 @@
 }
 
 @media only screen and (max-width: 992px) {
-
   .contacto {
     flex-direction: column;
   }
@@ -57,22 +55,28 @@
     text-align: center;
     grid-row-gap: 0px;
   }
+
   .faq1texto, .faq2texto, .faq3texto, .faq4texto, .faq5texto {
     margin-top: 20px;
     margin-bottom: 150px;
   }
+
   .faq1img {
     margin-top: 150px;
   }
+
   .tarjetaImagen img {
     margin-top: 50px;
   }
+
   input.switch {
       transform: scale(0.40);
   }
+
   .wrapper {
     right: -95px;
   }
+
   .categoriasSelector {
     .categoria1 , .categoria2 , .categoria3, .categoria4, .categoria5 {
     &:hover {
@@ -124,10 +128,10 @@
 }
 
 @media only screen and (max-width: 768px) {
-
   .wrapper {
     right: -60px;
   }
+
   #nombre, #email, #genero, #mensaje {
     width: 100%;
   }
@@ -173,8 +177,6 @@
     margin: 0 auto;
   }
 
-
-
   .botonPopUp {
     width: 50px;
     height: 50px;
@@ -187,18 +189,12 @@
   .whatsappIcon {
     bottom: 6%;
     right: 5%;
-    /*img {
-      width: 25px;
-      height: 25px;
-    }*/
   }
 
   #scrollTop {
     bottom: 15%;
     right: 5%;
   }
-
-
 
   .video h2 {
     font-weight: 500;
@@ -224,6 +220,7 @@
     }
     }
   }
+
   .catalogo {
     max-width: 100%;
   }
@@ -232,9 +229,6 @@
 @media only screen and (max-width: 768px) {
   input.switch {
       transform: scale(0.40);
-  }
-  .tarjetas {
-    width: 95%;
   }
   .contactoFormulario {
     padding: 60px;
@@ -310,7 +304,6 @@
   }
 
   .categoriasSelector {
-    width: 100%;
     .categoria1 , .categoria2 , .categoria3, .categoria4, .categoria5 {
     &:hover {
       flex-basis: 150%;
@@ -320,6 +313,21 @@
   
   .contactoFormulario {
     padding: 60px;
+  }
+
+  .tarjetaImagen {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+  }
+
+.tarjetaDescripcion {
+  padding: 20px;
+}
+
+  .informativo, .insta, .resenias, .categoriasSelector, .tarjetas {
+    width: 90%;
   }
 
 }
@@ -337,15 +345,13 @@
   .faq details summary {
     font-size: 0.938rem;
   }
+
   .categoriasSelector {
     .categoria1 , .categoria2 , .categoria3, .categoria4, .categoria5 {
     &:hover {
       flex-basis: 150%;
     }
     }
-  }
-  .informativo {
-    width: 95%;
   }
 
   .contactoFormulario {
